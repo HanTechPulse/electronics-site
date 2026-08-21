@@ -26,62 +26,35 @@
         ul { margin-left: 20px; margin-bottom: 15px; color: #cbd5e1; }
         li { margin-bottom: 6px; }
         
+        .component-img { width: 100%; max-width: 300px; height: auto; display: block; margin: 20px auto; border-radius: 8px; border: 2px solid #38bdf8; }
+        
         footer { text-align: center; margin-top: 40px; color: #64748b; font-size: 0.95rem; border-top: 1px solid #334155; padding-top: 20px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-
-    <!-- Language Switcher -->
     <div class="switcher">
         <button onclick="setLang('am')">አማርኛ</button>
         <button onclick="setLang('en')">English</button>
     </div>
 
-    <!-- Header -->
     <header>
-        <div class="lang-am">
-            <h1>HanTechPulse</h1>
-            <p class="subtitle">የኤሌክትሮኒክስ ትምህርት እና የሃርድዌር ፍተሻ ማዕከል</p>
-        </div>
-        <div class="lang-en">
-            <h1>HanTechPulse</h1>
-            <p class="subtitle">Electronics Education & Hardware Testing Hub</p>
-        </div>
+        <div class="lang-am"><h1>HanTechPulse</h1><p class="subtitle">የኤሌክትሮኒክስ ትምህርት እና የሃርድዌር ፍተሻ ማዕከል</p></div>
+        <div class="lang-en"><h1>HanTechPulse</h1><p class="subtitle">Electronics Education & Hardware Testing Hub</p></div>
     </header>
 
     <!-- 1. Capacitor -->
     <div class="card">
         <div class="lang-am">
             <h2>1. ካፓሲተር (Capacitor)</h2>
-            <p>ካፓሲተር የኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ (Electrostatic field) መልክ አከማችቶ የሚይዝ እና እንደ አስፈላጊነቱ ፈጥኖ የሚለቅ የኤሌክትሮኒክስ መለኪያ ነው። በሰርኪዩት ውስጥ ቮልቴጅን ለማለስለስ (Filtering) እና ጫጫታን (Noise) ለማስወገድ ያገለግላል።</p>
-            <h3>ዋና ዋና አይነቶች፦</h3>
-            <ul>
-                <li><strong>Electrolytic Capacitor:</strong> አወንታዊ (+) እና አሉታዊ (-) ፖላሪቲ ያለው ሲሆን በፓወር ሰፕላይ ሰርኪዩቶች ላይ ይሰራል፤ ሲሰካ አቅጣጫ መሳሳት የለበትም።</li>
-                <li><strong>Ceramic Capacitor:</strong> ፖላሪቲ የሌለው፣ አነስተኛ መጠን ያለው እና ለከፍተኛ ፍሪኩዌንሲ ፍልሰት የሚያገለግል ነው።</li>
-            </ul>
-            <h3>በመልቲሜትር መለኪያ መንገድ፦</h3>
-            <ul>
-                <li>መልቲሜትሩን ወደ <strong>Capacitance (Farad/F)</strong> ሞድ አስተካክል።</li>
-                <li>ከመለካትህ በፊት የካፓሲተሩን ሁለት እግሮች በስክሪው ድራይቨር በማጫረስ (Discharge) የያዘውን ኤሌክትሪክ አውጣ።</li>
-                <li>የመልቲሜትሩን ፕሮቦች ከእግሮቹ ጋር አገናኝ፤ በስክሪኑ ላይ የሚመጣውን ዋጋ (uF/nF) አካሉ ላይ ከተጻፈው ጋር አወዳድር።</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Electrolytic_capacitor.jpg/300px-Electrolytic_capacitor.jpg" alt="Capacitor" class="component-img">
+            <p>ካፓሲተር የኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ አከማችቶ የሚይዝ ነው።</p>
         </div>
         <div class="lang-en">
             <h2>1. Capacitor</h2>
-            <p>A capacitor is a passive electronic component that stores electrical energy in an electrostatic field and releases it when needed. It is primarily used for filtering voltage fluctuations and removing noise in circuits.</p>
-            <h3>Main Types:</h3>
-            <ul>
-                <li><strong>Electrolytic Capacitor:</strong> Polarized (+ and -), commonly used in power supply circuits. Polarity must be strictly observed during installation.</li>
-                <li><strong>Ceramic Capacitor:</strong> Non-polarized, compact, and ideal for high-frequency filtering applications.</li>
-            </ul>
-            <h3>How to Test with a Multimeter:</h3>
-            <ul>
-                <li>Set the multimeter to <strong>Capacitance (Farad/F)</strong> mode.</li>
-                <li>Discharge the capacitor completely by shorting its leads prior to testing.</li>
-                <li>Connect the multimeter probes to the leads and compare the measured value (uF/nF) with the rating printed on the body.</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Electrolytic_capacitor.jpg/300px-Electrolytic_capacitor.jpg" alt="Capacitor" class="component-img">
+            <p>A capacitor stores electrical energy in an electrostatic field.</p>
         </div>
     </div>
 
@@ -89,35 +62,13 @@
     <div class="card">
         <div class="lang-am">
             <h2>2. ዳዮድ (Diode)</h2>
-            <p>ዳዮድ የኤሌክትሪክ ፍሰት (Current) ወደ አንድ አቅጣጫ ብቻ እንዲያልፍ የሚፈቅድ እና ወደ ተቃራኒው አቅጣጫ የሚመጣውን የሚግት ኮምፖነንት ነው። ኤሲ (AC) ቮልቴጅን ወደ ዲሲ (DC) ለመቀየር (Rectification) ያገለግላል።</p>
-            <h3>ዋና ዋና አይነቶች፦</h3>
-            <ul>
-                <li><strong>Rectifier Diode (1N4007):</strong> ኤሲ ቮልቴጅን ወደ ዲሲ ለመቀየር የሚያገለግል።</li>
-                <li><strong>Zener Diode:</strong> ቮልቴጅን በተወሰነ መጠን ረግቶ እንዲቆይ (Voltage Regulation) የሚያደርግ።</li>
-                <li><strong>LED (Light Emitting Diode):</strong> ኤሌክትሪክ ሲያልፍበት ብርሃን የሚሰጥ።</li>
-            </ul>
-            <h3>በመልቲሜትር መለኪያ መንገድ፦</h3>
-            <ul>
-                <li>መልቲሜትሩን ወደ <strong>Diode Mode (▶|)</strong> ቀይር።</li>
-                <li>ቀዩን ፕሮብ ከአኖድ (+)፣ ጥቁሩን ከካቶድ (-) ጋር አያይዝ፤ በስክሪኑ ላይ ከ0.5V - 0.7V ያሳያል (Forward Bias)።</li>
-                <li>ፕሮቦቹን ስትገለብጣቸው ምንም አይነት ንባብ (OL) ማሳየት አለበት (Reverse Bias)። በሁለቱም በኩል ድምፅ (Beep) ካሰማ ዳዮዱ ተቃጥሏል።</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Diode_1N4007.jpg/300px-Diode_1N4007.jpg" alt="Diode" class="component-img">
+            <p>ዳዮድ የኤሌክትሪክ ፍሰትን ወደ አንድ አቅጣጫ ብቻ እንዲያልፍ ይፈቅዳል።</p>
         </div>
         <div class="lang-en">
             <h2>2. Diode</h2>
-            <p>A diode is a semiconductor component that allows current to flow in one direction only while blocking it in the reverse direction. It is essential for converting AC voltage to DC (Rectification).</p>
-            <h3>Main Types:</h3>
-            <ul>
-                <li><strong>Rectifier Diode (e.g., 1N4007):</strong> Standard diode used for AC to DC conversion.</li>
-                <li><strong>Zener Diode:</strong> Designed to maintain a stable reference voltage in circuits.</li>
-                <li><strong>LED (Light Emitting Diode):</strong> Emits light when electric current passes through it.</li>
-            </ul>
-            <h3>How to Test with a Multimeter:</h3>
-            <ul>
-                <li>Set the multimeter to <strong>Diode Mode (▶|)</strong>.</li>
-                <li>Connect the red probe to the Anode (+) and black probe to the Cathode (-); it should read around 0.5V - 0.7V (Forward Bias).</li>
-                <li>Reverse the probes; the screen should display "OL" (Reverse Bias). If it beeps in both directions, the diode is shorted.</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Diode_1N4007.jpg/300px-Diode_1N4007.jpg" alt="Diode" class="component-img">
+            <p>A diode allows current to flow in one direction only.</p>
         </div>
     </div>
 
@@ -125,21 +76,13 @@
     <div class="card">
         <div class="lang-am">
             <h2>3. ሪዚስተር (Resistor)</h2>
-            <p>ሪዚስተር በሰርኪዩት ውስጥ የሚያልፈውን የኤሌክትሪክ ፍሰት (Current) ለመገደብ እና ቮልቴጅን ለመክፈል (Voltage Divider) የሚያገለግል ተገብሮ (Passive) ኮምፖነንት ነው።</p>
-            <h3>አነባበብ እና መለኪያ፦</h3>
-            <ul>
-                <li><strong>የቀለም ኮድ (Color Code):</strong> አካሉ ላይ ባሉት ቀለማት አማካኝነት የኦህም (Ω) መጠኑ ይነበባል።</li>
-                <li><strong>በመልቲሜትር፦</strong> መልቲሜትሩን ወደ <strong>Ohms (Ω)</strong> ቀይረህ የሪዚስተሩን ሁለት ጫፎች ለካ። የሚመጣው ንባብ ከቀለሙ ኮድ ዋጋ ጋር ተመሳሳይ መሆን አለበት።</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Resistors.jpg/300px-Resistors.jpg" alt="Resistor" class="component-img">
+            <p>ሪዚስተር የኤሌክትሪክ ፍሰትን ለመግታት ያገለግላል።</p>
         </div>
         <div class="lang-en">
             <h2>3. Resistor</h2>
-            <p>A resistor is a passive electrical component that limits the flow of electric current and lowers voltage levels within a circuit.</p>
-            <h3>Reading & Testing:</h3>
-            <ul>
-                <li><strong>Color Code:</strong> Resistance values are represented by colored bands printed on the component body.</li>
-                <li><strong>Multimeter Testing:</strong> Set the multimeter to <strong>Ohms (Ω)</strong> mode and measure across both leads. The display should match the rated color code resistance.</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Resistors.jpg/300px-Resistors.jpg" alt="Resistor" class="component-img">
+            <p>A resistor limits the flow of electric current.</p>
         </div>
     </div>
 
@@ -147,40 +90,17 @@
     <div class="card">
         <div class="lang-am">
             <h2>4. ሞስፌት (MOSFET)</h2>
-            <p>ሞስፌት (Metal-Oxide-Semiconductor Field-Effect Transistor) በከፍተኛ ፍጥነት የኤሌክትሪክ ፍሰትን ለመቆጣጠር፣ እንደ ስዊች (Switch) እና አምፕሊፋየር ሆኖ የሚያገለግል ወሳኝ ትራንዚስተር ነው።</p>
-            <h3>ሶስቱ እግሮች (Terminals)፦</h3>
-            <ul>
-                <li><strong>Gate (G):</strong> ስዊቹን የመክፈቻ/መዝጊያ መቆጣጠሪያ።</li>
-                <li><strong>Drain (D):</strong> ኤሌክትሪክ የሚገባበት/ሚወጣበት ዋና መስመር።</li>
-                <li><strong>Source (S):</strong> ኤሌክትሪክ የሚወጣበት/ሚገባበት መስመር።</li>
-            </ul>
-            <h3>በመልቲሜትር መለኪያ መንገድ፦</h3>
-            <ul>
-                <li>መልቲሜትሩን ወደ <strong>Diode mode</strong> አድርገህ በDrain እና Source መካከል ያለውን የውስጥ ዳዮድ (Body Diode) ለካ፤ በይበልጥ ከ0.4V - 0.6V ያሳያል።</li>
-                <li>በGate እና Drain ወይም በGate እና Source መካከል መለካት የለበትም (OL ማሳየት አለበት)።</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/MOSFET_transistor.jpg/300px-MOSFET_transistor.jpg" alt="MOSFET" class="component-img">
+            <p>ሞስፌት እንደ ፈጣን ስዊች የሚያገለግል ትራንዚስተር ነው።</p>
         </div>
         <div class="lang-en">
             <h2>4. MOSFET</h2>
-            <p>A MOSFET is a semiconductor device widely used for switching and amplifying electronic signals in modern electronics circuits.</p>
-            <h3>Three Main Terminals:</h3>
-            <ul>
-                <li><strong>Gate (G):</strong> Controls the opening and closing of the channel.</li>
-                <li><strong>Drain (D):</strong> Main current entry/exit terminal.</li>
-                <li><strong>Source (S):</strong> Connected to ground or supply reference.</li>
-            </ul>
-            <h3>How to Test with a Multimeter:</h3>
-            <ul>
-                <li>Set multimeter to <strong>Diode mode</strong> and check between Drain and Source to verify the internal body diode (typically reads 0.4V - 0.6V).</li>
-                <li>Ensure there is no continuity (OL) between Gate-Drain or Gate-Source terminals.</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/MOSFET_transistor.jpg/300px-MOSFET_transistor.jpg" alt="MOSFET" class="component-img">
+            <p>A MOSFET is used as a fast electronic switch.</p>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 HanTechPulse | Developed by Bereket</p>
-    </footer>
-
+    <footer><p>&copy; 2026 HanTechPulse | Developed by Bereket</p></footer>
 </div>
 
 <script>
@@ -194,10 +114,6 @@
         }
     }
 </script>
-
 </body>
 </html>
-
-
-
 
