@@ -366,3 +366,230 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HanTechPulse - የኤሌክትሮኒክስ ትምህርት፣ የሃርድዌር ፍተሻ እና የሪዚስተር ከለር ካልኩሌተር።">
+    <meta name="keywords" content="Electronics, Resistor Calculator, Multimeter, Ethiopia, Hardware Testing">
+    <title>HanTechPulse - Electronics Lab & Tools</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; line-height: 1.7; padding: 20px; }
+        .container { max-width: 850px; margin: 0 auto; }
+        
+        .switcher { text-align: center; margin-bottom: 25px; }
+        .switcher button { background: #38bdf8; color: #0f172a; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 6px; font-weight: bold; font-size: 1rem; transition: 0.3s; }
+        .switcher button:hover { background: #0284c7; color: white; }
+        
+        .lang-en { display: none; }
+        
+        header { text-align: center; padding: 35px 15px; background: linear-gradient(135deg, #1e293b, #0f172a); border-bottom: 3px solid #38bdf8; border-radius: 12px; margin-bottom: 30px; }
+        h1 { color: #38bdf8; font-size: 2.4rem; margin-bottom: 8px; }
+        p.subtitle { color: #94a3b8; font-size: 1.1rem; }
+        
+        .card { background-color: #1e293b; border-radius: 12px; padding: 25px; margin-bottom: 25px; border-left: 5px solid #38bdf8; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .card h2 { color: #38bdf8; margin-bottom: 12px; font-size: 1.6rem; border-bottom: 1px solid #334155; padding-bottom: 8px; }
+        .card h3 { color: #60a5fa; margin: 18px 0 8px 0; font-size: 1.25rem; }
+        p { color: #e2e8f0; margin-bottom: 12px; }
+        ul { margin-left: 20px; margin-bottom: 15px; color: #cbd5e1; }
+        li { margin-bottom: 8px; }
+
+        /* Resistor Calculator Styles */
+        .calc-box { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
+        .calc-group { display: flex; flex-direction: column; gap: 5px; }
+        .calc-group label { color: #cbd5e1; font-weight: bold; }
+        .calc-group select { padding: 10px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: #f8fafc; font-size: 1rem; }
+        .result-box { margin-top: 15px; padding: 15px; background: #0f172a; border-radius: 8px; text-align: center; border: 1px solid #38bdf8; }
+        .result-box span { color: #38bdf8; font-size: 1.5rem; font-weight: bold; }
+        
+        footer { text-align: center; margin-top: 40px; color: #64748b; font-size: 0.95rem; border-top: 1px solid #334155; padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Language Switcher -->
+    <div class="switcher">
+        <button onclick="setLang('am')">አማርኛ</button>
+        <button onclick="setLang('en')">English</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="lang-am">
+            <h1>HanTechPulse</h1>
+            <p class="subtitle">የኤሌክትሮኒክስ ትምህርት፣ የመለኪያ መሳሪያዎች እና የሃርድዌር ላብራቶሪ</p>
+        </div>
+        <div class="lang-en">
+            <h1>HanTechPulse</h1>
+            <p class="subtitle">Electronics Education, Interactive Tools & Hardware Lab</p>
+        </div>
+    </header>
+
+    <!-- Interactive Resistor Calculator -->
+    <div class="card" style="border-left-color: #f59e0b;">
+        <div class="lang-am">
+            <h2>🧮 የሪዚስተር ከለር ኮድ ካልኩሌተር (4-Band)</h2>
+            <p>በሪዚስተሩ ላይ ያሉትን አራቱን ቀለማት በመምረጥ የኦህም (Ω) መጠኑን በቀላሉ ያሰሉ፦</p>
+        </div>
+        <div class="lang-en">
+            <h2>🧮 Resistor Color Code Calculator (4-Band)</h2>
+            <p>Select the 4 color bands on your resistor to calculate its resistance value:</p>
+        </div>
+
+        <div class="calc-box">
+            <div class="calc-group">
+                <label>1st Band (መጀመሪያ ቀለም):</label>
+                <select id="band1" onchange="calculateResistor()">
+                    <option value="1" style="background:brown; color:white;">Brown (1)</option>
+                    <option value="2" style="background:red; color:white;">Red (2)</option>
+                    <option value="3" style="background:orange; color:black;">Orange (3)</option>
+                    <option value="4" style="background:yellow; color:black;">Yellow (4)</option>
+                    <option value="5" style="background:green; color:white;">Green (5)</option>
+                    <option value="6" style="background:blue; color:white;">Blue (6)</option>
+                    <option value="7" style="background:violet; color:white;">Violet (7)</option>
+                    <option value="8" style="background:gray; color:white;">Gray (8)</option>
+                    <option value="9" style="background:white; color:black;">White (9)</option>
+                </select>
+            </div>
+
+            <div class="calc-group">
+                <label>2nd Band (ሁለተኛ ቀለም):</label>
+                <select id="band2" onchange="calculateResistor()">
+                    <option value="0" style="background:black; color:white;">Black (0)</option>
+                    <option value="1" style="background:brown; color:white;">Brown (1)</option>
+                    <option value="2" style="background:red; color:white;">Red (2)</option>
+                    <option value="3" style="background:orange; color:black;">Orange (3)</option>
+                    <option value="4" style="background:yellow; color:black;">Yellow (4)</option>
+                    <option value="5" style="background:green; color:white;">Green (5)</option>
+                    <option value="6" style="background:blue; color:white;">Blue (6)</option>
+                    <option value="7" style="background:violet; color:white;">Violet (7)</option>
+                    <option value="8" style="background:gray; color:white;">Gray (8)</option>
+                    <option value="9" style="background:white; color:black;">White (9)</option>
+                </select>
+            </div>
+
+            <div class="calc-group">
+                <label>Multiplier (የማበዛት ቀለም):</label>
+                <select id="band3" onchange="calculateResistor()">
+                    <option value="1">Black (x1 Ω)</option>
+                    <option value="10">Brown (x10 Ω)</option>
+                    <option value="100">Red (x100 Ω)</option>
+                    <option value="1000">Orange (x1 kΩ)</option>
+                    <option value="10000">Yellow (x10 kΩ)</option>
+                    <option value="100000">Green (x100 kΩ)</option>
+                    <option value="1000000">Blue (x1 MΩ)</option>
+                    <option value="0.1">Gold (x0.1 Ω)</option>
+                    <option value="0.01">Silver (x0.01 Ω)</option>
+                </select>
+            </div>
+
+            <div class="calc-group">
+                <label>Tolerance (የልዩነት መጠን):</label>
+                <select id="band4" onchange="calculateResistor()">
+                    <option value="±5%">Gold (±5%)</option>
+                    <option value="±10%">Silver (±10%)</option>
+                    <option value="±1%">Brown (±1%)</option>
+                    <option value="±2%">Red (±2%)</option>
+                </select>
+            </div>
+
+            <div class="result-box">
+                <p class="lang-am">የተሰላው ዋጋ፦ <span id="resValue">100 Ω ±5%</span></p>
+                <p class="lang-en">Calculated Value: <span id="resValueEn">100 Ω ±5%</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. Capacitor -->
+    <div class="card">
+        <div class="lang-am">
+            <h2>1. ካፓሲተር (Capacitor)</h2>
+            <p>ካፓሲተር የኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ መልክ አከማችቶ የሚይዝ እና እንደ አስፈላጊነቱ ፈጥኖ የሚለቅ የኤሌክትሮኒክስ መለኪያ ነው። በሰርኪዩት ውስጥ ቮልቴጅን ለማለስለስ (Filtering) ያገለግላል።</p>
+            <h3>በመልቲሜትር መለኪያ መንገድ፦</h3>
+            <ul>
+                <li>መልቲሜትሩን ወደ <strong>Capacitance (Farad/F)</strong> ሞድ አስተካክል።</li>
+                <li>ከመለካትህ በፊት የካፓሲተሩን ሁለት እግሮች በማጫረስ (Discharge) ያዘውን ኤሌክትሪክ አውጣ።</li>
+            </ul>
+        </div>
+        <div class="lang-en">
+            <h2>1. Capacitor</h2>
+            <p>A capacitor stores electrical energy in an electrostatic field and releases it when needed. It is primarily used for filtering voltage fluctuations in circuits.</p>
+            <h3>Testing with a Multimeter:</h3>
+            <ul>
+                <li>Set the multimeter to <strong>Capacitance (Farad/F)</strong> mode.</li>
+                <li>Discharge the capacitor completely by shorting its leads prior to testing.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 2. BJT Transistor -->
+    <div class="card">
+        <div class="lang-am">
+            <h2>2. ባይፖላር ጃንግሽን ትራንዚስተር (BJT Transistor)</h2>
+            <p>ትራንዚስተር አነስተኛ የኤሌክትሪክ ሲግናልን በማሳደግ (Amplification) ወይም እንደ ኤሌክትሮኒክ ስዊች (Switching) ሆኖ ያገለግላል።</p>
+            <h3>ሶስቱ እግሮች፦</h3>
+            <ul>
+                <li><strong>Base (B):</strong> ትራንዚስተሩን የሚያነቃቃው/መቆጣጠሪያው እግር።</li>
+                <li><strong>Collector (C):</strong> ዋናው ኤሌክትሪክ የሚገባበት እግር።</li>
+                <li><strong>Emitter (E):</strong> ኤሌክትሪክ የሚወጣበት እግር።</li>
+            </ul>
+        </div>
+        <div class="lang-en">
+            <h2>2. BJT Transistor</h2>
+            <p>BJT Transistors are used for signal amplification and electronic switching. They are current-controlled semiconductor devices.</p>
+            <h3>Three Terminals:</h3>
+            <ul>
+                <li><strong>Base (B):</strong> Control terminal.</li>
+                <li><strong>Collector (C):</strong> Input supply terminal.</li>
+                <li><strong>Emitter (E):</strong> Output terminal.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 HanTechPulse | Developed by Bereket</p>
+    </footer>
+
+</div>
+
+<script>
+    function setLang(lang) {
+        if(lang === 'en') {
+            document.querySelectorAll('.lang-am').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'block');
+        } else {
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.lang-am').forEach(el => el.style.display = 'block');
+        }
+    }
+
+    function calculateResistor() {
+        let b1 = document.getElementById("band1").value;
+        let b2 = document.getElementById("band2").value;
+        let mult = parseFloat(document.getElementById("band3").value);
+        let tol = document.getElementById("band4").value;
+
+        let baseVal = parseInt(b1 + b2);
+        let totalVal = baseVal * mult;
+        
+        let formattedVal = totalVal;
+        if (totalVal >= 1000000) {
+            formattedVal = (totalVal / 1000000) + " MΩ";
+        } else if (totalVal >= 1000) {
+            formattedVal = (totalVal / 1000) + " kΩ";
+        } else {
+            formattedVal = totalVal.toFixed(totalVal < 1 ? 2 : 0) + " Ω";
+        }
+
+        let resultString = formattedVal + " " + tol;
+        document.getElementById("resValue").innerText = resultString;
+        document.getElementById("resValueEn").innerText = resultString;
+    }
+</script>
+
+</body>
+</html>
