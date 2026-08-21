@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="HanTechPulse - የኤሌክትሮኒክስ ትምህርት፣ የሃርድዌር ፍተሻ እና የሪዚስተር ከለር ካልኩሌተር።">
-    <meta name="keywords" content="Electronics, Resistor Calculator, Multimeter, Ethiopia, Hardware Testing">
+    <meta name="keywords" content="Electronics, Resistor Calculator, Multimeter, AC DC, Diode, Transformer, Ethiopia">
     <title>HanTechPulse - Electronics Lab & Tools</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -31,14 +31,13 @@
         /* Ads Notice Banner */
         .ads-notice { background: linear-gradient(135deg, #0284c7, #0ea5e9); padding: 12px; border-radius: 8px; text-align: center; font-weight: bold; margin-bottom: 25px; color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
 
-        /* Resistor Calculator Styles */
+        /* Calculators */
         .calc-box { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
         .calc-group { display: flex; flex-direction: column; gap: 5px; }
         .calc-group label { color: #cbd5e1; font-weight: bold; }
         .calc-group select, .calc-group input { padding: 10px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: #f8fafc; font-size: 1rem; width: 100%; }
         .result-box { margin-top: 15px; padding: 15px; background: #0f172a; border-radius: 8px; text-align: center; border: 1px solid #38bdf8; }
         .result-box span { color: #38bdf8; font-size: 1.5rem; font-weight: bold; }
-        
         .calc-btn { background: #38bdf8; border: none; padding: 10px 20px; color: #0f172a; font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 10px; width: 100%; }
         .calc-btn:hover { background: #0284c7; color: white; }
 
@@ -78,7 +77,7 @@
         <div class="lang-en">📢 This website is open for advertisements and business collaborations.</div>
     </div>
 
-    <!-- Interactive Resistor Calculator -->
+    <!-- Resistor Color Code Calculator -->
     <div class="card" style="border-left-color: #f59e0b;">
         <div class="lang-am">
             <h2>🧮 የሪዚስተር ከለር ኮድ ካልኩሌተር (4-Band)</h2>
@@ -93,34 +92,32 @@
             <div class="calc-group">
                 <label>1st Band (መጀመሪያ ቀለም):</label>
                 <select id="band1" onchange="calculateResistor()">
-                    <option value="1" style="background:brown; color:white;">Brown (1)</option>
-                    <option value="2" style="background:red; color:white;">Red (2)</option>
-                    <option value="3" style="background:orange; color:black;">Orange (3)</option>
-                    <option value="4" style="background:yellow; color:black;">Yellow (4)</option>
-                    <option value="5" style="background:green; color:white;">Green (5)</option>
-                    <option value="6" style="background:blue; color:white;">Blue (6)</option>
-                    <option value="7" style="background:violet; color:white;">Violet (7)</option>
-                    <option value="8" style="background:gray; color:white;">Gray (8)</option>
-                    <option value="9" style="background:white; color:black;">White (9)</option>
+                    <option value="1">Brown (1)</option>
+                    <option value="2">Red (2)</option>
+                    <option value="3">Orange (3)</option>
+                    <option value="4">Yellow (4)</option>
+                    <option value="5">Green (5)</option>
+                    <option value="6">Blue (6)</option>
+                    <option value="7">Violet (7)</option>
+                    <option value="8">Gray (8)</option>
+                    <option value="9">White (9)</option>
                 </select>
             </div>
-
             <div class="calc-group">
                 <label>2nd Band (ሁለተኛ ቀለም):</label>
                 <select id="band2" onchange="calculateResistor()">
-                    <option value="0" style="background:black; color:white;">Black (0)</option>
-                    <option value="1" style="background:brown; color:white;">Brown (1)</option>
-                    <option value="2" style="background:red; color:white;">Red (2)</option>
-                    <option value="3" style="background:orange; color:black;">Orange (3)</option>
-                    <option value="4" style="background:yellow; color:black;">Yellow (4)</option>
-                    <option value="5" style="background:green; color:white;">Green (5)</option>
-                    <option value="6" style="background:blue; color:white;">Blue (6)</option>
-                    <option value="7" style="background:violet; color:white;">Violet (7)</option>
-                    <option value="8" style="background:gray; color:white;">Gray (8)</option>
-                    <option value="9" style="background:white; color:black;">White (9)</option>
+                    <option value="0">Black (0)</option>
+                    <option value="1">Brown (1)</option>
+                    <option value="2">Red (2)</option>
+                    <option value="3">Orange (3)</option>
+                    <option value="4">Yellow (4)</option>
+                    <option value="5">Green (5)</option>
+                    <option value="6">Blue (6)</option>
+                    <option value="7">Violet (7)</option>
+                    <option value="8">Gray (8)</option>
+                    <option value="9">White (9)</option>
                 </select>
             </div>
-
             <div class="calc-group">
                 <label>Multiplier (የማበዛት ቀለም):</label>
                 <select id="band3" onchange="calculateResistor()">
@@ -135,7 +132,6 @@
                     <option value="0.01">Silver (x0.01 Ω)</option>
                 </select>
             </div>
-
             <div class="calc-group">
                 <label>Tolerance (የልዩነት መጠን):</label>
                 <select id="band4" onchange="calculateResistor()">
@@ -145,7 +141,6 @@
                     <option value="±2%">Red (±2%)</option>
                 </select>
             </div>
-
             <div class="result-box">
                 <p class="lang-am">የተሰላው ዋጋ፦ <span id="resValue">100 Ω ±5%</span></p>
                 <p class="lang-en">Calculated Value: <span id="resValueEn">100 Ω ±5%</span></p>
@@ -153,17 +148,16 @@
         </div>
     </div>
 
-    <!-- New Ohm's Law Calculator -->
+    <!-- Ohm's Law Calculator -->
     <div class="card" style="border-left-color: #10b981;">
         <div class="lang-am">
             <h2>⚡ የኦም ህግ ካልኩሌተር (Ohm's Law Calculator)</h2>
-            <p>ቮልቴጅ (Voltage) እና ከረንት (Current) በማስገባት ሪዚስታንስን (Resistance) ያሰሉ፦</p>
+            <p>ቮልቴጅ (V) እና ከረንት (I) በማስገባት ሪዚስታንስ (R) ያሰሉ፦</p>
         </div>
         <div class="lang-en">
             <h2>⚡ Ohm's Law Calculator</h2>
             <p>Calculate Resistance by entering Voltage and Current:</p>
         </div>
-
         <div class="calc-box">
             <div class="calc-group">
                 <label class="lang-am">ቮልቴጅ (Volts - V):</label>
@@ -186,53 +180,67 @@
         </div>
     </div>
 
-    <!-- 1. Capacitor -->
+    <!-- 1. AC and DC -->
     <div class="card">
         <div class="lang-am">
-            <h2>1. ካፓሲተር (Capacitor)</h2>
-            <p>ካፓሲተር የኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ መልክ አከማችቶ የሚይዝ እና እንደ አስፈላጊነቱ ፈጥኖ የሚለቅ የኤሌክትሮኒክስ መለኪያ ነው። በሰርኪዩት ውስጥ ቮልቴጅን ለማለስለስ (Filtering) ያገለግላል።</p>
-            <h3>በመልቲሜትር መለኪያ መንገድ፦</h3>
+            <h2>1. የኤሲ እና ዲሲ ጅረቶች (AC & DC Current)</h2>
+            <p><strong>DC (Direct Current):</strong> ኤሌክትሪኩ በአንድ አቅጣጫ ብቻ የሚፈስበት ሲሆን፣ እንደ ባትሪዎች እና ቻርጀሮች ያሉ ምንጮች ይጠቀሙበታል።</p>
+            <p><strong>AC (Alternating Current):</strong> አቅጣጫውን በሰዓት ውስጥ በበርካታ ጊዜያት የሚቀያይር የኤሌክትሪክ ጅረት ሲሆን፣ በቤታችን ውስጥ የሚገኘው የኤሌክትሪክ ኃይል የዚህ ምሳሌ ነው።</p>
+        </div>
+        <div class="lang-en">
+            <h2>1. AC & DC Current</h2>
+            <p><strong>DC (Direct Current):</strong> Electric charge flows in only one direction. Common sources include batteries and adapters.</p>
+            <p><strong>AC (Alternating Current):</strong> Electric charge periodically reverses direction. Household power supplies use AC.</p>
+        </div>
+    </div>
+
+    <!-- 2. Diode -->
+    <div class="card">
+        <div class="lang-am">
+            <h2>2. ዳዮድ (Diode)</h2>
+            <p>ዳዮድ ኤሌክትሪክ በአንድ አቅጣጫ ብቻ እንዲያልፍ የሚያደርግ ሴሚኮንዳክተር አካል ነው። አብዛኛውን ጊዜ ከ AC ወደ DC ለመቀየር (Rectification) ያገለግላል።</p>
+            <h3>በመልቲሜትር መለከት፦</h3>
             <ul>
-                <li>መልቲሜትሩን ወደ <strong>Capacitance (Farad/F)</strong> ሞድ አስተካክል።</li>
-                <li>ከመለካትህ በፊት የካፓሲተሩን ሁለት እግሮች በማጫረስ (Discharge) ያዘውን ኤሌክትሪክ አውጣ።</li>
+                <li>መልቲሜትሩን ወደ Diode Mode አስተካክል።</li>
+                <li>ቀዩን ፕሮብ በአኖድ (Anode) እና ጥቁሩን በካቶድ (Cathode) ሲያያይዝ የተወሰነ የቮልቴጅ መጠን (0.5V - 0.7V ለሲሊኮን) ማሳየት አለበት።</li>
             </ul>
         </div>
         <div class="lang-en">
-            <h2>1. Capacitor</h2>
-            <p>A capacitor stores electrical energy in an electrostatic field and releases it when needed. It is primarily used for filtering voltage fluctuations in circuits.</p>
+            <h2>2. Diode</h2>
+            <p>A diode allows current to flow in one direction only, commonly used for rectification (converting AC to DC).</p>
             <h3>Testing with a Multimeter:</h3>
             <ul>
-                <li>Set the multimeter to <strong>Capacitance (Farad/F)</strong> mode.</li>
-                <li>Discharge the capacitor completely by shorting its leads prior to testing.</li>
+                <li>Set the multimeter to Diode Test mode.</li>
+                <li>Connect red probe to Anode and black to Cathode to check forward voltage drop (approx. 0.5V - 0.7V).</li>
             </ul>
         </div>
     </div>
 
-    <!-- 2. BJT Transistor -->
+    <!-- 3. Transformer -->
     <div class="card">
         <div class="lang-am">
-            <h2>2. ባይፖላር ጃንግሽን ትራንዚስተር (BJT Transistor)</h2>
-            <p>ትራንዚስተር አነስተኛ የኤሌክትሪክ ሲግናልን በማሳደግ (Amplification) ወይም እንደ ኤሌክትሮኒክ ስዊች (Switching) ሆኖ ያገለግላል።</p>
-            <h3>ሶስቱ እግሮች፦</h3>
-            <ul>
-                <li><strong>Base (B):</strong> ትራንዚስተሩን የሚያነቃቃው/መቆጣጠሪያው እግር።</li>
-                <li><strong>Collector (C):</strong> ዋናው ኤሌክትሪክ የሚገባበት እግር።</li>
-                <li><strong>Emitter (E):</strong> ኤሌክትሪክ የሚወጣበት እግር።</li>
-            </ul>
+            <h2>3. ትራንስፎርመር (Transformer)</h2>
+            <p>ትራንስፎርመር የኤሌክትሪክ ቮልቴጅን ከፍ ወይም ዝቅ ለማድረግ (Step-up / Step-down) በኤሌክትሮማግኔቲክ induction የሚሰራ መሳሪያ ነው።</p>
         </div>
         <div class="lang-en">
-            <h2>2. BJT Transistor</h2>
-            <p>BJT Transistors are used for signal amplification and electronic switching. They are current-controlled semiconductor devices.</p>
-            <h3>Three Terminals:</h3>
-            <ul>
-                <li><strong>Base (B):</strong> Control terminal.</li>
-                <li><strong>Collector (C):</strong> Input supply terminal.</li>
-                <li><strong>Emitter (E):</strong> Output terminal.</li>
-            </ul>
+            <h2>3. Transformer</h2>
+            <p>A transformer transfers electrical energy between two or more circuits through electromagnetic induction, used to step up or step down voltage.</p>
         </div>
     </div>
 
-    <!-- Contact & Social Media Section -->
+    <!-- 4. Capacitor -->
+    <div class="card">
+        <div class="lang-am">
+            <h2>4. ካፓሲተር (Capacitor)</h2>
+            <p>ካፓሲተር የኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ አከማችቶ የሚይዝ እና በሰርኪዩት ውስጥ ቮልቴጅን ለማለስለስ (Filtering) የሚያገለግል አካል ነው።</p>
+        </div>
+        <div class="lang-en">
+            <h2>4. Capacitor</h2>
+            <p>A capacitor stores electrical energy in an electrostatic field and is used for filtering voltage fluctuations in circuits.</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
     <div class="card contact-box">
         <div class="lang-am">
             <h2>📞 ጥያቄ እና የንግድ ትብብር (Contact Us)</h2>
@@ -240,7 +248,7 @@
             <p>ኢሜል: <a href="mailto:bereket@hantechpulse.com">bereket@hantechpulse.com</a></p>
             <p>
                 <a href="https://t.me/yourusername" target="_blank">Telegram</a> | 
-                <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+                <a href="https://instagram.com/getubereket36" target="_blank">Instagram</a>
             </p>
         </div>
         <div class="lang-en">
@@ -249,7 +257,7 @@
             <p>Email: <a href="mailto:bereket@hantechpulse.com">bereket@hantechpulse.com</a></p>
             <p>
                 <a href="https://t.me/yourusername" target="_blank">Telegram</a> | 
-                <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+                <a href="https://instagram.com/getubereket36" target="_blank">Instagram</a>
             </p>
         </div>
     </div>
@@ -277,19 +285,10 @@
         let mult = parseFloat(document.getElementById("band3").value);
         let tol = document.getElementById("band4").value;
 
-        let baseVal = parseInt(b1 + b2);
-        let totalVal = baseVal * mult;
-        
-        let formattedVal = totalVal;
-        if (totalVal >= 1000000) {
-            formattedVal = (totalVal / 1000000) + " MΩ";
-        } else if (totalVal >= 1000) {
-            formattedVal = (totalVal / 1000) + " kΩ";
-        } else {
-            formattedVal = totalVal.toFixed(totalVal < 1 ? 2 : 0) + " Ω";
-        }
-
+        let totalVal = parseInt(b1 + b2) * mult;
+        let formattedVal = totalVal >= 1000000 ? (totalVal / 1000000) + " MΩ" : (totalVal >= 1000 ? (totalVal / 1000) + " kΩ" : totalVal + " Ω");
         let resultString = formattedVal + " " + tol;
+        
         document.getElementById("resValue").innerText = resultString;
         document.getElementById("resValueEn").innerText = resultString;
     }
@@ -308,7 +307,6 @@
 
         let r = v / i;
         let finalR = r >= 1000 ? (r / 1000).toFixed(2) + " kΩ" : r.toFixed(2) + " Ω";
-        
         resElem.innerText = finalR;
         resElemEn.innerText = finalR;
     }
