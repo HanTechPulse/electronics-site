@@ -6,17 +6,22 @@
     <title>HanTechPulse - Electronics Lab</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-        body { background-color: #0f172a; color: #f8fafc; padding: 20px; }
-        .container { max-width: 850px; margin: 0 auto; }
+        body { background-color: #0f172a; color: #f8fafc; line-height: 1.6; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
         .switcher { text-align: center; margin-bottom: 25px; }
-        .switcher button { background: #38bdf8; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 6px; font-weight: bold; }
+        .switcher button { background: #38bdf8; color: #0f172a; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 6px; font-weight: bold; }
         .lang-en { display: none; }
-        .card { background-color: #1e293b; border-radius: 12px; padding: 20px; margin-bottom: 20px; border-left: 5px solid #38bdf8; }
-        .component-img { width: 100%; max-width: 200px; display: block; margin: 15px auto; border-radius: 8px; }
+        .card { background-color: #1e293b; border-radius: 12px; padding: 25px; margin-bottom: 25px; border-left: 5px solid #38bdf8; }
+        h1 { color: #38bdf8; text-align: center; margin-bottom: 30px; }
+        h2 { color: #38bdf8; margin-bottom: 15px; }
+        h3 { color: #60a5fa; margin-top: 15px; }
+        ul { margin-left: 20px; margin-top: 5px; color: #cbd5e1; }
+        footer { text-align: center; margin-top: 40px; color: #64748b; }
     </style>
 </head>
 <body>
 <div class="container">
+    <h1>HanTechPulse Electronics Lab</h1>
     <div class="switcher">
         <button onclick="setLang('am')">አማርኛ</button>
         <button onclick="setLang('en')">English</button>
@@ -26,13 +31,15 @@
     <div class="card">
         <div class="lang-am">
             <h2>1. ካፓሲተር (Capacitor)</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Electrolytic_capacitor.jpg/300px-Electrolytic_capacitor.jpg" alt="Capacitor" class="component-img">
-            <p>ካፓሲተር የኤሌክትሪክ ኃይልን የሚያከማች ኮምፖነንት ነው።</p>
+            <p>ካፓሲተር ኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ አከማችቶ የሚይዝ ኮምፖነንት ነው። በዋናነት ቮልቴጅን ለማረጋጋት (Filtering) እና ለተለያዩ የኤሌክትሮኒክስ ሰርኪዩቶች መረጋጋት ያገለግላል።</p>
+            <h3>መፈተሻ (Testing):</h3>
+            <ul><li>ሁልጊዜ ከመለካትዎ በፊት ካፓሲተሩን Discharge (የያዘውን ኤሌክትሪክ ማውጣት) ያድርጉ።</li><li>የመልቲሜትር መለኪያውን ወደ Capacitance (Farad) ቀይረው መለካት።</li></ul>
         </div>
         <div class="lang-en">
             <h2>1. Capacitor</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Electrolytic_capacitor.jpg/300px-Electrolytic_capacitor.jpg" alt="Capacitor" class="component-img">
-            <p>A capacitor stores electrical energy.</p>
+            <p>A capacitor is a component that stores electrical energy in an electrostatic field. It is mainly used for filtering voltage and ensuring circuit stability.</p>
+            <h3>Testing:</h3>
+            <ul><li>Always discharge the capacitor before testing.</li><li>Set the multimeter to Capacitance (Farad) mode to verify its value.</li></ul>
         </div>
     </div>
 
@@ -40,13 +47,15 @@
     <div class="card">
         <div class="lang-am">
             <h2>2. ዳዮድ (Diode)</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Diode_1N4007.jpg/300px-Diode_1N4007.jpg" alt="Diode" class="component-img">
-            <p>ዳዮድ ኤሌክትሪክን በአንድ አቅጣጫ ብቻ የሚያሳልፍ ነው።</p>
+            <p>ዳዮድ የኤሌክትሪክ ፍሰትን ወደ አንድ አቅጣጫ ብቻ የሚያሳልፍ ሴሚኮንዳክተር ነው። ኤሲ (AC) ቮልቴጅን ወደ ዲሲ (DC) ለመቀየር (Rectifier) ወሳኝ ሚና አለው።</p>
+            <h3>መፈተሻ (Testing):</h3>
+            <ul><li>መልቲሜትሩን ወደ Diode mode (▶|) ያስተካክሉ።</li><li>ፕሮቡን ሲያገናኙ በ Forward bias (0.5V-0.7V) ያሳያል፤ ሲቀያይሩት ግን ምንም ንባብ (OL) ሊሰጥ አይገባም።</li></ul>
         </div>
         <div class="lang-en">
             <h2>2. Diode</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Diode_1N4007.jpg/300px-Diode_1N4007.jpg" alt="Diode" class="component-img">
-            <p>A diode allows current in one direction.</p>
+            <p>A diode is a semiconductor that allows electric current to flow in only one direction. It is crucial for converting AC voltage to DC.</p>
+            <h3>Testing:</h3>
+            <ul><li>Set your multimeter to Diode mode (▶|).</li><li>In forward bias, it should read 0.5V-0.7V. In reverse bias, it should show no reading (OL).</li></ul>
         </div>
     </div>
 
@@ -54,13 +63,15 @@
     <div class="card">
         <div class="lang-am">
             <h2>3. ሪዚስተር (Resistor)</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Resistors.jpg/300px-Resistors.jpg" alt="Resistor" class="component-img">
-            <p>ሪዚስተር ኤሌክትሪክን የሚገታ ኮምፖነንት ነው።</p>
+            <p>ሪዚስተር በሰርኪዩት ውስጥ የሚያልፈውን የኤሌክትሪክ ፍሰት (Current) ለመገደብ ያገለግላል። ለተለያዩ የኤሌክትሮኒክስ ክፍሎች ትክክለኛውን የቮልቴጅ መጠን ለማድረስ ይጠቅማል።</p>
+            <h3>መፈተሻ (Testing):</h3>
+            <ul><li>መልቲሜትሩን ወደ Ohms (Ω) ቀይሩ።</li><li>ሪዚስተሩን ያለበት ሰርኪዩት ላይ ሳያገናኙት የሁለቱን ጫፎች እሴት መለካት።</li></ul>
         </div>
         <div class="lang-en">
             <h2>3. Resistor</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Resistors.jpg/300px-Resistors.jpg" alt="Resistor" class="component-img">
-            <p>A resistor limits the current flow.</p>
+            <p>A resistor is used to limit the flow of electric current in a circuit. It ensures that sensitive electronic components receive the correct voltage.</p>
+            <h3>Testing:</h3>
+            <ul><li>Set your multimeter to Ohms (Ω).</li><li>Measure the component across both leads while disconnected from the circuit.</li></ul>
         </div>
     </div>
 
@@ -68,13 +79,15 @@
     <div class="card">
         <div class="lang-am">
             <h2>4. ሞስፌት (MOSFET)</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/MOSFET_transistor.jpg/300px-MOSFET_transistor.jpg" alt="MOSFET" class="component-img">
-            <p>ሞስፌት እንደ ኤሌክትሮኒክ ስዊች የሚያገለግል ነው።</p>
+            <p>ሞስፌት እንደ ፈጣን ስዊች (Switch) ወይም አምፕሊፋየር የሚያገለግል የትራንዚስተር አይነት ነው። በዲጂታል ሰርኪዩቶች እና በፓወር ሰፕላይ ውስጥ በስፋት ጥቅም ላይ ይውላል።</p>
+            <h3>መፈተሻ (Testing):</h3>
+            <ul><li>Gate, Drain እና Source እግሮችን ለይቶ መለየት።</li><li>በDrain እና Source መካከል ያለውን የBody diode በመፈተሽ ትክክለኛነቱን ማረጋገጥ።</li></ul>
         </div>
         <div class="lang-en">
             <h2>4. MOSFET</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/MOSFET_transistor.jpg/300px-MOSFET_transistor.jpg" alt="MOSFET" class="component-img">
-            <p>A MOSFET acts as an electronic switch.</p>
+            <p>A MOSFET is a type of transistor used as a fast electronic switch or amplifier. It is widely used in digital circuits and power supplies.</p>
+            <h3>Testing:</h3>
+            <ul><li>Identify the Gate, Drain, and Source terminals.</li><li>Check the body diode between Drain and Source to verify if it's functioning.</li></ul>
         </div>
     </div>
 </div>
