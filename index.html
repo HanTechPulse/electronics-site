@@ -5,41 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HanTechPulse - Electronics Lab</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-        body { background-color: #0f172a; color: #f8fafc; line-height: 1.6; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; line-height: 1.7; padding: 20px; }
+        .container { max-width: 850px; margin: 0 auto; }
+        
         .switcher { text-align: center; margin-bottom: 25px; }
-        .switcher button { background: #38bdf8; color: #0f172a; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 6px; font-weight: bold; }
+        .switcher button { background: #38bdf8; color: #0f172a; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 6px; font-weight: bold; font-size: 1rem; transition: 0.3s; }
+        .switcher button:hover { background: #0284c7; color: white; }
+        
         .lang-en { display: none; }
-        .card { background-color: #1e293b; border-radius: 12px; padding: 25px; margin-bottom: 25px; border-left: 5px solid #38bdf8; }
-        h1 { color: #38bdf8; text-align: center; margin-bottom: 30px; }
-        h2 { color: #38bdf8; margin-bottom: 15px; }
-        h3 { color: #60a5fa; margin-top: 15px; }
-        ul { margin-left: 20px; margin-top: 5px; color: #cbd5e1; }
-        footer { text-align: center; margin-top: 40px; color: #64748b; }
+        
+        header { text-align: center; padding: 35px 15px; background: linear-gradient(135deg, #1e293b, #0f172a); border-bottom: 3px solid #38bdf8; border-radius: 12px; margin-bottom: 30px; }
+        h1 { color: #38bdf8; font-size: 2.4rem; margin-bottom: 8px; }
+        p.subtitle { color: #94a3b8; font-size: 1.1rem; }
+        
+        .card { background-color: #1e293b; border-radius: 12px; padding: 25px; margin-bottom: 25px; border-left: 5px solid #38bdf8; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .card h2 { color: #38bdf8; margin-bottom: 12px; font-size: 1.6rem; border-bottom: 1px solid #334155; padding-bottom: 8px; }
+        .card h3 { color: #60a5fa; margin: 18px 0 8px 0; font-size: 1.25rem; }
+        p { color: #e2e8f0; margin-bottom: 12px; }
+        ul { margin-left: 20px; margin-bottom: 15px; color: #cbd5e1; }
+        li { margin-bottom: 8px; }
+        
+        footer { text-align: center; margin-top: 40px; color: #64748b; font-size: 0.95rem; border-top: 1px solid #334155; padding-top: 20px; }
     </style>
 </head>
 <body>
+
 <div class="container">
-    <h1>HanTechPulse Electronics Lab</h1>
+
+    <!-- Language Switcher -->
     <div class="switcher">
         <button onclick="setLang('am')">አማርኛ</button>
         <button onclick="setLang('en')">English</button>
     </div>
 
+    <!-- Header -->
+    <header>
+        <div class="lang-am">
+            <h1>HanTechPulse</h1>
+            <p class="subtitle">የኤሌክትሮኒክስ ትምህርት እና የሃርድዌር ፍተሻ ማዕከል</p>
+        </div>
+        <div class="lang-en">
+            <h1>HanTechPulse</h1>
+            <p class="subtitle">Electronics Education & Hardware Testing Hub</p>
+        </div>
+    </header>
+
     <!-- 1. Capacitor -->
     <div class="card">
         <div class="lang-am">
             <h2>1. ካፓሲተር (Capacitor)</h2>
-            <p>ካፓሲተር ኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ አከማችቶ የሚይዝ ኮምፖነንት ነው። በዋናነት ቮልቴጅን ለማረጋጋት (Filtering) እና ለተለያዩ የኤሌክትሮኒክስ ሰርኪዩቶች መረጋጋት ያገለግላል።</p>
-            <h3>መፈተሻ (Testing):</h3>
-            <ul><li>ሁልጊዜ ከመለካትዎ በፊት ካፓሲተሩን Discharge (የያዘውን ኤሌክትሪክ ማውጣት) ያድርጉ።</li><li>የመልቲሜትር መለኪያውን ወደ Capacitance (Farad) ቀይረው መለካት።</li></ul>
+            <p>ካፓሲተር የኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ (Electrostatic field) መልክ አከማችቶ የሚይዝ እና እንደ አስፈላጊነቱ ፈጥኖ የሚለቅ የኤሌክትሮኒክስ መለኪያ ነው። በሰርኪዩት ውስጥ ቮልቴጅን ለማለስለስ (Filtering) እና ጫጫታን (Noise) ለማስወገድ ያገለግላል።</p>
+            <h3>ዋና ዋና አይነቶች፦</h3>
+            <ul>
+                <li><strong>Electrolytic Capacitor:</strong> አወንታዊ (+) እና አሉታዊ (-) ፖላሪቲ ያለው ሲሆን በፓወር ሰፕላይ ሰርኪዩቶች ላይ ይሰራል፤ ሲሰካ አቅጣጫ መሳሳት የለበትም።</li>
+                <li><strong>Ceramic Capacitor:</strong> ፖላሪቲ የሌለው፣ አነስተኛ መጠን ያለው እና ለከፍተኛ ፍሪኩዌንሲ ፍልሰት የሚያገለግል ነው።</li>
+            </ul>
+            <h3>በመልቲሜትር መለኪያ መንገድ፦</h3>
+            <ul>
+                <li>መልቲሜትሩን ወደ <strong>Capacitance (Farad/F)</strong> ሞድ አስተካክል።</li>
+                <li>ከመለካትህ በፊት የካፓሲተሩን ሁለት እግሮች በማጫረስ (Discharge) የያዘውን ኤሌክትሪክ አውጣ።</li>
+                <li>የመልቲሜትሩን ፕሮቦች ከእግሮቹ ጋር አገናኝ፤ በስክሪኑ ላይ የሚመጣውን ዋጋ (uF/nF) አካሉ ላይ ከተጻፈው ጋር አወዳድር።</li>
+            </ul>
         </div>
         <div class="lang-en">
             <h2>1. Capacitor</h2>
-            <p>A capacitor is a component that stores electrical energy in an electrostatic field. It is mainly used for filtering voltage and ensuring circuit stability.</p>
-            <h3>Testing:</h3>
-            <ul><li>Always discharge the capacitor before testing.</li><li>Set the multimeter to Capacitance (Farad) mode to verify its value.</li></ul>
+            <p>A capacitor is a passive electronic component that stores electrical energy in an electrostatic field and releases it when needed. It is primarily used for filtering voltage fluctuations and removing noise in circuits.</p>
+            <h3>Main Types:</h3>
+            <ul>
+                <li><strong>Electrolytic Capacitor:</strong> Polarized (+ and -), commonly used in power supply circuits. Polarity must be strictly observed.</li>
+                <li><strong>Ceramic Capacitor:</strong> Non-polarized, compact, and ideal for high-frequency applications.</li>
+            </ul>
+            <h3>How to Test with a Multimeter:</h3>
+            <ul>
+                <li>Set the multimeter to <strong>Capacitance (Farad/F)</strong> mode.</li>
+                <li>Discharge the capacitor completely by shorting its leads prior to testing.</li>
+                <li>Connect the probes to the leads and compare the measured value with the rating printed on the body.</li>
+            </ul>
         </div>
     </div>
 
@@ -47,15 +89,35 @@
     <div class="card">
         <div class="lang-am">
             <h2>2. ዳዮድ (Diode)</h2>
-            <p>ዳዮድ የኤሌክትሪክ ፍሰትን ወደ አንድ አቅጣጫ ብቻ የሚያሳልፍ ሴሚኮንዳክተር ነው። ኤሲ (AC) ቮልቴጅን ወደ ዲሲ (DC) ለመቀየር (Rectifier) ወሳኝ ሚና አለው።</p>
-            <h3>መፈተሻ (Testing):</h3>
-            <ul><li>መልቲሜትሩን ወደ Diode mode (▶|) ያስተካክሉ።</li><li>ፕሮቡን ሲያገናኙ በ Forward bias (0.5V-0.7V) ያሳያል፤ ሲቀያይሩት ግን ምንም ንባብ (OL) ሊሰጥ አይገባም።</li></ul>
+            <p>ዳዮድ የኤሌክትሪክ ፍሰት (Current) ወደ አንድ አቅጣጫ ብቻ እንዲያልፍ የሚፈቅድ እና ወደ ተቃራኒው አቅጣጫ የሚመጣውን የሚግት ኮምፖነንት ነው። ኤሲ (AC) ቮልቴጅን ወደ ዲሲ (DC) ለመቀየር (Rectification) ያገለግላል።</p>
+            <h3>ዋና ዋና አይነቶች፦</h3>
+            <ul>
+                <li><strong>Rectifier Diode (1N4007):</strong> ኤሲ ቮልቴጅን ወደ ዲሲ ለመቀየር የሚያገለግል።</li>
+                <li><strong>Zener Diode:</strong> ቮልቴጅን በተወሰነ መጠን ረግቶ እንዲቆይ የሚያደርግ።</li>
+                <li><strong>LED (Light Emitting Diode):</strong> ኤሌክትሪክ ሲያልፍበት ብርሃን የሚሰጥ።</li>
+            </ul>
+            <h3>በመልቲሜትር መለኪያ መንገድ፦</h3>
+            <ul>
+                <li>መልቲሜትሩን ወደ <strong>Diode Mode (▶|)</strong> ቀይር።</li>
+                <li>ቀዩን ፕሮብ ከአኖድ (+)፣ ጥቁሩን ከካቶድ (-) ጋር አያይዝ፤ በስክሪኑ ላይ ከ0.5V - 0.7V ያሳያል (Forward Bias)።</li>
+                <li>ፕሮቦቹን ስትገለብጣቸው ምንም አይነት ንባብ (OL) ማሳየት አለበት (Reverse Bias)።</li>
+            </ul>
         </div>
         <div class="lang-en">
             <h2>2. Diode</h2>
-            <p>A diode is a semiconductor that allows electric current to flow in only one direction. It is crucial for converting AC voltage to DC.</p>
-            <h3>Testing:</h3>
-            <ul><li>Set your multimeter to Diode mode (▶|).</li><li>In forward bias, it should read 0.5V-0.7V. In reverse bias, it should show no reading (OL).</li></ul>
+            <p>A diode is a semiconductor component that allows current to flow in one direction only while blocking it in the reverse direction. It is essential for converting AC voltage to DC (Rectification).</p>
+            <h3>Main Types:</h3>
+            <ul>
+                <li><strong>Rectifier Diode:</strong> Standard diode used for AC to DC conversion.</li>
+                <li><strong>Zener Diode:</strong> Designed to maintain a stable reference voltage.</li>
+                <li><strong>LED:</strong> Emits light when electric current passes through it.</li>
+            </ul>
+            <h3>How to Test with a Multimeter:</h3>
+            <ul>
+                <li>Set the multimeter to <strong>Diode Mode (▶|)</strong>.</li>
+                <li>Connect red probe to Anode (+) and black to Cathode (-); it should read around 0.5V - 0.7V.</li>
+                <li>Reverse the probes; the screen should display "OL".</li>
+            </ul>
         </div>
     </div>
 
@@ -63,15 +125,21 @@
     <div class="card">
         <div class="lang-am">
             <h2>3. ሪዚስተር (Resistor)</h2>
-            <p>ሪዚስተር በሰርኪዩት ውስጥ የሚያልፈውን የኤሌክትሪክ ፍሰት (Current) ለመገደብ ያገለግላል። ለተለያዩ የኤሌክትሮኒክስ ክፍሎች ትክክለኛውን የቮልቴጅ መጠን ለማድረስ ይጠቅማል።</p>
-            <h3>መፈተሻ (Testing):</h3>
-            <ul><li>መልቲሜትሩን ወደ Ohms (Ω) ቀይሩ።</li><li>ሪዚስተሩን ያለበት ሰርኪዩት ላይ ሳያገናኙት የሁለቱን ጫፎች እሴት መለካት።</li></ul>
+            <p>ሪዚስተር በሰርኪዩት ውስጥ የሚያልፈውን የኤሌክትሪክ ፍሰት (Current) ለመገደብ እና ቮልቴጅን ለመክፈል (Voltage Divider) የሚያገለግል ተገብሮ (Passive) ኮምፖነንት ነው።</p>
+            <h3>አነባበብ እና መለኪያ፦</h3>
+            <ul>
+                <li><strong>የቀለም ኮድ (Color Code):</strong> አካሉ ላይ ባሉት ቀለማት አማካኝነት የኦህም (Ω) መጠኑ ይነበባል።</li>
+                <li><strong>በመልቲሜትር፦</strong> መልቲሜትሩን ወደ <strong>Ohms (Ω)</strong> ቀይረህ የሪዚስተሩን ሁለት ጫፎች ለካ።</li>
+            </ul>
         </div>
         <div class="lang-en">
             <h2>3. Resistor</h2>
-            <p>A resistor is used to limit the flow of electric current in a circuit. It ensures that sensitive electronic components receive the correct voltage.</p>
-            <h3>Testing:</h3>
-            <ul><li>Set your multimeter to Ohms (Ω).</li><li>Measure the component across both leads while disconnected from the circuit.</li></ul>
+            <p>A resistor is a passive electrical component that limits the flow of electric current and lowers voltage levels within a circuit.</p>
+            <h3>Reading & Testing:</h3>
+            <ul>
+                <li><strong>Color Code:</strong> Resistance values are represented by colored bands printed on the component body.</li>
+                <li><strong>Multimeter Testing:</strong> Set the multimeter to <strong>Ohms (Ω)</strong> mode and measure across both leads.</li>
+            </ul>
         </div>
     </div>
 
@@ -79,17 +147,103 @@
     <div class="card">
         <div class="lang-am">
             <h2>4. ሞስፌት (MOSFET)</h2>
-            <p>ሞስፌት እንደ ፈጣን ስዊች (Switch) ወይም አምፕሊፋየር የሚያገለግል የትራንዚስተር አይነት ነው። በዲጂታል ሰርኪዩቶች እና በፓወር ሰፕላይ ውስጥ በስፋት ጥቅም ላይ ይውላል።</p>
-            <h3>መፈተሻ (Testing):</h3>
-            <ul><li>Gate, Drain እና Source እግሮችን ለይቶ መለየት።</li><li>በDrain እና Source መካከል ያለውን የBody diode በመፈተሽ ትክክለኛነቱን ማረጋገጥ።</li></ul>
+            <p>ሞስፌት በከፍተኛ ፍጥነት የኤሌክትሪክ ፍሰትን ለመቆጣጠር፣ እንደ ስዊች (Switch) እና አምፕሊፋየር ሆኖ የሚያገለግል ወሳኝ ትራንዚስተር ነው።</p>
+            <h3>ሶስቱ እግሮች (Terminals)፦</h3>
+            <ul>
+                <li><strong>Gate (G):</strong> ስዊቹን የመክፈቻ/መዝጊያ መቆጣጠሪያ።</li>
+                <li><strong>Drain (D):</strong> ኤሌክትሪክ የሚገባበት/ሚወጣበት ዋና መስመር።</li>
+                <li><strong>Source (S):</strong> ኤሌክትሪክ የሚወጣበት/ሚገባበት መስመር።</li>
+            </ul>
+            <h3>በመልቲሜትር መለኪያ መንገድ፦</h3>
+            <ul>
+                <li>መልቲሜትሩን ወደ <strong>Diode mode</strong> አድርገህ በDrain እና Source መካከል ያለውን የውስጥ ዳዮድ ለካ (0.4V - 0.6V ያሳያል)።</li>
+                <li>በGate እና Drain ወይም በGate እና Source መካከል መለካት የለበትም (OL ማሳየት አለበት)።</li>
+            </ul>
         </div>
         <div class="lang-en">
             <h2>4. MOSFET</h2>
-            <p>A MOSFET is a type of transistor used as a fast electronic switch or amplifier. It is widely used in digital circuits and power supplies.</p>
-            <h3>Testing:</h3>
-            <ul><li>Identify the Gate, Drain, and Source terminals.</li><li>Check the body diode between Drain and Source to verify if it's functioning.</li></ul>
+            <p>A MOSFET is a semiconductor device widely used for switching and amplifying electronic signals in modern electronics circuits.</p>
+            <h3>Three Main Terminals:</h3>
+            <ul>
+                <li><strong>Gate (G):</strong> Controls the opening and closing of the channel.</li>
+                <li><strong>Drain (D):</strong> Main current entry/exit terminal.</li>
+                <li><strong>Source (S):</strong> Connected to ground or supply reference.</li>
+            </ul>
+            <h3>How to Test with a Multimeter:</h3>
+            <ul>
+                <li>Set multimeter to <strong>Diode mode</strong> and check between Drain and Source (typically reads 0.4V - 0.6V).</li>
+                <li>Ensure there is no continuity (OL) between Gate-Drain or Gate-Source terminals.</li>
+            </ul>
         </div>
     </div>
+
+    <!-- 5. Detailed AC vs DC Section -->
+    <div class="card">
+        <div class="lang-am">
+            <h2>5. በኤሲ (AC) እና ዲሲ (DC) ኤሌክትሪክ መካከል ያለው ሰፊ ልዩነት</h2>
+            <p>በኤሌክትሮኒክስ እና ኤሌክትሪካል ኢንጂነሪንግ ዓለም ውስጥ የኤሌክትሪክ ፍሰት በሁለት ዋና ዋና ክፍሎች ይከፈላል። እነዚህም <strong>AC (Alternating Current)</strong> እና <strong>DC (Direct Current)</strong> ናቸው። ማንኛውንም የኤሌክትሮኒክስ ሰርኪዩት ለመንደፍ ወይም ለመጠገን የእነዚህን ሁለት የኃይል ዓይነቶች ባህሪ በጥልቀት መረዳት አስፈላጊ ነው።</p>
+            
+            <h3>ሀ. ኤሲ (Alternating Current - ተለዋዋጭ ጅረት)</h3>
+            <p>ኤሲ ኤሌክትሪክ ማለት የኤሌክትሮኖች ፍሰት አቅጣጫውን እና የመጠኑን መጠን (Magnitude) በየጊዜው የሚያቀያይርበት የኤሌክትሪክ ዓይነት ነው። ኤሌክትሮኖቹ ወደ ፊት እና ወደ ኋላ እየተወዛወዙ ይጓዛሉ።</p>
+            <ul>
+                <li><strong>የሞገድ ቅርፅ (Waveform):</strong> በዋናነት በሳይን ሞገድ (Sine Wave) መልክ ይጓዛል፤ ነገር ግን ስኩዌር (Square Wave) ወይም ትሪያንግል (Triangle Wave) ሊሆን ይችላል።</li>
+                <li><strong>ፍሪኩዌንሲ (Frequency):</strong> በሰከንድ ውስጥ የሞገዱ አቅጣጫ የሚቀየርበት ብዛት በፍሪኩዌንሲ (Hertz / Hz) ይለካል። ለምሳሌ በኢትዮጵያ ያለው የቤት ውስጥ ኤሌክትሪክ ፍሪኩዌንሲ 50Hz ነው (በሰከንድ 50 ጊዜ አቅጣጫውን ይቀይራል)።</li>
+                <li><strong>የመነሻ ምንጭ:</strong> በኃይል ማመንጫ ጣቢያዎች (ውሃ፣ ንፋስ፣ እንፋሎት) በሚገኙ ትላልቅ ተሽከርካሪ ጄኔሬተሮች (Alternators) ይመረታል።</li>
+                <li><strong>ዋና ጥቅም:</strong> ኤሲ ኤሌክትሪክ በከፍተኛ ቮልቴጅ እና አነስተኛ የኃይል ብክነት ወደ ሩቅ ቦታዎች (ከኃይል ማመንጫ ወደ ከተሞች) በቀላሉ ለማስተላለፍ በጣም ተመራጭ ነው።</li>
+            </ul>
+
+            <h3>ለ. ዲሲ (Direct Current - ቀጥተኛ ጅረት)</h3>
+            <p>ዲሲ ኤሌክትሪክ ማለት የኤሌክትሮኖች ፍሰት ሁልጊዜ በአንድ አቅጣጫ ብቻ በቀጥታ መስመር የሚጓዝበት የኤሌክትሪክ ዓይነት ነው። የቮልቴጅ መጠኑ በጊዜ ሂደት አይቀያየርም (Constant) ነው።</p>
+            <ul>
+                <li><strong>ባህሪ:</strong> ፖላሪቲ አለው፤ ማለትም ሁልጊዜ አወንታዊ (+) እና አሉታዊ (-) ጫፎች አሉት። ኤሌክትሮኖች ከአሉታዊ ጫፍ ተነስተው ወደ አወንታዊው ይጓዛሉ።</li>
+                <li><strong>የመነሻ ምንጭ:</strong> ባትሪዎች (Batteries)፣ የፀሐይ ብርሃን ኃይል (Solar Cells)፣ እና ኤሲን ወደ ዲሲ የሚቀይሩ አዳፕተሮች (Adapters/Power Supplies) ናቸው።</li>
+                <li><strong>ዋና ጥቅም:</strong> አብዛኛዎቹ የዲጂታል ኤሌክትሮኒክስ እቃዎች (እንደ ስልኮች፣ ላፕቶፖች፣ ማይክሮኮንትሮለሮች፣ ቲቪዎች) በጥቃቅን ሴሚኮንዳክተር ትራንዚስተሮች ስለሚሰሩ የተረጋጋ ዲሲ ኤሌክትሪክ ይፈልጋሉ።</li>
+            </ul>
+
+            <h3>ሐ. ኤሲን ወደ ዲሲ የመቀየር ሂደት (Rectification)</h3>
+            <p>ከግድግዳ የኤሌክትሪክ ሶኬት የሚመጣው ኤሲ (220V) ሲሆን ስልካችን ወይም ላፕቶፓችን የሚጠቀመው ግን አነስተኛ ዲሲ (ለምሳሌ 5V ወይም 19V) ነው። ይህንን ለመቀየር የፓወር ሰፕላይ (Charger) ሰርኪዩት የሚከተሉትን ክፍሎች ይጠቀማል፦</p>
+            <ul>
+                <li><strong>ትራንስፎርመር (Transformer):</strong> ከፍተኛውን ኤሲ ቮልቴጅ ወደ ዝቅተኛ ኤሲ ቮልቴጅ ያወርዳል።</li>
+                <li><strong>Rectifier Diodes (ዳዮዶች):</strong> ኤሲ ኤሌክትሪኩን ወደ አንድ አቅጣጫ ብቻ እንዲፈስ በማድረግ ወደ ዲሲ ይለውጡታል።</li>
+                <li><strong>Capacitor (ካፓሲተር):</strong> የተቆራረጠውን ዲሲ ቮልቴጅ በማለስለስ (Filtering) ለስላሳ እና የተረጋጋ ዲሲ ያደርገዋል።</li>
+            </ul>
+        </div>
+
+        <div class="lang-en">
+            <h2>5. Comprehensive Guide: AC vs DC Electricity</h2>
+            <p>In the world of electronics and electrical engineering, electrical current is divided into two fundamental types: <strong>AC (Alternating Current)</strong> and <strong>DC (Direct Current)</strong>. Understanding their fundamental behaviors is essential for designing and troubleshooting electronic circuits.</p>
+            
+            <h3>A. AC (Alternating Current)</h3>
+            <p>Alternating Current is an electric current in which the flow of electric charge periodically reverses direction and continuously changes its magnitude over time.</p>
+            <ul>
+                <li><strong>Waveform:</strong> Typically follows a Sine Wave pattern, but can also exist as Square or Triangle waves in signal generation.</li>
+                <li><strong>Frequency:</strong> Measured in Hertz (Hz), indicating how many times the current direction cycles per second (e.g., 50Hz in standard power grids).</li>
+                <li><strong>Sources:</strong> Generated by rotating alternators in hydroelectric, wind, or thermal power plants.</li>
+                <li><strong>Primary Advantage:</strong> Highly efficient for long-distance power transmission with minimal power loss using transformers.</li>
+            </ul>
+
+            <h3>B. DC (Direct Current)</h3>
+            <p>Direct Current is the unidirectional flow of electric charge. The voltage level remains constant over time and flows continuously in a single direction.</p>
+            <ul>
+                <li><strong>Characteristics:</strong> Has fixed polarity with distinct Positive (+) and Negative (-) terminals.</li>
+                <li><strong>Sources:</strong> Batteries, solar panels, and AC-to-DC power adapters.</li>
+                <li><strong>Primary Advantage:</strong> Essential for sensitive digital electronics, microprocessors, and integrated circuits that require stable, non-fluctuating voltage.</li>
+            </ul>
+
+            <h3>C. Conversion Process (AC to DC Rectification)</h3>
+            <p>To convert high-voltage AC from wall outlets into safe DC for electronic devices, power supplies use a multi-stage process:</p>
+            <ul>
+                <li><strong>Transformer:</strong> Steps down high AC voltage to a lower AC level.</li>
+                <li><strong>Diode Bridge:</strong> Converts bidirectional AC into unidirectional pulsating DC.</li>
+                <li><strong>Filter Capacitor:</strong> Smooths out the voltage ripples to deliver steady DC power.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 HanTechPulse | Developed by Bereket</p>
+    </footer>
+
 </div>
 
 <script>
@@ -103,5 +257,6 @@
         }
     }
 </script>
+
 </body>
 </html>
