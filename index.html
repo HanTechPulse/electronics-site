@@ -9,7 +9,7 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #0f172a; color: #f8fafc; line-height: 1.8; padding: 20px; }
-        .container { max-width: 900px; margin: 0 auto; }
+        .container { max-width: 950px; margin: 0 auto; }
         
         .switcher { text-align: center; margin-bottom: 25px; }
         .switcher button { background: #38bdf8; color: #0f172a; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 6px; font-weight: bold; font-size: 1rem; transition: 0.3s; }
@@ -17,28 +17,28 @@
         
         .lang-en { display: none; }
         
-        header { text-align: center; padding: 40px 15px; background: linear-gradient(135deg, #1e293b, #0f172a); border-bottom: 3px solid #38bdf8; border-radius: 12px; margin-bottom: 30px; }
-        h1 { color: #38bdf8; font-size: 2.6rem; margin-bottom: 8px; }
-        p.subtitle { color: #94a3b8; font-size: 1.15rem; }
+        header { text-align: center; padding: 45px 15px; background: linear-gradient(135deg, #1e293b, #0f172a); border-bottom: 3px solid #38bdf8; border-radius: 12px; margin-bottom: 30px; }
+        h1 { color: #38bdf8; font-size: 2.8rem; margin-bottom: 8px; }
+        p.subtitle { color: #94a3b8; font-size: 1.2rem; }
         
-        .card { background-color: #1e293b; border-radius: 12px; padding: 30px; margin-bottom: 30px; border-left: 6px solid #38bdf8; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
-        .card h2 { color: #38bdf8; margin-bottom: 15px; font-size: 1.8rem; border-bottom: 1px solid #334155; padding-bottom: 10px; }
-        .card h3 { color: #60a5fa; margin: 20px 0 10px 0; font-size: 1.3rem; }
-        p { color: #e2e8f0; margin-bottom: 15px; text-align: justify; }
-        ul { margin-left: 20px; margin-bottom: 15px; color: #cbd5e1; }
-        li { margin-bottom: 10px; }
+        .card { background-color: #1e293b; border-radius: 12px; padding: 35px; margin-bottom: 35px; border-left: 6px solid #38bdf8; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+        .card h2 { color: #38bdf8; margin-bottom: 18px; font-size: 1.9rem; border-bottom: 1px solid #334155; padding-bottom: 12px; }
+        .card h3 { color: #60a5fa; margin: 25px 0 12px 0; font-size: 1.4rem; }
+        p { color: #e2e8f0; margin-bottom: 18px; text-align: justify; }
+        ul { margin-left: 20px; margin-bottom: 20px; color: #cbd5e1; }
+        li { margin-bottom: 12px; }
 
         /* Ads Notice Banner */
         .ads-notice { background: linear-gradient(135deg, #0284c7, #0ea5e9); padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; margin-bottom: 30px; color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
 
         /* Calculators */
-        .calc-box { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
-        .calc-group { display: flex; flex-direction: column; gap: 5px; }
-        .calc-group label { color: #cbd5e1; font-weight: bold; }
-        .calc-group select, .calc-group input { padding: 12px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: #f8fafc; font-size: 1rem; width: 100%; }
-        .result-box { margin-top: 15px; padding: 15px; background: #0f172a; border-radius: 8px; text-align: center; border: 1px solid #38bdf8; }
-        .result-box span { color: #38bdf8; font-size: 1.6rem; font-weight: bold; }
-        .calc-btn { background: #38bdf8; border: none; padding: 12px 20px; color: #0f172a; font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 10px; width: 100%; font-size: 1.1rem; }
+        .calc-box { display: flex; flex-direction: column; gap: 18px; margin-top: 20px; }
+        .calc-group { display: flex; flex-direction: column; gap: 6px; }
+        .calc-group label { color: #cbd5e1; font-weight: bold; font-size: 1.05rem; }
+        .calc-group select, .calc-group input { padding: 12px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: #f8fafc; font-size: 1.05rem; width: 100%; }
+        .result-box { margin-top: 15px; padding: 18px; background: #0f172a; border-radius: 8px; text-align: center; border: 1px solid #38bdf8; }
+        .result-box span { color: #38bdf8; font-size: 1.7rem; font-weight: bold; }
+        .calc-btn { background: #38bdf8; border: none; padding: 14px 20px; color: #0f172a; font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 10px; width: 100%; font-size: 1.15rem; }
         .calc-btn:hover { background: #0284c7; color: white; }
 
         /* Contact Section */
@@ -63,34 +63,34 @@
     <header>
         <div class="lang-am">
             <h1>HanTechPulse</h1>
-            <p class="subtitle">የኤሌክትሮኒክስ ትምህርት፣ የመለኪያ መሳሪያዎች እና የሃርድዌር ላብራቶሪ</p>
+            <p class="subtitle">የኤሌክትሮኒክስ ትምህርት፣ የመለኪያ መሳሪያዎች እና የሃርድዌር ላብራቶሪ ማዕከል</p>
         </div>
         <div class="lang-en">
             <h1>HanTechPulse</h1>
-            <p class="subtitle">Electronics Education, Interactive Tools & Hardware Lab</p>
+            <p class="subtitle">Advanced Electronics Education, Interactive Tools & Hardware Lab</p>
         </div>
     </header>
 
     <!-- Ads Notice -->
     <div class="ads-notice">
-        <div class="lang-am">📢 ይህ ድረ-ገጽ ለማስታወቂያዎች እና ለንግድ ትብብር ክፍት ነው።</div>
+        <div class="lang-am">📢 ይህ ድረ-ገጽ ለማስታወቂያዎች፣ ለቴክኖሎጂ ትብብሮች እና ለንግድ አጋርነት ክፍት ነው።</div>
         <div class="lang-en">📢 This website is open for advertisements and business collaborations.</div>
     </div>
 
     <!-- Resistor Color Code Calculator -->
     <div class="card" style="border-left-color: #f59e0b;">
         <div class="lang-am">
-            <h2>🧮 የሪዚስተር ከለር ኮድ ካልኩሌተር (4-Band)</h2>
-            <p>በሪዚስተሩ አካል ላይ ያሉትን አራቱን ቀለማት በመምረጥ የኦህም (Ω) መጠኑን እና የልዩነት (Tolerance) መጠኑን በቀላሉ ያሰሉ፦</p>
+            <h2>🧮 የሪዚስተር ከለር ኮድ ካልኩሌተር (4-Band Resistor Calculator)</h2>
+            <p>በኤሌክትሮኒክስ ሰርኪዩት ዲዛይን ውስጥ ሪዚስተሮች ወሳኝ ሚና አላቸው። በእጅዎ ላይ ያለውን የካርቦን ሪዚስተር አራት የቀለም መስመሮች (Bands) በመምረጥ ትክክለኛውን የመቋቋም አቅም በኦህም (Ω) እና የብቃት ልዩነት (Tolerance) መጠን በዚህ መሳሪያ በቀላሉ ማወቅ ይችላሉ፦</p>
         </div>
         <div class="lang-en">
             <h2>🧮 Resistor Color Code Calculator (4-Band)</h2>
-            <p>Select the 4 color bands on your resistor to calculate its resistance value and tolerance:</p>
+            <p>Calculate the exact resistance value in Ohms and tolerance percentage by selecting the 4 color bands on your carbon-film or metal-film resistor:</p>
         </div>
 
         <div class="calc-box">
             <div class="calc-group">
-                <label>1st Band (መጀመሪያ ቀለም):</label>
+                <label>1st Band (አንደኛ ቀለም - የመጀመሪያው አሃዝ):</label>
                 <select id="band1" onchange="calculateResistor()">
                     <option value="1">Brown (1)</option>
                     <option value="2">Red (2)</option>
@@ -104,7 +104,7 @@
                 </select>
             </div>
             <div class="calc-group">
-                <label>2nd Band (ሁለተኛ ቀለም):</label>
+                <label>2nd Band (ሁለተኛ ቀለም - ሁለተኛው አሃዝ):</label>
                 <select id="band2" onchange="calculateResistor()">
                     <option value="0">Black (0)</option>
                     <option value="1">Brown (1)</option>
@@ -119,7 +119,7 @@
                 </select>
             </div>
             <div class="calc-group">
-                <label>Multiplier (የማበዛት ቀለም):</label>
+                <label>Multiplier (ሶስተኛ ቀለም - ማባዣ):</label>
                 <select id="band3" onchange="calculateResistor()">
                     <option value="1">Black (x1 Ω)</option>
                     <option value="10">Brown (x10 Ω)</option>
@@ -133,7 +133,7 @@
                 </select>
             </div>
             <div class="calc-group">
-                <label>Tolerance (የልዩነት መጠን):</label>
+                <label>Tolerance (አራተኛ ቀለም - የጥራት ልዩነት):</label>
                 <select id="band4" onchange="calculateResistor()">
                     <option value="±5%">Gold (±5%)</option>
                     <option value="±10%">Silver (±10%)</option>
@@ -142,8 +142,8 @@
                 </select>
             </div>
             <div class="result-box">
-                <p class="lang-am">የተሰላው ዋጋ፦ <span id="resValue">100 Ω ±5%</span></p>
-                <p class="lang-en">Calculated Value: <span id="resValueEn">100 Ω ±5%</span></p>
+                <p class="lang-am">የተሰላው የሪዚስታንስ ዋጋ፦ <span id="resValue">100 Ω ±5%</span></p>
+                <p class="lang-en">Calculated Resistance Value: <span id="resValueEn">100 Ω ±5%</span></p>
             </div>
         </div>
     </div>
@@ -152,30 +152,30 @@
     <div class="card" style="border-left-color: #10b981;">
         <div class="lang-am">
             <h2>⚡ የኦም ህግ ካልኩሌተር (Ohm's Law Calculator)</h2>
-            <p>የቮልቴጅ (Volts - V) እና የከረንት (Amps - I) እሴቶችን በማስገባት በሰርኪዩቱ ውስጥ ያለውን የሪዚስታንስ (Resistance - R) መጠን በኦህም በቀላሉ ያሰሉ።</p>
+            <p>የኦም ህግ (Ohm's Law) በኤሌክትሪክ እና ኤሌክትሮኒክስ ምሰሶ ከሆኑት መሰረታዊ ህጎች አንዱ ነው። በቮልቴጅ (Volts - V) እና በከረንት (Amps - I) መካከል ያለውን ግንኙነት በማስላት የሰርኪዩቱን ሪዚስታንስ ($R = V / I$) በቀላሉ ለማወቅ ይህንን ማስያ ይጠቀሙ፦</p>
         </div>
         <div class="lang-en">
             <h2>⚡ Ohm's Law Calculator</h2>
-            <p>Calculate circuit resistance by entering Voltage and Current values based on Ohm's Law formula ($R = V / I$).</p>
+            <p>Ohm's Law is fundamental to electrical engineering. Calculate circuit resistance instantly by entering Voltage and Current values based on the formula $R = V / I$:</p>
         </div>
         <div class="calc-box">
             <div class="calc-group">
                 <label class="lang-am">ቮልቴጅ (Volts - V):</label>
                 <label class="lang-en">Voltage (Volts - V):</label>
-                <input type="number" id="volts" placeholder="ဥပማ፦ 12">
+                <input type="number" id="volts" placeholder="ለምሳሌ፦ 12">
             </div>
             <div class="calc-group">
                 <label class="lang-am">ከረንት (Amps - I):</label>
                 <label class="lang-en">Current (Amps - I):</label>
-                <input type="number" id="amps" placeholder="ဥပማ፦ 0.5">
+                <input type="number" id="amps" placeholder="ለምሳሌ፦ 0.5">
             </div>
             <button class="calc-btn" onclick="calculateOhm()">
-                <span class="lang-am">አስላ (Calculate)</span>
-                <span class="lang-en">Calculate</span>
+                <span class="lang-am">አስላ (Calculate Resistance)</span>
+                <span class="lang-en">Calculate Resistance</span>
             </button>
             <div class="result-box">
-                <p class="lang-am">ውጤት፦ <span id="ohmResult">0 Ω</span></p>
-                <p class="lang-en">Result: <span id="ohmResultEn">0 Ω</span></p>
+                <p class="lang-am">የተሰላው የኦህም መጠን ውጤት፦ <span id="ohmResult">0 Ω</span></p>
+                <p class="lang-en">Calculated Resistance Result: <span id="ohmResultEn">0 Ω</span></p>
             </div>
         </div>
     </div>
@@ -183,49 +183,49 @@
     <!-- 1. AC and DC -->
     <div class="card">
         <div class="lang-am">
-            <h2>1. የኤሲ እና ዲሲ ጅረቶች ጥልቅ ትንተና (AC & DC Current Analysis)</h2>
-            <p>በኤሌክትሮኒክስ እና ኤሌክትሪካል ኢንጂነሪንግ ውስጥ የኤሌክትሪክ ኃይል በሁለት ዋና ዋና  corrientes (Forms) ይከፈላል፤ እነሱም ዲሲ (DC) እና ኤሲ (AC) በመባል ይታወቃሉ። እነዚህን ሁለቱን መረዳት በማንኛውም ሰርኪዩት ዲዛይን እና ሃርድዌር ሙከራ ጊዜ እጅግ ወሳኝ ነው።</p>
+            <h2>1. የኤሲ እና ዲሲ ጅረቶች ጥልቅ እና ሰፊ ትንተና (Comprehensive Analysis of AC & DC Power)</h2>
+            <p>በኤሌክትሪካል እና ኤሌክትሮኒክስ ኢንጂነሪንግ ዓለም ውስጥ የኤሌክትሪክ ኃይል ዝውውር በሁለት ዋና ዋና ቅርጾች ይከፈላል፦ ቀጥተኛ ጅረት (Direct Current - DC) እና ተለዋዋጭ ጅረት (Alternating Current - AC)። እነዚህን ሁለቱን የኃይል  አይነቶች በውል መረዳት ማንኛውንም የኤሌክትሮኒክስ ሃርድዌር ለመንደፍ፣ ለመገንባት እና ችግሮችን ለመፍታት (Troubleshooting) እጅግ ወሳኝ መሰረት ነው።</p>
             
-            <h3>ዲሲ (Direct Current - ዲሲ ጅረት):</h3>
-            <p>ዲሲ ማለት ኤሌክትሪኩ በአንድ አቅጣጫ ብቻ የሚፈስበት የኤሌክትሪክ ኃይል ዝውውር ነው። በዚህ ጊዜ የኤሌክትሮኖች እንቅስቃሴ ከኔጌቲቭ (Negative) ተርሚናል ወደ ፖዘቲቭ (Positive) ተርሚናል በቀጥተኛ መስመር ይጓዛል። እንደ ባትሪዎች፣ ሶላር ፓነሎች፣ እና የተለያዩ የሞባይል ቻርጀር አዳፕተሮች ያሉ መሳሪያዎች ዲሲ ኃይልን ያመነጫሉ ወይም ይጠቀማሉ። በዲሲ ሰርኪዩቶች ውስጥ ቮልቴጅ እና ከረንት ሰዓት እያለፈ ሲሄድ መጠናቸው አይለዋወጥም (Constant ናቸው)።</p>
+            <h3>ቀጥተኛ ጅረት (Direct Current - DC):</h3>
+            <p>ዲሲ ማለት የኤሌክትሪክ ኃይል (ኤሌክትሮኖች) በአንድ አቅጣጫ ብቻ የሚፈስበት የማያወላውል የኃይል ዝውውር ነው። በዚህ ጊዜ የቮልቴጅ እና የከረንት መጠኖች ከጊዜ ወደ ጊዜ ሳይለወጡ (Constant ሆኖ) በቋሚነት ይጓዛሉ። የዲሲ ኃይል ዋና ምንጮች እንደ ሊድ-አሲድ እና ሊቲየም-አየን ባትሪዎች፣ የሶላር ፓነሎች፣ እና የኤሲ ቮልቴጅን አስተካክለው የሚያወጡ የሞባይል ወይም ላፕቶፕ አዳፕተሮች (Power Adapters) ናቸው። በዘመናዊ ማይክሮኮንትሮለሮች፣ አርዱዊኖ (Arduino) ሰርኪዩቶች እና በዲጂታል ኤሌክትሮኒክስ ውስጥ የምንጠቀመው በሙሉ በዲሲ ኃይል ላይ የተመሰረተ ነው።</p>
 
-            <h3>ኤሲ (Alternating Current - ኤሲ ጅረት):</h3>
-            <p>ኤሲ ማለት ደግሞ የኤሌክትሪክ ጅረቱ አቅጣጫውን በየሰከንዱ ውስጥ በበርካታ ͏ጊዜያት (Cycles) በቀያያሪ ሁኔታ የሚፈስበት የኃይል ዓይነት ነው። ለምሳሌ በቤቶቻችን ውስጥ የምናገኘው የኤሌክትሪክ ኃይል ኤሲ ሲሆን፣ አቅጣጫውን በሰከንድ ውስጥ 50 ወይም 60 ጊዜ (Frequency) ይቀያይራል። ኤሲ ኃይል ከኃይል ማመንጫ ጣቢያዎች ረጅም ርቀት -ለረጅም ርቀት ማስተላለፍ እጅግ ͏ስለሚመች በብሔራዊ ግሪዶች (Grids) ውስጥ በስፋት ጥቅም ላይ ይውላል።</p>
+            <h3>ተለዋዋጭ ጅረት (Alternating Current - AC):</h3>
+            <p>ኤሲ ማለት ደግሞ የኤሌክትሪክ ጅረቱ አቅጣጫ እና መጠኑ በየሰከንዱ ውስጥ በበርካታ ͏ጊዜያት (Cycles) በየቋሚው የሚቀያየርበት የኃይል ዝውውር ነው። ለምሳሌ በቤቶቻችን እና በኢንዱስትሪዎች ውስጥ የምንጠቀመው የኤሌክትሪክ ኃይል ኤሲ ሲሆን፣ አቅጣጫውን በሰከንድ ውስጥ 50 ጊዜ (በአውሮፓ እና በአፍሪካ - 50Hz) ወይም 60 ጊዜ (በአሜሪካ - 60Hz) ይቀያይራል። ኤሲ ኃይል ከኃይል ማመንጫ ጣቢያዎች (Hydroelectric Power Plants) ተነስቶ እጅግ በጣም ረጅም ርቀቶችን ያለ ብዙ የኃይል ብክነት እንዲጓዝ ያስችለዋል፤ ምክንያቱም ትራንስፎርመሮችን በመጠቀም ቮልቴጁን በቀላሉ ከፍና ዝቅ ማድረግ ስለሚቻል ነው።</p>
         </div>
         <div class="lang-en">
-            <h2>1. AC & DC Current Comprehensive Analysis</h2>
-            <p>Electrical power in electronics and electrical engineering fundamentally operates in two forms: Direct Current (DC) and Alternating Current (AC). Understanding both is crucial for hardware design and troubleshooting.</p>
+            <h2>1. Comprehensive Analysis of AC & DC Power</h2>
+            <p>Electrical power distribution in electrical engineering fundamentally operates in two modes: Direct Current (DC) and Alternating Current (AC). A profound understanding of both is essential for designing circuits, testing hardware components, and troubleshooting electronic systems effectively.</p>
             
             <h3>Direct Current (DC):</h3>
-            <p>In DC, electric charge flows in only one constant direction. Electrons move steadily from the negative terminal to the positive terminal. Common sources include batteries, solar panels, and DC power adapters. DC voltage and current remain constant over time.</p>
+            <p>In a Direct Current system, electric charge (electrons) flows in one constant direction only. Voltage and current levels remain steady and do not change periodically over time. Primary sources of DC include batteries (lithium-ion, lead-acid), photovoltaic solar panels, and rectified DC power adapters. Modern microcontrollers, Arduino boards, and digital logic circuits rely entirely on stable DC power supplies.</p>
 
             <h3>Alternating Current (AC):</h3>
-            <p>In AC, the flow of electric charge periodically reverses direction. Household electricity is typically AC, cycling at frequencies of 50Hz or 60Hz. AC is predominantly used for power transmission over long distances from generation plants to homes because it can be easily stepped up and down using transformers.</p>
+            <p>Alternating Current is characterized by the periodic reversal of current direction and magnitude. Household and industrial electricity is standard AC, typically cycling at frequencies of 50Hz or 60Hz. AC power is uniquely advantageous for long-distance electrical transmission from massive generation plants because voltage levels can be effortlessly stepped up or down using transformers, minimizing energy losses.</p>
         </div>
     </div>
 
     <!-- 2. Diode -->
     <div class="card">
         <div class="lang-am">
-            <h2>2. ዳዮድ (Diode) እና አሰራሩ</h2>
-            <p>ዳዮድ ሁለት እግሮች (Anode እና Cathode) ያሉት ሴሚኮንዳክተር (Semiconductor) ኤሌክትሮኒክ አካል ሲሆን፤ ዋና ተግባሩም ኤሌክትሪክ በአንድ አቅጣጫ ብቻ እንዲያልፍ ፈቅዶ በተቃራኒ አቅጣጫ የሚመጣውን ጅረት ሙሉ በሙሉ መዝጋት (Blocking) ነው። ይህ ባህሪው ኤሌክትሪኩን ከ AC ወደ DC ለመቀየር (Rectification)፣ ሰርኪዩቶችን ከ የተሳሳተ የቮልቴጅ ዝውውር (Reverse Polarity Protection) ለመከላከል እና ሲግናሎችን ለመለየት ያገለግላል።</p>
+            <h2>2. የዲዮድ አሰራር መርህ እና በመልቲሜትር የመፈተሻ ዘዴዎች (Diode Fundamentals & Testing)</h2>
+            <p>ዲዮድ ሁለት ተርሚናሎች (አኖድ - Anode እና ካቶድ - Cathode) ያሉት ሴሚኮንዳክተር (Semiconductor) ኤሌክትሮኒክ አካል ነው። ዋናው እና ልዩ መለያ ባህሪውም ኤሌክትሪክ በአንድ አቅጣጫ ብቻ እንዲያልፍ ፈቅዶ፣ በተቃራኒ አቅጣጫ የሚመጣውን ማንኛውንም ጅረት ሙሉ በሙሉ መዝጋት (Blocking) ነው። ይህ ልዩ ባህሪው ሰርኪዩቶችን ከተሳሳተ የባትሪ ዝውውር (Reverse Polarity Protection) ለመከላከል፣ የኤሲ ኃይልን ወደ ዲሲ ለመቀየር (Rectification) እና የሬዲዮ ሲግናሎችን ለመለየት (Demodulation) እጅግ አስፈላጊ ያደርገዋል።</p>
             
-            <h3>በመልቲሜትር በመፈተሽ ሁኔታ (Diode Testing):</h3>
+            <h3>በዲጂታል መልቲሜትር ዲዮዱን በብቃት የመፈተሻ ደረጃዎች (Multimeter Testing Steps):</h3>
             <ul>
-                <li><strong>የሙከራ ዝግጅት:</strong> መልቲሜትሩን (Multimeter) ወደ ዲዮድ ምልክት ወይም ሙዚቃዊ ድምፅ ወደሚሰጥበት (Diode/Continuity Mode) ማስተካከያ ዞር አድርገው።</li>
-                <li><strong>ፎርዋርድ ባያስ (Forward Bias):</strong> ቀዩን ፕሮብ (Red Probe) ከአኖድ (Anode - ፖዘቲቭ) ጋር፣ ጥቁሩን ፕሮብ (Black Probe) ከካቶድ (Cathode - ነጭ መስመር ካለው ጫፍ) ጋር ሲያያይዙ መልቲሜትሩ የሲሊኮን ዳዮድ ከሆነ በግምት ከ 0.5V እስከ 0.7V የቮልቴጅ ጠብታ (Voltage Drop) ማሳየት አለበት።</li>
-                <li><strong>ሪቨርስ ባያስ (Reverse Bias):</strong> ፕሮቦቹን ሲቀያይሩት (ቀዩን በካቶድ፣ ጥቁሩን በአኖድ) ምንም አይነት ንባብ ሊሰጥ አይገባም (OL ማለትም Open Loop ማሳየት አለበት)። ይህን ካደረገ ዳዮዱ በጥሩ ጤንነት ላይ ይገኛል ማለት ነው።</li>
+                <li><strong>የመጀመሪያ ዝግጅት:</strong> የዲጂታል መልቲሜትሩን (Digital Multimeter) ማዞሪያ ቁልፍ (Dial) ወደ ዲዮድ ምልክት ወይም ወደ ቀጣይነት መመርመሪያ (Diode/Continuity Mode) አስተካክለው ያስቀምጡ።</li>
+                <li><strong>ፎርዋርድ ባያስ ሙከራ (Forward Bias Test):</strong> ቀዩን ፕሮብ (Red Probe) ከዲዮዱ አኖድ (Anode - ፖዘቲቭ ጫፍ) ጋር፣ ጥቁሩን ፕሮብ (Black Probe) ደግሞ ከካቶድ (Cathode - በነጭ መስመር ምልክት ከተደረገበት ጫፍ) ጋር ያገናኙ። በዚህ ጊዜ ዲዮዱ በጥሩ ጤንነት ላይ ከሆነ ስክሪኑ ላይ ከ 0.5V እስከ 0.7V የሚደርስ የሲሊኮን ቮልቴጅ ጠብታ (Voltage Drop) ንባብ ማሳየት አለበት።</li>
+                <li><strong>ሪቨርስ ባያስ ሙከራ (Reverse Bias Test):</strong> አሁን የመልቲሜትሩን ፕሮቦች ይቀያይሩ (ቀዩን በካቶድ፣ ጥቁሩን በአኖድ)። በዚህ ጊዜ ዲዮዱ ጅረት ማስተላለፍ ስለሌለበት መልቲሜትሩ ምንም ዓይነት ንባብ ሳይሰጥ **'OL' (Open Loop)** ወይም ማለቂያ የሌለው መቋቋም ማሳየት አለበት። ይህንን ካሟላ ዲዮዱ 100% ጤናማ ነው ማለት ነው።</li>
             </ul>
         </div>
         <div class="lang-en">
-            <h2>2. Diode Fundamentals and Testing</h2>
-            <p>A diode is a two-terminal semiconductor component that allows electric current to flow in one direction only while blocking current in the reverse direction. This unidirectional property makes diodes essential for rectification (AC to DC conversion), reverse polarity protection, and signal demodulation.</p>
+            <h2>2. Diode Fundamentals & Multimeter Testing Procedures</h2>
+            <p>A diode is a two-terminal semiconductor device featuring an Anode and a Cathode. Its core function is to permit unidirectional current flow while completely blocking current in the opposite direction. This property is vital for circuit protection against reverse polarity, AC-to-DC rectification, and signal processing.</p>
             
-            <h3>Testing a Diode with a Multimeter:</h3>
+            <h3>Step-by-Step Multimeter Testing Guide:</h3>
             <ul>
-                <li><strong>Setup:</strong> Turn your digital multimeter dial to the Diode test mode symbol.</li>
-                <li><strong>Forward Bias:</strong> Connect the red probe to the Anode and the black probe to the Cathode (marked with a band). A healthy silicon diode should display a forward voltage drop between 0.5V and 0.7V.</li>
-                <li><strong>Reverse Bias:</strong> Swap the probes (red to cathode, black to anode). The multimeter should read 'OL' (Open Loop), indicating no reverse current leakage.</li>
+                <li><strong>Meter Setup:</strong> Turn your digital multimeter rotary switch to the Diode test symbol.</li>
+                <li><strong>Forward Bias Test:</strong> Place the red probe on the Anode and the black probe on the Cathode (identified by the visual band). A healthy silicon diode will display a forward voltage drop reading between 0.5V and 0.7V.</li>
+                <li><strong>Reverse Bias Test:</strong> Swap the probe connections (red to cathode, black to anode). The multimeter should register **'OL' (Open Loop)**, indicating zero reverse leakage current and proper blocking functionality.</li>
             </ul>
         </div>
     </div>
@@ -233,38 +233,38 @@
     <!-- 3. Transformer -->
     <div class="card">
         <div class="lang-am">
-            <h2>3. ትራንስፎርመር (Transformer) አሰራር እና መርህ</h2>
-            <p>ትራንስፎርመር በኤሌክትሮማግኔቲክ ኢንዳክሽን (Electromagnetic Induction) መርህ በመነሳት የኤሌክትሪክ ኃይልን ከአንድ ወረዳ ወደ ሌላ ወረዳ የሚያስተላልፍ የማይንቀሳቀስ (Static) መሳሪያ ነው። ዋናው ጥቅሙም የኤሌክትሪክ ቮልቴጅ መጠን ከፍ (Step-up) ወይም ዝቅ (Step-down) ማድረግ ነው። ትራንስፎርመር የሚሰራው በ AC ኃይል ላይ ብቻ ነው፤ ምክንያቱም የሚለዋወጠው መግነጢሳዊ መስክ (Alternating Magnetic Field) በሁለተኛው ኮይል ላይ ቮልቴጅ እንዲፈጠር (Induce) ስለሚያደርግ ነው።</p>
-            <p>በውስጡም ዋና ዋና የሚባሉት Primary Winding (የመጀመሪያ ደረጃ ጠመዝማዛ) እና Secondary Winding (የሁለተኛ ደረጃ ጠመዝማዛ) በብረት ኮር (Iron Core) ላይ ተጠቅልለው ይገኛሉ። በኤሌክትሮኒክስ ሃርድዌር ስራዎች ውስጥ የቤት ውስጥ 220V AC ቮልቴጅን ወደ ዝቅተኛ 12V ወይም 24V AC በመቀነስ የኃይል አቅርቦት (Power Supply) ለመገንባት በብዛት እንጠቀምበታለን።</p>
+            <h2>3. የትራንስፎርመር አሰራር መርህ እና ቴክኒካዊ ትንተና (Transformer Principles & Operation)</h2>
+            <p>ትራንስፎርመር በኤሌክትሮማግኔቲክ ኢንዳክሽን (Electromagnetic Induction) መርህ በመነሳት የኤሌክትሪክ ኃይልን ከአንድ ወረዳ ወደ ሌላ ወረዳ ያለ ምንም የኤሌክትሪክ ግንኙነት (በመግነጢሳዊ መስክ አማካኝነት) የሚያስተላልፍ የማይንቀሳቀስ (Static) ሃርድዌር መሳሪያ ነው። ዋናው አገልግሎቱም የኤሲ ቮልቴጅ መጠንን ከፍ (Step-up) ወይም ዝቅ (Step-down) ማድረግ ነው። ትራንስፎርመሮች የሚሰሩት በ AC (Alternating Current) ኃይል ላይ ብቻ ነው፤ ምክንያቱም የሚለዋወጠው መግነጢሳዊ መስክ (Alternating Magnetic Field) በሁለተኛው ጠመዝማዛ ኮይል ላይ ቮልቴጅ እንዲፈጠር (Induce) ለማድረግ የግድ አስፈላጊ ነው።</p>
+            <p>በውስጡም ዋና ዋና የሚባሉት ፕራይማሪ ዊንዲንግ (Primary Winding - የግብዓት ጠመዝማዛ) እና ሴኮንደሪ ዊንዲንግ (Secondary Winding - የውጤት ጠመዝማዛ) በላሚኔትድ በብረት ኮር (Laminated Iron Core) ላይ ተጠቅልለው ይገኛሉ። በኤሌክትሮኒክስ ላብራቶሪ ስራዎቻችን ውስጥ የቤት ውስጥ ከፍተኛውን 220V AC ቮልቴጅ ወደ ደህንነቱ የተጠበቀ ዝቅተኛ 12V ወይም 24V AC በመቀነስ የኃይል አቅርቦት ሰርኪዩቶችን (Power Supply Units) ለመገንባት በስፋት እንጠቀምበታለን።</p>
         </div>
         <div class="lang-en">
-            <h2>3. Transformer Operation and Principles</h2>
-            <p>A transformer is a static electrical device that transfers electrical energy between two or more circuits through electromagnetic induction. Its primary function is to step up or step down alternating voltage levels. Transformers operate exclusively on AC power because a changing magnetic field is required to induce voltage in the secondary winding.</p>
-            <p>Constructed with primary and secondary windings wrapped around an iron core, transformers are heavily utilized in power supply units to convert high household AC voltages down to safe, lower levels like 12V or 24V AC.</p>
+            <h2>3. Transformer Principles & Technical Operation</h2>
+            <p>A transformer is a static electromagnetic device that transfers electrical energy between circuits via electromagnetic induction without any physical metallic connection. Its principal purpose is to step up or step down alternating voltage levels. Transformers operate exclusively on AC power because a continuously changing magnetic field is mandatory to induce voltage across the secondary winding.</p>
+            <p>Constructed with primary and secondary coils wound around a laminated iron core, transformers are essential in benchtop electronics for stepping down hazardous household 220V AC mains down to safe, manageable voltages like 12V or 24V AC for power supply construction.</p>
         </div>
     </div>
 
     <!-- 4. Capacitor -->
     <div class="card">
         <div class="lang-am">
-            <h2>4. ካፓሲተር (Capacitor) እና የሥራ ከባቢ</h2>
-            <p>ካፓሲተር የኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ (Electrostatic Field) ውስጥ አከማችቶ የሚይዝ ተገብሮ (Passive) ኤሌክትሮኒክ አካል ነው። በውስጡ በዳይኤሌክትሪክ (Dielectric) ቁሳቁስ የተነጠሉ ሁለት ከንዳክተር ፕሌቶች አሉት። ዋና ዋና አገልግሎቶቹም የቮልቴጅ መዋዠቅን ለማለስለስ (Filtering & Smoothing)፣ ኃይልን በአጭር ሰዓት ውስጥ ለቀው እንዲሰጡ (Energy Discharging) እና በኦስክሌተር ሰርኪዩቶች ውስጥ ድግግሞሾችን ለማስተካከል ያገለግላሉ።</p>
-            <h3>ጠቃሚ ጥንቃቄ፦</h3>
-            <p>ትላልቅ ካፓሲተሮች ሰርኪዩቱ ከጠፋ በኋላም ከፍተኛ መጠን ያለው የኤሌክትሪክ ኃይል ውስጥ ተከማችቶ ሊቆይ ስለሚችል፣ ከመነካታቸው ወይም ከመለካታቸው በፊት ተገቢውን የፍሳሽ (Discharge) ሂደት ማድረግ ለደህንነት እጅግ አስፈላጊ ነው።</p>
+            <h2>4. የካፓሲተር አሰራር፣ ተግባር እና የደህንነት ጥንቃቄዎች (Capacitor Functions & Safety)</h2>
+            <p>ካፓሲተር የኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ (Electrostatic Field) ውስጥ አከማችቶ የሚይዝ እና እንደ አስፈላጊነቱ መልሶ የሚለቀቅ ተገብሮ (Passive) ኤሌክትሮኒክ አካል ነው። በውስጡ በዳይኤሌክትሪክ (Dielectric - መከላከያ) ቁሳቁስ የተነጠሉ ሁለት ከንዳክተር ፕሌቶች አከማችተው ይይዛሉ። በኤሌክትሮኒክስ ሰርኪዩቶች ውስጥ የቮልቴጅ መዋዠቅን ለማለስለስ (Filtering and Smoothing)፣ ድምጽን ለማጣራት (Decoupling)፣ ኃይልን በአጭር ሰዓት ውስጥ ለቀው እንዲሰጡ (Energy Discharging) እና በኦስክሌተር ሰርኪዩቶች ውስጥ ድግግሞሾችን ለማስተካከል (Tuning) እጅግ ወሳኝ ሚና አላቸው።</p>
+            <h3>እጅግ አስፈላጊ የደህንነት ጥንቃቄ (Critical Safety Warning):</h3>
+            <p>ትላልቅ ኤሌክትሮሊቲክ ካፓሲተሮች (Electrolytic Capacitors) ሰርኪዩቱ ከጠፋ እና ከኃይል ምንጭ ከተነጠለ በኋላም እንኳ ከፍተኛ መጠን ያለው የኤሌክትሪክ ኃይል በውስጣቸው ተከማችቶ ሊቆይ ይችላል። ስለዚህ በሃርድዌር ላብራቶሪዎ ውስጥ ከመነካታቸው ወይም ከመለካታቸው በፊት ተገቢውን የፍሳሽ (Discharge resistor) ሂደት በማድረግ ኃይሉን ሙሉ በሙሉ ማስወገድ ለግል ደህንነትዎ እጅግ አሳሳቢ እና አስፈላጊ ነው።</p>
         </div>
         <div class="lang-en">
-            <h2>4. Capacitor Functionality and Safety</h2>
-            <p>A capacitor is a passive electronic component that stores electrical energy in an electrostatic field, consisting of two conductive plates separated by a dielectric material. Key applications include filtering voltage fluctuations, smoothing power supply outputs, energy discharging, and tuning frequencies in oscillator circuits.</p>
-            <h3>Important Safety Note:</h3>
-            <p>Large capacitors can retain lethal electrical charges even after power is disconnected. Always safely discharge capacitors using a proper resistor before handling or testing them on a workbench.</p>
+            <h2>4. Capacitor Functions, Applications & Safety Protocols</h2>
+            <p>A capacitor is a passive electronic component that stores and releases electrical energy within an electrostatic field, consisting of two conductive plates separated by an insulating dielectric material. Key circuit applications include voltage filtering, power supply smoothing, signal decoupling, energy storage, and frequency tuning.</p>
+            <h3>Critical Safety Warning:</h3>
+            <p>Large electrolytic capacitors can retain lethal electrical charges long after power has been disconnected from the circuit. Always safely discharge capacitors using an appropriate bleeder resistor before handling, soldering, or testing them on your workbench.</p>
         </div>
     </div>
 
     <!-- Contact Section -->
     <div class="card contact-box">
         <div class="lang-am">
-            <h2>📞 ጥያቄ እና የንግድ ትብብር (Contact Us)</h2>
-            <p>ለማስታወቂያ፣ ለጥያቄ ወይም ሃሳብ ለመለዋወጥ በሚከተሉት አድራሻዎች ያግኙን፦</p>
+            <h2>📞 ጥያቄ፣ አስተያየት እና የንግድ ትብብር (Contact Us)</h2>
+            <p>ለማስታወቂያ፣ ለቴክኖሎጂ ትብብር ወይም ለጥያቄዎች በሚከተሉት አድራሻዎች በቀላሉ ያግኙን፦</p>
             <p>ኢሜል: <a href="mailto:bereket@hantechpulse.com">bereket@hantechpulse.com</a></p>
             <p>
                 <a href="https://t.me/yourusername" target="_blank">Telegram</a> | 
@@ -273,7 +273,7 @@
         </div>
         <div class="lang-en">
             <h2>📞 Contact & Business Collaborations</h2>
-            <p>For ads, questions, or collaborations, reach out via:</p>
+            <p>For advertisements, technical collaborations, or inquiries, reach out via:</p>
             <p>Email: <a href="mailto:bereket@hantechpulse.com">bereket@hantechpulse.com</a></p>
             <p>
                 <a href="https://t.me/yourusername" target="_blank">Telegram</a> | 
