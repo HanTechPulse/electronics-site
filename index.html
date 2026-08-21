@@ -1,376 +1,6 @@
 <!DOCTYPE html>
 <html lang="am">
 <head>
-<meta name="google-site-verification" content="79yvdOJ-DjhVpKpB8PvFyhJt0F5sT7D4bx-H6P4tz8g" />
-<meta name="google-adsense-account" content="ca-pub-1191920710059249">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HanTechPulse - Electronics Lab</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #0f172a; color: #f8fafc; line-height: 1.7; padding: 20px; }
-        .container { max-width: 850px; margin: 0 auto; }
-        
-        .switcher { text-align: center; margin-bottom: 25px; }
-        .switcher button { background: #38bdf8; color: #0f172a; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 6px; font-weight: bold; font-size: 1rem; transition: 0.3s; }
-        .switcher button:hover { background: #0284c7; color: white; }
-        
-        .lang-en { display: none; }
-        
-        header { text-align: center; padding: 35px 15px; background: linear-gradient(135deg, #1e293b, #0f172a); border-bottom: 3px solid #38bdf8; border-radius: 12px; margin-bottom: 30px; }
-        h1 { color: #38bdf8; font-size: 2.4rem; margin-bottom: 8px; }
-        p.subtitle { color: #94a3b8; font-size: 1.1rem; }
-        
-        .card { background-color: #1e293b; border-radius: 12px; padding: 25px; margin-bottom: 25px; border-left: 5px solid #38bdf8; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        .card h2 { color: #38bdf8; margin-bottom: 12px; font-size: 1.6rem; border-bottom: 1px solid #334155; padding-bottom: 8px; }
-        .card h3 { color: #60a5fa; margin: 18px 0 8px 0; font-size: 1.25rem; }
-        p { color: #e2e8f0; margin-bottom: 12px; }
-        ul { margin-left: 20px; margin-bottom: 15px; color: #cbd5e1; }
-        li { margin-bottom: 8px; }
-        
-        footer { text-align: center; margin-top: 40px; color: #64748b; font-size: 0.95rem; border-top: 1px solid #334155; padding-top: 20px; }
-    </style>
-</head>
-<body>
-
-<div class="container">
-
-    <!-- Language Switcher -->
-    <div class="switcher">
-        <button onclick="setLang('am')">አማርኛ</button>
-        <button onclick="setLang('en')">English</button>
-    </div>
-
-    <!-- Header -->
-    <header>
-        <div class="lang-am">
-            <h1>HanTechPulse</h1>
-            <p class="subtitle">የኤሌክትሮኒክስ ትምህርት እና የሃርድዌር ፍተሻ ማዕከል</p>
-        </div>
-        <div class="lang-en">
-            <h1>HanTechPulse</h1>
-            <p class="subtitle">Electronics Education & Hardware Testing Hub</p>
-        </div>
-    </header>
-
-    <!-- 1. Capacitor -->
-    <div class="card">
-        <div class="lang-am">
-            <h2>1. ካፓሲተር (Capacitor)</h2>
-            <p>ካፓሲተር የኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ (Electrostatic field) መልክ አከማችቶ የሚይዝ እና እንደ አስፈላጊነቱ ፈጥኖ የሚለቅ የኤሌክትሮኒክስ መለኪያ ነው። በሰርኪዩት ውስጥ ቮልቴጅን ለማለስለስ (Filtering) እና ጫጫታን (Noise) ለማስወገድ ያገለግላል።</p>
-            <h3>ዋና ዋና አይነቶች፦</h3>
-            <ul>
-                <li><strong>Electrolytic Capacitor:</strong> አወንታዊ (+) እና አሉታዊ (-) ፖላሪቲ ያለው ሲሆን በፓወር ሰፕላይ ሰርኪዩቶች ላይ ይሰራል፤ ሲሰካ አቅጣጫ መሳሳት የለበትም።</li>
-                <li><strong>Ceramic Capacitor:</strong> ፖላሪቲ የሌለው፣ አነስተኛ መጠን ያለው እና ለከፍተኛ ፍሪኩዌንሲ ፍልሰት የሚያገለግል ነው።</li>
-            </ul>
-            <h3>በመልቲሜትር መለኪያ መንገድ፦</h3>
-            <ul>
-                <li>መልቲሜትሩን ወደ <strong>Capacitance (Farad/F)</strong> ሞድ አስተካክል።</li>
-                <li>ከመለካትህ በፊት የካፓሲተሩን ሁለት እግሮች በማጫረስ (Discharge) የያዘውን ኤሌክትሪክ አውጣ።</li>
-                <li>የመልቲሜትሩን ፕሮቦች ከእግሮቹ ጋር አገናኝ፤ በስክሪኑ ላይ የሚመጣውን ዋጋ (uF/nF) አካሉ ላይ ከተጻፈው ጋር አወዳድር።</li>
-            </ul>
-        </div>
-        <div class="lang-en">
-            <h2>1. Capacitor</h2>
-            <p>A capacitor is a passive electronic component that stores electrical energy in an electrostatic field and releases it when needed. It is primarily used for filtering voltage fluctuations and removing noise in circuits.</p>
-            <h3>Main Types:</h3>
-            <ul>
-                <li><strong>Electrolytic Capacitor:</strong> Polarized (+ and -), commonly used in power supply circuits. Polarity must be strictly observed.</li>
-                <li><strong>Ceramic Capacitor:</strong> Non-polarized, compact, and ideal for high-frequency applications.</li>
-            </ul>
-            <h3>How to Test with a Multimeter:</h3>
-            <ul>
-                <li>Set the multimeter to <strong>Capacitance (Farad/F)</strong> mode.</li>
-                <li>Discharge the capacitor completely by shorting its leads prior to testing.</li>
-                <li>Connect the probes to the leads and compare the measured value with the rating printed on the body.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 2. Diode -->
-    <div class="card">
-        <div class="lang-am">
-            <h2>2. ዳዮድ (Diode)</h2>
-            <p>ዳዮድ የኤሌክትሪክ ፍሰት (Current) ወደ አንድ አቅጣጫ ብቻ እንዲያልፍ የሚፈቅድ እና ወደ ተቃራኒው አቅጣጫ የሚመጣውን የሚግት ኮምፖነንት ነው። ኤሲ (AC) ቮልቴጅን ወደ ዲሲ (DC) ለመቀየር (Rectification) ያገለግላል።</p>
-            <h3>ዋና ዋና አይነቶች፦</h3>
-            <ul>
-                <li><strong>Rectifier Diode (1N4007):</strong> ኤሲ ቮልቴጅን ወደ ዲሲ ለመቀየር የሚያገለግል።</li>
-                <li><strong>Zener Diode:</strong> ቮልቴጅን በተወሰነ መጠን ረግቶ እንዲቆይ የሚያደርግ።</li>
-                <li><strong>LED (Light Emitting Diode):</strong> ኤሌክትሪክ ሲያልፍበት ብርሃን የሚሰጥ።</li>
-            </ul>
-            <h3>በመልቲሜትር መለኪያ መንገድ፦</h3>
-            <ul>
-                <li>መልቲሜትሩን ወደ <strong>Diode Mode (▶|)</strong> ቀይር።</li>
-                <li>ቀዩን ፕሮብ ከአኖድ (+)፣ ጥቁሩን ከካቶድ (-) ጋር አያይዝ፤ በስክሪኑ ላይ ከ0.5V - 0.7V ያሳያል (Forward Bias)።</li>
-                <li>ፕሮቦቹን ስትገለብጣቸው ምንም አይነት ንባብ (OL) ማሳየት አለበት (Reverse Bias)።</li>
-            </ul>
-        </div>
-        <div class="lang-en">
-            <h2>2. Diode</h2>
-            <p>A diode is a semiconductor component that allows current to flow in one direction only while blocking it in the reverse direction. It is essential for converting AC voltage to DC (Rectification).</p>
-            <h3>Main Types:</h3>
-            <ul>
-                <li><strong>Rectifier Diode:</strong> Standard diode used for AC to DC conversion.</li>
-                <li><strong>Zener Diode:</strong> Designed to maintain a stable reference voltage.</li>
-                <li><strong>LED:</strong> Emits light when electric current passes through it.</li>
-            </ul>
-            <h3>How to Test with a Multimeter:</h3>
-            <ul>
-                <li>Set the multimeter to <strong>Diode Mode (▶|)</strong>.</li>
-                <li>Connect red probe to Anode (+) and black to Cathode (-); it should read around 0.5V - 0.7V.</li>
-                <li>Reverse the probes; the screen should display "OL".</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 3. Resistor -->
-    <div class="card">
-        <div class="lang-am">
-            <h2>3. ሪዚስተር (Resistor)</h2>
-            <p>ሪዚስተር በሰርኪዩት ውስጥ የሚያልፈውን የኤሌክትሪክ ፍሰት (Current) ለመገደብ እና ቮልቴጅን ለመክፈል (Voltage Divider) የሚያገለግል ተገብሮ (Passive) ኮምፖነንት ነው።</p>
-            <h3>አነባበብ እና መለኪያ፦</h3>
-            <ul>
-                <li><strong>የቀለም ኮድ (Color Code):</strong> አካሉ ላይ ባሉት ቀለማት አማካኝነት የኦህም (Ω) መጠኑ ይነበባል።</li>
-                <li><strong>በመልቲሜትር፦</strong> መልቲሜትሩን ወደ <strong>Ohms (Ω)</strong> ቀይረህ የሪዚስተሩን ሁለት ጫፎች ለካ።</li>
-            </ul>
-        </div>
-        <div class="lang-en">
-            <h2>3. Resistor</h2>
-            <p>A resistor is a passive electrical component that limits the flow of electric current and lowers voltage levels within a circuit.</p>
-            <h3>Reading & Testing:</h3>
-            <ul>
-                <li><strong>Color Code:</strong> Resistance values are represented by colored bands printed on the component body.</li>
-                <li><strong>Multimeter Testing:</strong> Set the multimeter to <strong>Ohms (Ω)</strong> mode and measure across both leads.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 4. MOSFET -->
-    <div class="card">
-        <div class="lang-am">
-            <h2>4. ሞስፌት (MOSFET)</h2>
-            <p>ሞስፌት በከፍተኛ ፍጥነት የኤሌክትሪክ ፍሰትን ለመቆጣጠር፣ እንደ ስዊች (Switch) እና አምፕሊፋየር ሆኖ የሚያገለግል ወሳኝ ትራንዚስተር ነው።</p>
-            <h3>ሶስቱ እግሮች (Terminals)፦</h3>
-            <ul>
-                <li><strong>Gate (G):</strong> ስዊቹን የመክፈቻ/መዝጊያ መቆጣጠሪያ።</li>
-                <li><strong>Drain (D):</strong> ኤሌክትሪክ የሚገባበት/ሚወጣበት ዋና መስመር።</li>
-                <li><strong>Source (S):</strong> ኤሌክትሪክ የሚወጣበት/ሚገባበት መስመር።</li>
-            </ul>
-            <h3>በመልቲሜትር መለኪያ መንገድ፦</h3>
-            <ul>
-                <li>መልቲሜትሩን ወደ <strong>Diode mode</strong> አድርገህ በDrain እና Source መካከል ያለውን የውስጥ ዳዮድ ለካ (0.4V - 0.6V ያሳያል)።</li>
-                <li>በGate እና Drain ወይም በGate እና Source መካከል መለካት የለበትም (OL ማሳየት አለበት)።</li>
-            </ul>
-        </div>
-        <div class="lang-en">
-            <h2>4. MOSFET</h2>
-            <p>A MOSFET is a semiconductor device widely used for switching and amplifying electronic signals in modern electronics circuits.</p>
-            <h3>Three Main Terminals:</h3>
-            <ul>
-                <li><strong>Gate (G):</strong> Controls the opening and closing of the channel.</li>
-                <li><strong>Drain (D):</strong> Main current entry/exit terminal.</li>
-                <li><strong>Source (S):</strong> Connected to ground or supply reference.</li>
-            </ul>
-            <h3>How to Test with a Multimeter:</h3>
-            <ul>
-                <li>Set multimeter to <strong>Diode mode</strong> and check between Drain and Source (typically reads 0.4V - 0.6V).</li>
-                <li>Ensure there is no continuity (OL) between Gate-Drain or Gate-Source terminals.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 5. BJT Transistor -->
-    <div class="card">
-        <div class="lang-am">
-            <h2>5. ባይፖላር ጃንግሽን ትራንዚስተር (BJT Transistor)</h2>
-            <p>ትራንዚስተር ዘመናዊ ኤሌክትሮኒክስን የለወጠ ታላቅ ግኝት ነው። አነስተኛ የኤሌክትሪክ ሲግናልን በማሳደግ (Amplification) ወይም እንደ ኤሌክትሮኒክ ስዊች (Switching) ሆኖ ያገለግላል። BJT ትራንዚስተሮች በCurrent-Controlled የሚሰሩ ናቸው።</p>
-            <h3>ሁለቱ ዋና ዋና ክፍሎች፦</h3>
-            <ul>
-                <li><strong>NPN Transistor:</strong> አነስተኛ አወንታዊ (Positive) ቮልቴጅ በBase እግሩ ላይ ሲያገኝ ይሰራል (ከEmitter ወደ Collector ኤሌክትሮን ይፈሳል)።</li>
-                <li><strong>PNP Transistor:</strong> አሉታዊ (Negative) ቮልቴጅ በBase እግሩ ላይ ሲያገኝ ይሰራል።</li>
-            </ul>
-            <h3>ሶስቱ እግሮች (Terminals)፦</h3>
-            <ul>
-                <li><strong>Base (B):</strong> ትራንዚስተሩን የሚያነቃቃው/መቆጣጠሪያው እግር።</li>
-                <li><strong>Collector (C):</strong> ዋናው ኤሌክትሪክ የሚገባበት እግር።</li>
-                <li><strong>Emitter (E):</strong> ኤሌክትሪክ የሚወጣበት እግር።</li>
-            </ul>
-            <h3>በመልቲሜትር መለኪያ መንገድ፦</h3>
-            <ul>
-                <li>መልቲሜትሩን ወደ <strong>Diode Mode</strong> አስተካክል።</li>
-                <li>ለNPN ትራንዚስተር፦ ቀዩን ፕሮብ በBase (B) ላይ በማስቀመጥ፣ ጥቁሩን ፕሮብ በCollector (C) እና በEmitter (E) ላይ ተራ በተራ ለካ። በሁለቱም ላይ ከ0.6V - 0.7V ያሳያል።</li>
-            </ul>
-        </div>
-        <div class="lang-en">
-            <h2>5. BJT Transistor</h2>
-            <p>Bipolar Junction Transistors (BJTs) are fundamental active components used for signal amplification and electronic switching. They are current-controlled semiconductor devices.</p>
-            <h3>Two Main Types:</h3>
-            <ul>
-                <li><strong>NPN Transistor:</strong> Turns ON when a positive current is applied to the Base terminal.</li>
-                <li><strong>PNP Transistor:</strong> Turns ON when a negative current/ground is applied to the Base terminal.</li>
-            </ul>
-            <h3>Three Terminals:</h3>
-            <ul>
-                <li><strong>Base (B):</strong> The control terminal used to activate the transistor.</li>
-                <li><strong>Collector (C):</strong> The higher-voltage supply terminal.</li>
-                <li><strong>Emitter (E):</strong> The terminal through which current exits the device.</li>
-            </ul>
-            <h3>How to Test with a Multimeter:</h3>
-            <ul>
-                <li>Set multimeter to <strong>Diode Mode</strong>.</li>
-                <li>For NPN: Place the red probe on the Base (B) and the black probe on Collector (C) and Emitter (E). Both should read around 0.6V - 0.7V.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 6. Transformer -->
-    <div class="card">
-        <div class="lang-am">
-            <h2>6. ትራንስፎርመር (Transformer)</h2>
-            <p>ትራንስፎርመር የማግኔቲክ መስክን (Electromagnetic Induction) በመጠቀም የኤሲ (AC) ቮልቴጅ መጠንን ከፍ ወይም ዝቅ ለማድረግ የሚያገለግል የኤሌክትሪካል መሣሪያ ነው። በውስጡ አየር ወይም አይረን ኮር (Core) ላይ የተጠመጠሙ ሁለት ዋና ጥቅል ሽቦዎች (Windings) አሉት።</p>
-            <h3>አይነቶች እና አሰራራቸው፦</h3>
-            <ul>
-                <li><strong>Step-Down Transformer:</strong> ከፍተኛ የኤሲ ቮልቴጅን (ለምሳሌ 220V) ወደ ዝቅተኛ (ለምሳሌ 12V ወይም 5V) ያወርዳል። በስልክ ቻርጀሮች እና በኦዲዮ አምፕሊፋየሮች ውስጥ በስፋት ይገኛል።</li>
-                <li><strong>Step-Up Transformer:</strong> ዝቅተኛ የኤሲ ቮልቴጅን ወደ ከፍተኛ ደረጃ ያሳድጋል።</li>
-                <li><strong>Primary Winding:</strong> የኤሌክትሪክ ኃይል የሚገባበት የመጀመሪያው ጥቅል ሽቦ።</li>
-                <li><strong>Secondary Winding:</strong> የተለወጠው ቮልቴጅ የሚወጣበት ሁለተኛው ጥቅል ሽቦ።</li>
-            </ul>
-            <h3>በመልቲሜትር የመቋቋም (Resistance) መለኪያ መንገድ፦</h3>
-            <ul>
-                <li>መልቲሜትሩን ወደ <strong>Resistance (Ω)</strong> ወይም <strong>Continuity Mode</strong> አስተካክል።</li>
-                <li>የPrimary እና Secondary ሽቦዎችን ጫፎች ለካ። የትራንስፎርመሩ ሽቦዎች አልተቆረጡም ከሆነ አነስተኛ Resistance (ወይም የድምፅ ምልክት - Beep) ያሳያል።</li>
-            </ul>
-        </div>
-        <div class="lang-en">
-            <h2>6. Transformer</h2>
-            <p>A transformer is a passive electrical device that transfers electrical energy between two or more circuits through electromagnetic induction. It is used to step up or step down AC voltage levels.</p>
-            <h3>Types & Key Concepts:</h3>
-            <ul>
-                <li><strong>Step-Down Transformer:</strong> Converts high input AC voltage (e.g., 220V) to safer lower AC voltage (e.g., 12V). Common in power adapters.</li>
-                <li><strong>Step-Up Transformer:</strong> Increases low input AC voltage to higher levels.</li>
-                <li><strong>Primary Winding:</strong> Receives the input power.</li>
-                <li><strong>Secondary Winding:</strong> Delivers the transformed output voltage.</li>
-            </ul>
-            <h3>How to Test with a Multimeter:</h3>
-            <ul>
-                <li>Set multimeter to <strong>Ohms (Ω)</strong> or <strong>Continuity</strong> mode.</li>
-                <li>Measure resistance across Primary and Secondary coils to verify there are no open circuit faults.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 7. PCB & Soldering -->
-    <div class="card">
-        <div class="lang-am">
-            <h2>7. ፒሲቢ እና የሶልደሪንግ ጥበብ (PCB & Soldering)</h2>
-            <p><strong>PCB (Printed Circuit Board)</strong> የኤሌክትሮኒክስ ኮምፖነንቶችን አንድ ላይ የሚያገናኝ፣ የመዳብ መስመሮች (Copper Traces) የተዘረጉበት ቦርድ ነው። ሰርኪዩቶች በተረጋጋ እና በፀና ሁኔታ እንዲሰሩ ያደርጋል።</p>
-            <h3>የሶልደሪንግ (Soldering) መሰረታዊ መመሪያ፦</h3>
-            <p>ሶልደሪንግ ማለት ኮምፖነንቶችን ከፒሲቢ ቦርድ ጋር በቆርቆሮ (Solder Wire) እና በካውያ (Soldering Iron) በማቀለጥ የማያያዝ ሂደት ነው።</p>
-            <ul>
-                <li><strong>ትክክለኛው የሙቀት መጠን:</strong> ካውያው ከ300°C - 350°C አካባቢ መሞቅ አለበት።</li>
-                <li><strong>ቀዶ ጥገና መሰስ:</strong> የኮምፖነንቱን እግር እና የፒሲቢውን መዳብ በአንድ ላይ በካውያው ለ2-3 ሰከንድ ካሞቁ በኋላ ቆርቆሮውን ማስነካት።</li>
-                <li><strong>Cold Joint ማቀብ:</strong> ቆርቆሮው በደንብ ሳይቀልጥ ከተያያዘ ኤሌክትሪክ በጥሩ ሁኔታ አያሳልፍም። ጥሩ የሶልደር ነጥብ የሚያብረቀርቅ የኮን (Cone) ቅርፅ ይኖረዋል።</li>
-            </ul>
-        </div>
-        <div class="lang-en">
-            <h2>7. PCB & Soldering Fundamentals</h2>
-            <p>A <strong>Printed Circuit Board (PCB)</strong> mechanically supports and electrically connects electronic components using conductive copper traces etched onto a non-conductive substrate.</p>
-            <h3>Proper Soldering Guide:</h3>
-            <p>Soldering is the process of joining electronic components onto a PCB using a molten metal alloy (solder wire) applied with a heated soldering iron.</p>
-            <ul>
-                <li><strong>Optimal Temperature:</strong> Set soldering iron between 300°C - 350°C for standard lead-free/leaded solder.</li>
-                <li><strong>Proper Technique:</strong> Heat both the component lead and the PCB pad simultaneously for 2-3 seconds before applying solder.</li>
-                <li><strong>Avoiding Cold Joints:</strong> Ensure joints cool naturally without movement. A good solder joint should look shiny and cone-shaped.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 8. Detailed AC vs DC Section -->
-    <div class="card">
-        <div class="lang-am">
-            <h2>8. በኤሲ (AC) እና ዲሲ (DC) ኤሌክትሪክ መካከል ያለው ሰፊ ልዩነት</h2>
-            <p>በኤሌክትሮኒክስ እና ኤሌክትሪካል ኢንጂነሪንግ ዓለም ውስጥ የኤሌክትሪክ ፍሰት በሁለት ዋና ዋና ክፍሎች ይከፈላል። እነዚህም <strong>AC (Alternating Current)</strong> እና <strong>DC (Direct Current)</strong> ናቸው። ማንኛውንም የኤሌክትሮኒክስ ሰርኪዩት ለመንደፍ ወይም ለመጠገን የእነዚህን ሁለት የኃይል ዓይነቶች ባህሪ በጥልቀት መረዳት አስፈላጊ ነው።</p>
-            
-            <h3>ሀ. ኤሲ (Alternating Current - ተለዋዋጭ ጅረት)</h3>
-            <p>ኤሲ ኤሌክትሪክ ማለት የኤሌክትሮኖች ፍሰት አቅጣጫውን እና የመጠኑን መጠን (Magnitude) በየጊዜው የሚያቀያይርበት የኤሌክትሪክ ዓይነት ነው። ኤሌክትሮኖቹ ወደ ፊት እና ወደ ኋላ እየተወዛወዙ ይጓዛሉ።</p>
-            <ul>
-                <li><strong>የሞገድ ቅርፅ (Waveform):</strong> በዋናነት በሳይን ሞገድ (Sine Wave) መልክ ይጓዛል፤ ነገር ግን ስኩዌር (Square Wave) ወይም ትሪያንግል (Triangle Wave) ሊሆን ይችላል።</li>
-                <li><strong>ፍሪኩዌንሲ (Frequency):</strong> በሰከንድ ውስጥ የሞገዱ አቅጣጫ የሚቀየርበት ብዛት በፍሪኩዌንሲ (Hertz / Hz) ይለካል። ለምሳሌ በኢትዮጵያ ያለው የቤት ውስጥ ኤሌክትሪክ ፍሪኩዌንሲ 50Hz ነው (በሰከንድ 50 ጊዜ አቅጣጫውን ይቀይራል)።</li>
-                <li><strong>የመነሻ ምንጭ:</strong> በኃይል ማመንጫ ጣቢያዎች (ውሃ፣ ንፋስ፣ እንፋሎት) በሚገኙ ትላልቅ ተሽከርካሪ ጄኔሬተሮች (Alternators) ይመረታል።</li>
-                <li><strong>ዋና ጥቅም:</strong> ኤሲ ኤሌክትሪክ በከፍተኛ ቮልቴጅ እና አነስተኛ የኃይል ብክነት ወደ ሩቅ ቦታዎች (ከኃይል ማመንጫ ወደ ከተሞች) በቀላሉ ለማስተላለፍ በጣም ተመራጭ ነው።</li>
-            </ul>
-
-            <h3>ለ. ዲሲ (Direct Current - ቀጥተኛ ጅረት)</h3>
-            <p>ዲሲ ኤሌክትሪክ ማለት የኤሌክትሮኖች ፍሰት ሁልጊዜ በአንድ አቅጣጫ ብቻ በቀጥታ መስመር የሚጓዝበት የኤሌክትሪክ ዓይነት ነው። የቮልቴጅ መጠኑ በጊዜ ሂደት አይቀያየርም (Constant) ነው።</p>
-            <ul>
-                <li><strong>ባህሪ:</strong> ፖላሪቲ አለው፤ ማለትም ሁልጊዜ አወንታዊ (+) እና አሉታዊ (-) ጫፎች አሉት። ኤሌክትሮኖች ከአሉታዊ ጫፍ ተነስተው ወደ አወንታዊው ይጓዛሉ።</li>
-                <li><strong>የመነሻ ምንጭ:</strong> ባትሪዎች (Batteries)፣ የፀሐይ ብርሃን ኃይል (Solar Cells)፣ እና ኤሲን ወደ ዲሲ የሚቀይሩ አዳፕተሮች (Adapters/Power Supplies) ናቸው።</li>
-                <li><strong>ዋና ጥቅም:</strong> አብዛኛዎቹ የዲጂታል ኤሌክትሮኒክስ እቃዎች (እንደ ስልኮች፣ ላፕቶፖች፣ ማይክሮኮንትሮለሮች፣ ቲቪዎች) በጥቃቅን ሴሚኮንዳክተር ትራንዚስተሮች ስለሚሰሩ የተረጋጋ ዲሲ ኤሌክትሪክ ይፈልጋሉ።</li>
-            </ul>
-
-            <h3>ሐ. ኤሲን ወደ ዲሲ የመቀየር ሂደት (Rectification)</h3>
-            <p>ከግድግዳ የኤሌክትሪክ ሶኬት የሚመጣው ኤሲ (220V) ሲሆን ስልካችን ወይም ላፕቶፓችን የሚጠቀመው ግን አነስተኛ ዲሲ (ለምሳሌ 5V ወይም 19V) ነው። ይህንን ለመቀየር የፓወር ሰፕላይ (Charger) ሰርኪዩት የሚከተሉትን ክፍሎች ይጠቀማል፦</p>
-            <ul>
-                <li><strong>ትራንስፎርመር (Transformer):</strong> ከፍተኛውን ኤሲ ቮልቴጅ ወደ ዝቅተኛ ኤሲ ቮልቴጅ ያወርዳል።</li>
-                <li><strong>Rectifier Diodes (ዳዮዶች):</strong> ኤሲ ኤሌክትሪኩን ወደ አንድ አቅጣጫ ብቻ እንዲፈስ በማድረግ ወደ ዲሲ ይለውጡታል።</li>
-                <li><strong>Capacitor (ካፓሲተር):</strong> የተቆራረጠውን ዲሲ ቮልቴጅ በማለስለስ (Filtering) ለስላሳ እና የተረጋጋ ዲሲ ያደርገዋል።</li>
-            </ul>
-        </div>
-
-        <div class="lang-en">
-            <h2>8. Comprehensive Guide: AC vs DC Electricity</h2>
-            <p>In the world of electronics and electrical engineering, electrical current is divided into two fundamental types: <strong>AC (Alternating Current)</strong> and <strong>DC (Direct Current)</strong>. Understanding their fundamental behaviors is essential for designing and troubleshooting electronic circuits.</p>
-            
-            <h3>A. AC (Alternating Current)</h3>
-            <p>Alternating Current is an electric current in which the flow of electric charge periodically reverses direction and continuously changes its magnitude over time.</p>
-            <ul>
-                <li><strong>Waveform:</strong> Typically follows a Sine Wave pattern, but can also exist as Square or Triangle waves in signal generation.</li>
-                <li><strong>Frequency:</strong> Measured in Hertz (Hz), indicating how many times the current direction cycles per second (e.g., 50Hz in standard power grids).</li>
-                <li><strong>Sources:</strong> Generated by rotating alternators in hydroelectric, wind, or thermal power plants.</li>
-                <li><strong>Primary Advantage:</strong> Highly efficient for long-distance power transmission with minimal power loss using transformers.</li>
-            </ul>
-
-            <h3>B. DC (Direct Current)</h3>
-            <p>Direct Current is the unidirectional flow of electric charge. The voltage level remains constant over time and flows continuously in a single direction.</p>
-            <ul>
-                <li><strong>Characteristics:</strong> Has fixed polarity with distinct Positive (+) and Negative (-) terminals.</li>
-                <li><strong>Sources:</strong> Batteries, solar panels, and AC-to-DC power adapters.</li>
-                <li><strong>Primary Advantage:</strong> Essential for sensitive digital electronics, microprocessors, and integrated circuits that require stable, non-fluctuating voltage.</li>
-            </ul>
-
-            <h3>C. Conversion Process (AC to DC Rectification)</h3>
-            <p>To convert high-voltage AC from wall outlets into safe DC for electronic devices, power supplies use a multi-stage process:</p>
-            <ul>
-                <li><strong>Transformer:</strong> Steps down high AC voltage to a lower AC level.</li>
-                <li><strong>Diode Bridge:</strong> Converts bidirectional AC into unidirectional pulsating DC.</li>
-                <li><strong>Filter Capacitor:</strong> Smooths out the voltage ripples to deliver steady DC power.</li>
-            </ul>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 HanTechPulse | Developed by Bereket</p>
-    </footer>
-
-</div>
-
-<script>
-    function setLang(lang) {
-        if(lang === 'en') {
-            document.querySelectorAll('.lang-am').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'block');
-        } else {
-            document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('.lang-am').forEach(el => el.style.display = 'block');
-        }
-    }
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="am">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="HanTechPulse - የኤሌክትሮኒክስ ትምህርት፣ የሃርድዌር ፍተሻ እና የሪዚስተር ከለር ካልኩሌተር።">
@@ -398,14 +28,25 @@
         ul { margin-left: 20px; margin-bottom: 15px; color: #cbd5e1; }
         li { margin-bottom: 8px; }
 
+        /* Ads Notice Banner */
+        .ads-notice { background: linear-gradient(135deg, #0284c7, #0ea5e9); padding: 12px; border-radius: 8px; text-align: center; font-weight: bold; margin-bottom: 25px; color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
         /* Resistor Calculator Styles */
         .calc-box { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; }
         .calc-group { display: flex; flex-direction: column; gap: 5px; }
         .calc-group label { color: #cbd5e1; font-weight: bold; }
-        .calc-group select { padding: 10px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: #f8fafc; font-size: 1rem; }
+        .calc-group select, .calc-group input { padding: 10px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: #f8fafc; font-size: 1rem; width: 100%; }
         .result-box { margin-top: 15px; padding: 15px; background: #0f172a; border-radius: 8px; text-align: center; border: 1px solid #38bdf8; }
         .result-box span { color: #38bdf8; font-size: 1.5rem; font-weight: bold; }
         
+        .calc-btn { background: #38bdf8; border: none; padding: 10px 20px; color: #0f172a; font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 10px; width: 100%; }
+        .calc-btn:hover { background: #0284c7; color: white; }
+
+        /* Contact Section */
+        .contact-box { text-align: center; margin-top: 30px; }
+        .contact-box a { color: #38bdf8; text-decoration: none; font-weight: bold; }
+        .contact-box a:hover { text-decoration: underline; }
+
         footer { text-align: center; margin-top: 40px; color: #64748b; font-size: 0.95rem; border-top: 1px solid #334155; padding-top: 20px; }
     </style>
 </head>
@@ -430,6 +71,12 @@
             <p class="subtitle">Electronics Education, Interactive Tools & Hardware Lab</p>
         </div>
     </header>
+
+    <!-- Ads Notice -->
+    <div class="ads-notice">
+        <div class="lang-am">📢 ይህ ድረ-ገጽ ለማስታወቂያዎች እና ለንግድ ትብብር ክፍት ነው።</div>
+        <div class="lang-en">📢 This website is open for advertisements and business collaborations.</div>
+    </div>
 
     <!-- Interactive Resistor Calculator -->
     <div class="card" style="border-left-color: #f59e0b;">
@@ -506,6 +153,39 @@
         </div>
     </div>
 
+    <!-- New Ohm's Law Calculator -->
+    <div class="card" style="border-left-color: #10b981;">
+        <div class="lang-am">
+            <h2>⚡ የኦም ህግ ካልኩሌተር (Ohm's Law Calculator)</h2>
+            <p>ቮልቴጅ (Voltage) እና ከረንት (Current) በማስገባት ሪዚስታንስን (Resistance) ያሰሉ፦</p>
+        </div>
+        <div class="lang-en">
+            <h2>⚡ Ohm's Law Calculator</h2>
+            <p>Calculate Resistance by entering Voltage and Current:</p>
+        </div>
+
+        <div class="calc-box">
+            <div class="calc-group">
+                <label class="lang-am">ቮልቴጅ (Volts - V):</label>
+                <label class="lang-en">Voltage (Volts - V):</label>
+                <input type="number" id="volts" placeholder="ဥပማ፦ 12">
+            </div>
+            <div class="calc-group">
+                <label class="lang-am">ከረንት (Amps - I):</label>
+                <label class="lang-en">Current (Amps - I):</label>
+                <input type="number" id="amps" placeholder="ဥပማ፦ 0.5">
+            </div>
+            <button class="calc-btn" onclick="calculateOhm()">
+                <span class="lang-am">አስላ (Calculate)</span>
+                <span class="lang-en">Calculate</span>
+            </button>
+            <div class="result-box">
+                <p class="lang-am">ውጤት፦ <span id="ohmResult">0 Ω</span></p>
+                <p class="lang-en">Result: <span id="ohmResultEn">0 Ω</span></p>
+            </div>
+        </div>
+    </div>
+
     <!-- 1. Capacitor -->
     <div class="card">
         <div class="lang-am">
@@ -552,6 +232,28 @@
         </div>
     </div>
 
+    <!-- Contact & Social Media Section -->
+    <div class="card contact-box">
+        <div class="lang-am">
+            <h2>📞 ጥያቄ እና የንግድ ትብብር (Contact Us)</h2>
+            <p>ለማስታወቂያ፣ ለጥያቄ ወይም ሃሳብ ለመለዋወጥ በሚከተሉት አድራሻዎች ያግኙን፦</p>
+            <p>ኢሜል: <a href="mailto:bereket@hantechpulse.com">bereket@hantechpulse.com</a></p>
+            <p>
+                <a href="https://t.me/yourusername" target="_blank">Telegram</a> | 
+                <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+            </p>
+        </div>
+        <div class="lang-en">
+            <h2>📞 Contact & Business Collaborations</h2>
+            <p>For ads, questions, or collaborations, reach out via:</p>
+            <p>Email: <a href="mailto:bereket@hantechpulse.com">bereket@hantechpulse.com</a></p>
+            <p>
+                <a href="https://t.me/yourusername" target="_blank">Telegram</a> | 
+                <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+            </p>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 HanTechPulse | Developed by Bereket</p>
     </footer>
@@ -590,6 +292,25 @@
         let resultString = formattedVal + " " + tol;
         document.getElementById("resValue").innerText = resultString;
         document.getElementById("resValueEn").innerText = resultString;
+    }
+
+    function calculateOhm() {
+        let v = parseFloat(document.getElementById("volts").value);
+        let i = parseFloat(document.getElementById("amps").value);
+        let resElem = document.getElementById("ohmResult");
+        let resElemEn = document.getElementById("ohmResultEn");
+
+        if(!v || !i || i === 0) {
+            resElem.innerText = "እባክዎ ትክክለኛ ቁጥር ያስገቡ";
+            resElemEn.innerText = "Please enter valid numbers";
+            return;
+        }
+
+        let r = v / i;
+        let finalR = r >= 1000 ? (r / 1000).toFixed(2) + " kΩ" : r.toFixed(2) + " Ω";
+        
+        resElem.innerText = finalR;
+        resElemEn.innerText = finalR;
     }
 </script>
 
