@@ -61,28 +61,69 @@
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>HanTechPulse</h1>
-            <p class="subtitle">የኤሌክትሮኒክስ እና የሃርድዌር መረጃዎች ማዕከል</p>
-        </header>
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HanTechPulse - Electronics Lab</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        
+        /* Language Switcher Styling */
+        .switcher { text-align: center; margin-bottom: 20px; }
+        .switcher button { background: #38bdf8; border: none; padding: 8px 15px; margin: 5px; cursor: pointer; border-radius: 5px; font-weight: bold; }
+        
+        .lang-en { display: none; } /* Default hide English */
+        
+        header { text-align: center; padding: 30px; background: #1e293b; border-radius: 10px; margin-bottom: 20px; }
+        .card { background-color: #1e293b; padding: 20px; margin-bottom: 20px; border-left: 5px solid #38bdf8; border-radius: 10px; }
+    </style>
+</head>
+<body>
 
-        <div class="card">
-            <h2>እንኳን ወደ HanTechPulse በደህና መጡ!</h2>
-            <p>እዚህ ገጽ ላይ ስለ የተለያዩ የኤሌክትሮኒክስ ኮምፖነንቶች፣ ሰርኪዩቶች እና የሃርድዌር ፍተሻዎች አጠቃላይ መረጃዎችን ያገኛሉ።</p>
-        </div>
-
-        <div class="card">
-            <h2>ቀጣይ የሚጨመሩ ይዘቶች</h2>
-            <p>በቅርቡ የካፓሲተር፣ ሪዚስተር፣ ዳዮድ እና ሞስፌት መለኪያ መንገዶችን እና የሰርኪዩት ዲዛይኖችን እዚህ ገጽ ላይ እናካፍላለን።</p>
-        </div>
-
-        <footer>
-            <p>&copy; 2026 HanTechPulse | የተሰራው በበረከት</p>
-        </footer>
+<div class="container">
+    <!-- Language Switcher -->
+    <div class="switcher">
+        <button onclick="setLang('am')">አማርኛ</button>
+        <button onclick="setLang('en')">English</button>
     </div>
+
+    <header>
+        <h1 class="lang-am">HanTechPulse</h1>
+        <h1 class="lang-en">HanTechPulse</h1>
+        <p class="lang-am">የኤሌክትሮኒክስ መረጃዎች ማዕከል</p>
+        <p class="lang-en">Electronics Information Hub</p>
+    </header>
+
+    <div class="card">
+        <h2 class="lang-am">1. ካፓሲተር (Capacitor)</h2>
+        <h2 class="lang-en">1. Capacitor</h2>
+        <p class="lang-am">ካፓሲተር የኤሌክትሪክ ኃይልን የሚያከማች ኮምፖነንት ነው።</p>
+        <p class="lang-en">A capacitor is a component that stores electrical energy.</p>
+    </div>
+
+    <footer>
+        <p style="text-align:center; color:#64748b;">&copy; 2026 HanTechPulse</p>
+    </footer>
+</div>
+
+<script>
+    function setLang(lang) {
+        if(lang === 'en') {
+            document.querySelectorAll('.lang-am').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'block');
+        } else {
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.lang-am').forEach(el => el.style.display = 'block');
+        }
+    }
+</script>
 
 </body>
 </html>
+
 
 
