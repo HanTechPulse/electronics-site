@@ -38,6 +38,7 @@
 
         .container { max-width: 1050px; margin: 0 auto; }
         
+        /* Top Controls Bar */
         .top-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px; }
         .switcher { display: flex; justify-content: center; gap: 10px; }
         .switcher button, .theme-toggle, .search-box input { background: var(--bg-card); color: var(--accent-primary); border: 2px solid var(--accent-primary); padding: 10px 20px; cursor: pointer; border-radius: 50px; font-weight: 700; font-size: 0.95rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15); }
@@ -49,30 +50,20 @@
 
         .lang-en { display: none; }
         
+        /* Header */
         header { 
             text-align: center; 
-            padding: 45px 25px; 
+            padding: 55px 25px; 
             background: var(--bg-card); 
             border: 1px solid var(--border-color);
             border-radius: 20px; 
             margin-bottom: 35px; 
             box-shadow: var(--shadow);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
         }
-        .logo-image {
-            max-width: 260px;
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            margin-bottom: 5px;
-        }
-        h1 { color: var(--accent-primary); font-size: 2.8rem; margin-bottom: 6px; font-weight: 800; letter-spacing: -0.5px; }
+        h1 { color: var(--accent-primary); font-size: 2.8rem; margin-bottom: 12px; font-weight: 800; letter-spacing: -0.5px; }
         p.subtitle { color: var(--text-muted); font-size: 1.2rem; max-width: 800px; margin: 0 auto; font-weight: 500; }
         
+        /* Cards */
         .card { 
             background-color: var(--bg-card); 
             border-radius: 20px; 
@@ -87,13 +78,16 @@
         ul { margin-left: 22px; margin-bottom: 22px; color: var(--text-muted); }
         li { margin-bottom: 14px; font-size: 1.05rem; }
 
+        /* Interactive Visual Components (Working Graphics) */
         .interactive-graphic { background: var(--bg-body); border: 2px dashed var(--accent-primary); border-radius: 16px; padding: 25px; text-align: center; margin: 25px 0; }
         .interactive-graphic svg { max-width: 100%; height: auto; }
         .interactive-btn { background: var(--accent-gradient); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; margin-top: 10px; }
         .interactive-btn:hover { opacity: 0.9; }
 
+        /* Notice Banner */
         .ads-notice { background: var(--accent-gradient); padding: 20px 28px; border-radius: 16px; text-align: center; font-weight: 600; margin-bottom: 35px; color: white; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2); font-size: 1.1rem; }
 
+        /* Calculators */
         .calc-box { display: flex; flex-direction: column; gap: 20px; margin-top: 25px; background: var(--bg-body); padding: 30px; border-radius: 16px; border: 1px solid var(--border-color); }
         .calc-group { display: flex; flex-direction: column; gap: 8px; }
         .calc-group label { color: var(--text-main); font-weight: 600; font-size: 1.05rem; }
@@ -105,6 +99,7 @@
         
         .calc-btn { background: var(--accent-gradient); border: none; padding: 16px 24px; color: white; font-weight: 700; border-radius: 12px; cursor: pointer; margin-top: 10px; width: 100%; font-size: 1.1rem; }
 
+        /* Contact Section */
         .contact-box { text-align: center; margin-top: 35px; }
         .contact-box a { color: var(--accent-primary); text-decoration: none; font-weight: 700; }
         .contact-box a:hover { text-decoration: underline; }
@@ -121,6 +116,7 @@
 
 <div class="container">
 
+    <!-- Top Controls Bar -->
     <div class="top-controls">
         <div class="switcher">
             <button onclick="setLang('am')">አማርኛ</button>
@@ -132,9 +128,8 @@
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
     </div>
 
+    <!-- Header -->
     <header>
-        <img src="logo.png" alt="HanTechPulse Logo" class="logo-image" onerror="this.style.display='none'">
-        
         <div class="lang-am">
             <h1>HanTechPulse</h1>
             <p class="subtitle">የኤሌክትሮኒክስ ትምህርት፥ የመለኪያ መሣሪያዎች እና የሃርድዌር ላብራቶሪ</p>
@@ -145,6 +140,7 @@
         </div>
     </header>
 
+    <!-- Ads Notice -->
     <div class="ads-notice">
         <div class="lang-am">📢 ይህ ድር-ገጽ ለማስታወቂያዎች እና ለንግድ ትብብር ክፍት ነው::</div>
         <div class="lang-en">📢 This website is open for advertisements and business collaborations.</div>
@@ -167,12 +163,17 @@
         </div>
         <div class="lang-en">
             <h2>🧱 Resistor Theory, Principles & Color Code Calculator</h2>
-            <p>A resistor is one of the most fundamental passive electronic components used in electrical and electronic engineering. Its core purpose is to restrict, control, and regulate the flow of electrical current within a circuit.</p>
+            <p>A resistor is one of the most fundamental passive electronic components used in electrical and electronic engineering. Its core purpose is to restrict, control, and regulate the flow of electrical current within a circuit. By opposing electron flow, resistors convert electrical energy into heat, ensuring delicate components receive precise current levels.</p>
+            
             <h3>Key Functions of Resistors in Circuits:</h3>
             <ul>
-                <li><strong>Current Limiting:</strong> Protecting sensitive components like LEDs from excessive current.</li>
-                <li><strong>Voltage Division:</strong> Splitting higher voltage levels into precise lower voltages.</li>
+                <li><strong>Current Limiting:</strong> Protecting sensitive components like LEDs from excessive current that could cause permanent damage.</li>
+                <li><strong>Voltage Division:</strong> Splitting higher voltage levels into precise lower voltages required by various sub-circuits.</li>
+                <li><strong>Biasing:</strong> Establishing correct operating voltage and current parameters for active devices like transistors and operational amplifiers.</li>
             </ul>
+
+            <h3>Understanding Resistor Color Codes:</h3>
+            <p>Carbon-film and metal-film resistors use standardized colored bands to indicate their resistance value and manufacturing tolerance in Ohms (Ω). Use the interactive tool below to calculate values based on your physical resistor bands:</p>
         </div>
 
         <div class="calc-box">
@@ -215,7 +216,7 @@
         </div>
         <div class="lang-en">
             <h2>⚡ Ohm's Law Calculator</h2>
-            <p>Calculate circuit resistance instantly by entering Voltage and Current values based on the formula R = V / I:</p>
+            <p>Ohm's Law is fundamental to electrical engineering. Calculate circuit resistance instantly by entering Voltage and Current values based on the formula R = V / I:</p>
         </div>
         <div class="calc-box">
             <div class="calc-group">
@@ -242,18 +243,19 @@
             <h2>1. የኤሲ እና ዲሲ ጅረቶች (AC and DC)</h2>
             <p>በኤሌክትሪካል እና ኤሌክትሮኒክስ ኢንጂነሪንግ ዓለም ውስጥ የኤሌክትሪክ ኃይል ዝውውር በሁለት ዋና ዋና ቅርጾች ይከፈላል፤ ቀጥተኛ ጅረት (Direct Current - DC) እና ተለዋዋጭ ጅረት (Alternating Current - AC)። እነዚህን ሁለቱን የኃይል አይነቶች በውል መረዳት ማንኛውንም የኤሌክትሮኒክስ ሃርድዌር ለመንደፍ፣ ለመገንባት እና ችግሮችን ለመፍታት (Troubleshooting) እጅግ ወሳኝ መሰረት ነው።</p>
             <h3>ቀጥተኛ ጅረት (Direct Current - DC):</h3>
-            <p>ዲሲ ማለት የኤሌክትሪክ ኃይል (ኤሌክትሮኖች) በአንድ አቅጣጫ ብቻ የሚፈስበት የማያወላውል የኃይል ዝውውር ነው። በዚህ ጊዜ የቮልቴጅ እና የከረንት መጠኖች ከጊዜ ወደ ጊዜ ሳይለወጡ በቋሚነት ይጓዛሉ። የዲሲ ኃይል ዋና ምንጮች እንደ ሊድ-አሲድ እና ሊቲየም-አየን ባትሪዎች፣ የሶላር ፓነሎች፣ እና የኤሲ ቮልቴጅን አስተካክለው የሚያወጡ የሞባይል ወይም ላፕቶፕ አዳፕተሮች (Power Adapters) ናቸው። በዘመናዊ ማይክሮኮንትሮለሮች፣ አርዱዊኖ (Arduino) ሰርኪዩቶች እና በዲጂታል ኤሌክትሮኒክስ ውስጥ የምንጠቀመው በሙሉ በዲሲ ኃይል ላይ የተመሰረተ ነው።</p>
+            <p>ዲሲ ማለት የኤሌክትሪክ ኃይል (ኤሌክትሮኖች) በአንድ አቅጣጫ ብቻ የሚፈስበት የማያወላውል የኃይል ዝውውር ነው። በዚህ ጊዜ የቮልቴጅ እና የከረንት መጠኖች ከጊዜ ወደ ጊዜ ሳይለወጡ (Constant ሆኖ) በቋሚነት ይጓዛሉ። የዲሲ ኃይል ዋና ምንጮች እንደ ሊድ-አሲድ እና ሊቲየም-አየን ባትሪዎች፣ የሶላር ፓነሎች፣ እና የኤሲ ቮልቴጅን አስተካክለው የሚያወጡ የሞባይል ወይም ላፕቶፕ አዳፕተሮች (Power Adapters) ናቸው። በዘመናዊ ማይክሮኮንትሮለሮች፣ አርዱዊኖ (Arduino) ሰርኪዩቶች እና በዲጂታል ኤሌክትሮኒክስ ውስጥ የምንጠቀመው በሙሉ በዲሲ ኃይል ላይ የተመሰረተ ነው።</p>
             <h3>ተለዋዋጭ ጅረት (Alternating Current - AC):</h3>
-            <p>ኤሲ ማለት ደግሞ የኤሌክትሪክ ጅረቱ አቅጣጫ እና መጠኑ በየሰከንዱ ውስጥ በበርካታ ጊዜያት የሚቀያየርበት የኃይል ዝውውር ነው። ለምሳሌ በቤቶቻችን እና በኢንዱስትሪዎች ውስጥ የምንጠቀመው የኤሌክትሪክ ኃይል ኤሲ ሲሆን፣ አቅጣጫውን በሰከንድ ውስጥ 50 ጊዜ (በአውሮፓ እና በአፍሪካ - 50Hz) ወይም 60 ጊዜ (በአሜሪካ - 60Hz) ይቀያይራል። ኤሲ ኃይል ከኃይል ማመንጫ ጣቢያዎች ተነስቶ እጅግ በጣም ረጅም ርቀቶችን ያለ ብዙ የኃይል ብክነት እንዲጓዝ ያስችለዋል፤ ምክንያቱም ትራንስፎርመሮችን በመጠቀም ቮልቴጁን በቀላሉ ከፍና ዝቅ ማድረግ ስለሚቻል ነው።</p>
+            <p>ኤሲ ማለት ደግሞ የኤሌክትሪክ ጅረቱ አቅጣጫ እና መጠኑ በየሰከንዱ ውስጥ በበርካታ ͏ጊዜያት (Cycles) በየቋሚው የሚቀያየርበት የኃይል ዝውውር ነው። ለምሳሌ በቤቶቻችን እና በኢንዱስትሪዎች ውስጥ የምንጠቀመው የኤሌክትሪክ ኃይል ኤሲ ሲሆን፣ አቅጣጫውን በሰከንድ ውስጥ 50 ጊዜ (በአውሮፓ እና በአፍሪካ - 50Hz) ወይም 60 ጊዜ (በአሜሪካ - 60Hz) ይቀያይራል። ኤሲ ኃይል ከኃይል ማመንጫ ጣቢያዎች (Hydroelectric Power Plants) ተነስቶ እጅግ በጣም ረጅም ርቀቶችን ያለ ብዙ የኃይል ብክነት እንዲጓዝ ያስችለዋል፤ ምክንያቱም ትራንስፎርመሮችን በመጠቀም ቮልቴጁን በቀላሉ ከፍና ዝቅ ማድረግ ስለሚቻል ነው።</p>
         </div>
         <div class="lang-en">
             <h2>1. Comprehensive Analysis of AC & DC Power</h2>
-            <p>Electrical power distribution fundamentally operates in two modes: Direct Current (DC) and Alternating Current (AC). A profound understanding of both is essential for designing circuits and troubleshooting electronic systems.</p>
+            <p>Electrical power distribution in electrical engineering fundamentally operates in two modes: Direct Current (DC) and Alternating Current (AC). A profound understanding of both is essential for designing circuits, testing hardware components, and troubleshooting electronic systems effectively.</p>
             <h3>Direct Current (DC):</h3>
-            <p>In a Direct Current system, electric charge flows in one constant direction only. Primary sources include batteries, photovoltaic solar panels, and rectified DC power adapters. Microcontrollers and digital logic rely entirely on stable DC.</p>
+            <p>In a Direct Current system, electric charge (electrons) flows in one constant direction only. Voltage and current levels remain steady and do not change periodically over time. Primary sources of DC include batteries (lithium-ion, lead-acid), photovoltaic solar panels, and rectified DC power adapters. Modern microcontrollers, Arduino boards, and digital logic circuits rely entirely on stable DC power supplies.</p>
             <h3>Alternating Current (AC):</h3>
-            <p>Alternating Current is characterized by the periodic reversal of current direction and magnitude. Household electricity is standard AC, typically cycling at 50Hz or 60Hz, allowing efficient long-distance transmission via transformers.</p>
+            <p>Alternating Current is characterized by the periodic reversal of current direction and magnitude. Household and industrial electricity is standard AC, typically cycling at frequencies of 50Hz or 60Hz. AC power is uniquely advantageous for long-distance electrical transmission from massive generation plants because voltage levels can be effortlessly stepped up or down using transformers, minimizing energy losses.</p>
         </div>
+        <!-- Working Interactive Graphic for AC/DC -->
         <div class="interactive-graphic">
             <p style="text-align:center; font-weight:bold; margin-bottom:10px;">Live Waveform Simulator / የሲግናል ሞገድ ማሳያ</p>
             <svg viewBox="0 0 400 120" width="100%">
@@ -268,22 +270,22 @@
     <div class="card search-item" data-keywords="diode ዲዮድ multimeter">
         <div class="lang-am">
             <h2>2. ዲዮድ (Diode)</h2>
-            <p>ዲዮድ ሁለት ተርሚናሎች (አኖድ - Anode እና ካቶድ - Cathode) ያሉት ሴሚኮንዳክተር ኤሌክትሮኒክ አካል ነው። ዋናው እና ልዩ መለያ ባህሪውም ኤሌክትሪክ በአንድ አቅጣጫ ብቻ እንዲያልፍ ፈቅዶ፣ በተቃራኒ አቅጣጫ የሚመጣውን ማንኛውንም ጅረት ሙሉ በሙሉ መዝጋት ነው። ይህ ልዩ ባህሪው ሰርኪዩቶችን ከተሳሳተ የባትሪ ዝውውር ለመከላከል፣ የኤሲ ኃይልን ወደ ዲሲ ለመቀየር (Rectification) እና የሬዲዮ ሲግናሎችን ለመለየት እጅግ አስፈላጊ ያደርገዋል።</p>
+            <p>ዲዮድ ሁለት ተርሚናሎች (አኖድ - Anode እና ካቶድ - Cathode) ያሉት ሴሚኮንዳክተር (Semiconductor) ኤሌክትሮኒክ አካል ነው። ዋናው እና ልዩ መለያ ባህሪውም ኤሌክትሪክ በአንድ አቅጣጫ ብቻ እንዲያልፍ ፈቅዶ፣ በተቃራኒ አቅጣጫ የሚመጣውን ማንኛውንም ጅረት ሙሉ በሙሉ መዝጋት (Blocking) ነው። ይህ ልዩ ባህሪው ሰርኪዩቶችን ከተሳሳተ የባትሪ ዝውውር (Reverse Polarity Protection) ለመከላከል፣ የኤሲ ኃይልን ወደ ዲሲ ለመቀየር (Rectification) እና የሬዲዮ ሲግናሎችን ለመለየት (Demodulation) እጅግ አስፈላጊ ያደርገዋል።</p>
             <h3>በዲጂታል መልቲሜትር ዲዮዱን በብቃት የመፈተሻ ደረጃዎች (Multimeter Testing Steps):</h3>
             <ul>
-                <li><strong>የመጀመሪያ ዝግጅት:</strong> የዲጂታል መልቲሜትሩን ማዞሪያ ቁልፍ ወደ ዲዮድ ምልክት ወይም ወደ ቀጣይነት መመርመሪያ (Diode/Continuity Mode) አስተካክለው ያስቀምጡ።</li>
-                <li><strong>ፎርዋርድ ባያስ ሙከራ (Forward Bias Test):</strong> ቀዩን ፕሮብ ከዲዮዱ አኖድ ጋር፣ ጥቁሩን ፕሮብ ደግሞ ከካቶድ ጋር ያገናኙ። በዚህ ጊዜ ዲዮዱ በጥሩ ጤንነት ላይ ከሆነ ስክሪኑ ላይ ከ 0.5V እስከ 0.7V የሚደርስ የሲሊኮን ቮልቴጅ ጠብታ ንባብ ማሳየት አለበት።</li>
-                <li><strong>ሪቨርስ ባያስ ሙከራ (Reverse Bias Test):</strong> አሁን የመልቲሜትሩን ፕሮቦች ይቀያይሩ። በዚህ ጊዜ ዲዮዱ ጅረት ማስተላለፍ ስለሌለበት መልቲሜትሩ ምንም ዓይነት ንባብ ሳይሰጥ **'OL' (Open Loop)** ወይም ማለቂያ የሌለው መቋቋም ማሳየት አለበት።</li>
+                <li><strong>የመጀመሪያ ዝግጅት:</strong> የዲጂታል መልቲሜትሩን (Digital Multimeter) ማዞሪያ ቁልፍ (Dial) ወደ ዲዮድ ምልክት ወይም ወደ ቀጣይነት መመርመሪያ (Diode/Continuity Mode) አስተካክለው ያስቀምጡ።</li>
+                <li><strong>ፎርዋርድ ባያስ ሙከራ (Forward Bias Test):</strong> ቀዩን ፕሮብ (Red Probe) ከዲዮዱ አኖድ (Anode - ፖዘቲቭ ጫፍ) ጋር፣ ጥቁሩን ፕሮብ (Black Probe) ደግሞ ከካቶድ (Cathode - በነጭ መስመር ምልክት ከተደረገበት ጫፍ) ጋር ያገናኙ። በዚህ ጊዜ ዲዮዱ በጥሩ ጤንነት ላይ ከሆነ ስክሪኑ ላይ ከ 0.5V እስከ 0.7V የሚደርስ የሲሊኮን ቮልቴጅ ጠብታ (Voltage Drop) ንባብ ማሳየት አለበት።</li>
+                <li><strong>ሪቨርስ ባያስ ሙከራ (Reverse Bias Test):</strong> አሁን የመልቲሜትሩን ፕሮቦች ይቀያይሩ (ቀዩን በካቶድ፣ ጥቁሩን በአኖድ)። በዚህ ጊዜ ዲዮዱ ጅረት ማስተላለፍ ስለሌለበት መልቲሜትሩ ምንም ዓይነት ንባብ ሳይሰጥ **'OL' (Open Loop)** ወይም ማለቂያ የሌለው መቋቋም ማሳየት አለበት። ይህንን ካሟላ ዲዮዱ 100% ጤናማ ነው ማለት ነው።</li>
             </ul>
         </div>
         <div class="lang-en">
             <h2>2. Diode Fundamentals & Multimeter Testing Procedures</h2>
-            <p>A diode is a two-terminal semiconductor device featuring an Anode and a Cathode, permitting unidirectional current flow while blocking reverse current.</p>
+            <p>A diode is a two-terminal semiconductor device featuring an Anode and a Cathode. Its core function is to permit unidirectional current flow while completely blocking current in the opposite direction. This property is vital for circuit protection against reverse polarity, AC-to-DC rectification, and signal processing.</p>
             <h3>Step-by-Step Multimeter Testing Guide:</h3>
             <ul>
-                <li><strong>Meter Setup:</strong> Turn your multimeter rotary switch to the Diode test symbol.</li>
-                <li><strong>Forward Bias Test:</strong> Place red probe on Anode, black on Cathode. A healthy diode shows 0.5V to 0.7V drop.</li>
-                <li><strong>Reverse Bias Test:</strong> Swap probes. The meter should display **'OL' (Open Loop)**.</li>
+                <li><strong>Meter Setup:</strong> Turn your digital multimeter rotary switch to the Diode test symbol.</li>
+                <li><strong>Forward Bias Test:</strong> Place the red probe on the Anode and the black probe on the Cathode (identified by the visual band). A healthy silicon diode will display a forward voltage drop reading between 0.5V and 0.7V.</li>
+                <li><strong>Reverse Bias Test:</strong> Swap the probe connections (red to cathode, black to anode). The multimeter should register **'OL' (Open Loop)**, indicating zero reverse leakage current and proper blocking functionality.</li>
             </ul>
         </div>
     </div>
@@ -292,11 +294,13 @@
     <div class="card search-item" data-keywords="transformer ትራንስፎርመር">
         <div class="lang-am">
             <h2>3. ትራንስፎርመር (Transformer)</h2>
-            <p>ትራንስፎርመር በኤሌክትሮማግኔቲክ ኢንዳክሽን መርህ በመነሳት የኤሌክትሪክ ኃይልን ከአንድ ወረዳ ወደ ሌላ ወረዳ ያለ ምንም የኤሌክትሪክ ግንኙነት በመግነጢሳዊ መስክ አማካኝነት የሚያስተላልፍ የማይንቀሳቀስ ሃርድዌር መሳሪያ ነው። ዋናው አገልግሎቱም የኤሲ ቮልቴጅ መጠንን ከፍ (Step-up) ወይም ዝቅ (Step-down) ማድረግ ነው። ትራንስፎርመሮች የሚሰሩት በ AC ኃይል ላይ ብቻ ነው፤ ምክንያቱም የሚለዋወጠው መግነጢሳዊ መስክ በሁለተኛው ጠመዝማዛ ኮይል ላይ ቮልቴጅ እንዲፈጠር ለማድረግ የግድ አስፈላጊ ነው።</p>
+            <p>ትራንስፎርመር በኤሌክትሮማግኔቲክ ኢንዳክሽን (Electromagnetic Induction) መርህ በመነሳት የኤሌክትሪክ ኃይልን ከአንድ ወረዳ ወደ ሌላ ወረዳ ያለ ምንም የኤሌክትሪክ ግንኙነት (በመግነጢሳዊ መስክ አማካኝነት) የሚያስተላልፍ የማይንቀሳቀስ (Static) ሃርድዌር መሳሪያ ነው። ዋናው አገልግሎቱም የኤሲ ቮልቴጅ መጠንን ከፍ (Step-up) ወይም ዝቅ (Step-down) ማድረግ ነው። ትራንስፎርመሮች የሚሰሩት በ AC (Alternating Current) ኃይል ላይ ብቻ ነው፤ ምክንያቱም የሚለዋወጠው መግነጢሳዊ መስክ (Alternating Magnetic Field) በሁለተኛው ጠመዝማዛ ኮይል ላይ ቮልቴጅ እንዲፈጠር (Induce) ለማድረግ የግድ አስፈላጊ ነው።</p>
+            <p>በውስጡም ዋና ዋና የሚባሉት ፕራይማሪ ዊንዲንግ (Primary Winding - የግብዓት ጠመዝማዛ) እና ሴኮንደሪ ዊንዲንግ (Secondary Winding - የውጤት ጠመዝማዛ) በላሚኔትድ በብረት ኮር (Laminated Iron Core) ላይ ተጠቅልለው ይገኛሉ። በኤሌክትሮኒክስ ላብራቶሪ ስራዎቻችን ውስጥ የቤት ውስጥ ከፍተኛውን 220V AC ቮልቴጅ ወደ ደህንነቱ የተጠበቀ ዝቅተኛ 12V ወይም 24V AC በመቀነስ የኃይል አቅርቦት ሰርኪዩቶችን (Power Supply Units) ለመገንባት በስፋት እንጠቀምበታለን።</p>
         </div>
         <div class="lang-en">
             <h2>3. Transformer Principles & Technical Operation</h2>
-            <p>A transformer is a static electromagnetic device that transfers electrical energy between circuits via electromagnetic induction without physical metallic contact, stepping alternating voltages up or down.</p>
+            <p>A transformer is a static electromagnetic device that transfers electrical energy between circuits via electromagnetic induction without any physical metallic connection. Its principal purpose is to step up or step down alternating voltage levels. Transformers operate exclusively on AC power because a continuously changing magnetic field is mandatory to induce voltage across the secondary winding.</p>
+            <p>Constructed with primary and secondary coils wound around a laminated iron core, transformers are essential in benchtop electronics for stepping down hazardous household 220V AC mains down to safe, manageable voltages like 12V or 24V AC for power supply construction.</p>
         </div>
     </div>
 
@@ -304,61 +308,118 @@
     <div class="card search-item" data-keywords="capacitor ካፓሲተር safety">
         <div class="lang-am">
             <h2>4. ካፓሲተር (Capacitor)</h2>
-            <p>ካፓሲተር የኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ ውስጥ አከማችቶ የሚይዝ እና እንደ አስፈላጊነቱ መልሶ የሚለቀቅ ተገብሮ ኤሌክትሮኒክ አካል ነው። በውስጡ በዳይኤሌክትሪክ ቁሳቁስ የተነጠሉ ሁለት ከንዳክተር ፕሌቶች አከማችተው ይይዛሉ። በሰርኪዩት ውስጥ ቮልቴጅን ለማጣራት፣ የኃይል አቅርቦትን ለማስተካከል እና ሲግናሎችን ከቦታ ቦታ ለማሸጋገር ይጠቅማል።</p>
+            <p>ካፓሲተር የኤሌክትሪክ ኃይልን በኤሌክትሮስታቲክ መስክ (Electrostatic Field) ውስጥ አከማችቶ የሚይዝ እና እንደ አስፈላጊነቱ መልሶ የሚለቀቅ ተገብሮ (Passive) ኤሌክትሮኒክ አካል ነው። በውስጡ በዳይኤሌክትሪክ (Dielectric - መከላከያ) ቁሳቁስ የተነጠሉ ሁለት ከንዳክተር ፕሌቶች አከማችተው ይይዛሉ። በኤሌክትሮኒክስ ሰርኪዩቶች ውስጥ የቮልቴጅ መዋዠቅን ለማለስለስ (Filtering and Smoothing)፣ ድምጽን ለማጣራት (Decoupling)፣ ኃይልን በአጭር ሰዓት ውስጥ ለቀው እንዲሰጡ (Energy Discharging) እና በኦስክሌተር ሰርኪዩቶች ውስጥ ድግግሞሾችን ለማስተካከል (Tuning) እጅግ ወሳኝ ሚና አላቸው።</p>
             <h3>እጅግ አስፈላጊ የደህንነት ጥንቃቄ (Critical Safety Warning):</h3>
-            <p>ትላልቅ ኤሌክትሮሊቲክ ካፓሲተሮች ሰርኪዩቱ ከጠፋ እና ከኃይል ምንጭ ከተነጠለ በኋላም እንኳ ከፍተኛ መጠን ያለው የኤሌክትሪክ ኃይል በውስጣቸው ተከማችቶ ሊቆይ ይችላል። ስለዚህ በሃርድዌር ላብራቶሪዎ ውስጥ ከመነካታቸው ወይም ከመለካታቸው በፊት ተገቢውን የፍሳሽ ሂደት ማድረግ ለግል ደህንነትዎ እጅግ አሳሳቢ ነው።</p>
+            <p>ትላልቅ ኤሌክትሮሊቲክ ካፓሲተሮች (Electrolytic Capacitors) ሰርኪዩቱ ከጠፋ እና ከኃይል ምንጭ ከተነጠለ በኋላም እንኳ ከፍተኛ መጠን ያለው የኤሌክትሪክ ኃይል በውስጣቸው ተከማችቶ ሊቆይ ይችላል። ስለዚህ በሃርድዌር ላብራቶሪዎ ውስጥ ከመነካታቸው ወይም ከመለካታቸው በፊት ተገቢውን የፍሳሽ (Discharge resistor) ሂደት በማድረግ ኃይሉን ሙሉ በሙሉ ማስወገድ ለግል ደህንነትዎ እጅግ አሳሳቢ እና አስፈላጊ ነው።</p>
         </div>
         <div class="lang-en">
             <h2>4. Capacitor Functions, Applications & Safety Protocols</h2>
-            <p>A capacitor is a passive component that stores and releases electrical energy within an electrostatic field for filtering and decoupling.</p>
+            <p>A capacitor is a passive electronic component that stores and releases electrical energy within an electrostatic field, consisting of two conductive plates separated by an insulating dielectric material. Key circuit applications include voltage filtering, power supply smoothing, signal decoupling, energy storage, and frequency tuning.</p>
             <h3>Critical Safety Warning:</h3>
-            <p>Large electrolytic capacitors retain lethal electrical charges long after power disconnection. Always safely discharge capacitors prior to testing.</p>
+            <p>Large electrolytic capacitors can retain lethal electrical charges long after power has been disconnected from the circuit. Always safely discharge capacitors using an appropriate bleeder resistor before handling, soldering, or testing them on your workbench.</p>
         </div>
     </div>
 
-    <!-- 15 Components Detailed Section -->
+    <!-- 15 Essential Electronics Components Detailed Section -->
     <div class="card search-item" data-keywords="switch inductor relay transistor battery bridge rectifier fuse motor speaker mic ldr piezo potentiometer mosfet">
         <div class="lang-am">
-            <h2>🛠 የ15ቱ መሰረታዊ የኤሌክትሮኒክስ አካላት ዝርዝር እና ጥልቅ ማብራሪያ (Detailed Components Lab Guide)</h2>
-            <p>በኤሌክትሮኒክስ ላብራቶሪዎ ውስጥ ሊያውቋቸው የሚገቡ የ15ቱ ቁልፍ ሃርድዌር አካላት ሙሉ መግለጫዎች እነሆ፦</p>
-            <ul>
-                <li><strong>1. Switch (መቀያየሪያ):</strong> ሰርኪዩቱን በእጅ በመቆጣጠር የኤሌክትሪክ ፍሰቱን እንዲጀምር ወይም እንዲቆም የሚያደርግ መሰረታዊ መሣሪያ ነው።</li>
-                <li><strong>2. Inductor (ኢንዳክተር):</strong> ኤሌክትሪክ ሲያልፍበት ሃይልን በመግነጢሳዊ መስክ (Magnetic Field) ውስጥ አከማችቶ የሚይዝ ከኮይል የተሰራ አካል ነው።</li>
-                <li><strong>3. Relay (ሪሌይ):</strong> በትንሽ የዲሲ ቮልቴጅ ትልቅ የኤሲ ወይም የዲሲ ኃይል ያላቸውን መሳሪያዎች በኤሌክትሮማግኔቲክ መርህ የሚያቀያይር ስዊች ነው።</li>
-                <li><strong>4. Transistor (ትራንዚስተር):</strong> የኤሌክትሪክ ሲግናሎችን እጅግ አጉልቶ (Amplification) የሚያሳይ ወይም እንደ ከፍተኛ ፍጥነት ማብሪያ/ማጥፊያ (Electronic Switch) የሚያገለግል ሴሚኮንዳክተር ነው።</li>
-                <li><strong>5. Battery (ባትሪ):</strong> የኬሚካል ሃይልን ወደ ኤሌክትሪክ ሃይል በመቀየር ለሰርኪዩቶች የተረጋጋ የዲሲ ኃይል ምንጭ የሚሰጥ ሃርድዌር ነው።</li>
-                <li><strong>6. Bridge Rectifier (ብሪጅ ሬክቲፋየር):</strong> አራት ዲዮዶችን በአንድ ላይ በማቀናጀት ተለዋዋጭውን የኤሲ ኃይል ወደ ቀጥተኛ የዲሲ ኃይል የሚቀይር ሰርኪዩት አካል ነው።</li>
-                <li><strong>7. Fuse (ፊውዝ):</strong> በሰርኪዩት ውስጥ ከመጠን በላይ ከረንት (Overcurrent) ሲፈጠር ራሱን በማቃጠል (በመበጣጠስ) ውድ የሆኑ የኤሌክትሮኒክስ አካላትን ከጉዳት የሚጠብቅ የደህንነት መስመር ነው።</li>
-                <li><strong>8. DC Motor (ዲሲ ሞተር):</strong> የኤሌክትሪክ ሃይልን በመግነጢሳዊ ኃይል ወደ ሜካኒካዊ የማሽከርከር እንቅስቃሴ (Mechanical Rotation) የሚቀይር ሞተር ነው።</li>
-                <li><strong>9. AC Motor (ኤሲ ሞተር):</strong> በቀጥታ በኤሲ ኃይል የሚሰራ እና በኢንዱስትሪዎችና በትላልቅ ማሽኖች ውስጥ የማሽከርከር ስራ የሚያከናውን ሞተር ነው።</li>
-                <li><strong>10. Speaker (ስፒከር):</strong> ኤሌክትሪካዊ የድምፅ ሲግናሎችን ወደ መካኒካዊ ንዝረት በመቀየር የሰው ልጅ ሊሰማው ወደሚችለው የድምፅ ሞገድ የሚለውጥ አካል ነው።</li>
-                <li><strong>11. Microphone (ማይክሮፎን):</strong> በዙሪያችን ያለውን የድምፅ ሞገድ በመቀበል ወደ እስታቲስቲካዊ ወይም ኤሌክትሪካዊ ሲግናል የሚቀይር መሣሪያ ነው።</li>
-                <li><strong>12. LDR (Light Dependent Resistor):</strong> በላዩ ላይ በሚያርፈው የብርሃን መጠን ልክ ሪዚስታንሱ (መቋቋሙ) እየጨመረ ወይም እየቀነሰ የሚለዋወጥ የብርሃን ዳሳሽ ነው።</li>
-                <li><strong>13. Piezo Buzzer (ባዘር):</strong> የኤሌክትሪክ ሲግናል ሲገባለት የማንቂያ ድምፅ ወይም ድምጽ ማሰማት የሚችል ትናንሽ ኤሌክትሮኒክ አካል ነው።</li>
-                <li><strong>14. Potentiometer (ፖቴንሺዮሜትር):</strong> በትናንሽ እጆቻችን ማዞሪያ (Knob) በመታገዝ የሪዚስታንስ መጠኑን እንደ ፍላጎታችን ከፍና ዝቅ እንድናደርግ የሚያስችለን ተለዋዋጭ ሪዚስተር ነው።</li>
-                <li><strong>15. MOSFET (Metal-Oxide-Semiconductor Field-Effect Transistor):</strong> እጅግ በጣም ፈጣን በሆነ ፍጥነት እና በከፍተኛ ኃይል የሚሰሩ ሰርኪዩቶችን (እንደ ሞተር ስፒድ መቆጣጠሪያ) ለመቆጣጠር የሚያገለግል የላቀ ትራንዚስተር ነው።</li>
-            </ul>
+            <h2>🛠 የ15ቱ መሰረታዊ የኤሌክትሮኒክስ አካላት ዝርዝር ማብራሪያ (Detailed Components Lab Guide)</h2>
+            <p>በዚህ ክፍል ውስጥ በኤሌክትሮኒክስ እና ኤሌክትሪካል ሰርኪዩት ዲዛይን ውስጥ በብዛት የምንጠቀምባቸውን 15 ዋና ዋና ሃርድዌር አካላት ተግባር፣ አገልግሎት እና ምልክቶቻቸውን (Symbols) በሰፊው እንመለከታለን።</p>
+
+            <h3>1. Switch (መቀያየሪያ) - ምልክት: ⏻</h3>
+            <p>ስዊች የኤሌክትሪክ ሰርኪዩት ዌብ ወይም መስመር እንዲገናኝ (Closed) ወይም እንዲቋረጥ (Open) የሚያደርግ መካኒካል ወይም ኤሌክትሮኒክ መሳሪያ ነው። ኃይልን ወደ ሰርኪዩቱ ለማስገባት ወይም ለማጥፋት ያገለግላል።</p>
+
+            <h3>2. Inductor (ኢንዳክተር) - ምልክት: ∿</h3>
+            <p>ኢንዳክተር ኮይል (Coil) ተብሎም ይጠራል። የኤሌክትሪክ ኃይልን በሚለዋወጥ መግነጢሳዊ መስክ (Magnetic Field) ውስጥ አከማችቶ የሚይዝ ተገብሮ አካል ነው። ድግግሞሾችን ለማጣራት (Filtering) እና በሃይል አቅርቦት ሰርኪዩቶች ውስጥ ከፍተኛ አገልግሎት አለው።</p>
+
+            <h3>3. Relay Switch (ሪሌይ ስዊች) - ምልክት: ⛿</h3>
+            <p>ሪሌይ በትንሽ የዲሲ ቮልቴጅ ምልክት (Low Voltage Signal) በመጠቀም ትላልቅ የኤሌክትሪክ ኃይሎችን (ለምሳሌ 220V AC የቤት ውስጥ እቃዎችን) የሚያዘው ወይም የሚያቀያይረው ኤሌክትሮ-መካኒካል ስዊች ነው።</p>
+
+            <h3>4. Transistor (ትራንዚስተር) - ምልክት: ⫘</h3>
+            <p>ትራንዚስተር ዘመናዊ ኤሌክትሮኒክስን ያቆመ እጅግ ወሳኝ ሴሚኮንዳክተር አካል ነው። የኤሌክትሪክ ሲግናሎችን ለማጉላት (Amplification) ወይም እንደ ኤሌክትሮኒክ ስዊች (Switching) ሆኖ ለመስራት ያገለግላል።</p>
+
+            <h3>5. Battery (ባትሪ) - ምልክት: ⎓</h3>
+            <p>ባትሪ ኬሚካላዊ ሃይልን ወደ ኤሌክትሪክ ሃይል በመቀየር የዲሲ (DC) ቮልቴጅ እና ከረንት በቀጣይነት ለሰርኪዩቱ የሚያቀርብ ዋና የኃይል ምንጭ ነው።</p>
+
+            <h3>6. Bridge Rectifier (ብሪጅ ሬክቲፋየር) - ምልክት: ⍾</h3>
+            <p>አራት ዲዮዶች በተለየ መልኩ ተያይዘው የሚሰሩበት አካል ሲሆን፤ ተለዋዋጭውን የኤሲ (AC) ኃይል ወደ ቀጥተኛ የዲሲ (DC) ኃይል ለመቀየር (Rectification) በሃይል አቅርቦት ሰርኪዩቶች ውስጥ ይገነባል።</p>
+
+            <h3>7. Fuse (ፊውዝ) - ምልክት: ⌁</h3>
+            <p>ፊውዝ የደህንነት መጠበቂያ አካል ነው። በሰርኪዩቱ ውስጥ ከመጠን በላይ ከረንት (Overload ወይም Short Circuit) ሲፈጠር በውስጡ ያለው ቀጭን ሽቦ በማቅለጥ ሰርኪዩቱን በማቋረጥ ሌሎች ውድ አካላትን ከእሳት እና ከጉዳት ይጠብቃል።</p>
+
+            <h3>8. DC Motor (ዲሲ ሞተር) - ምልክት: ⍒</h3>
+            <p>የዲሲ ኤሌክትሪክ ኃይልን ወደ ሜካኒካል የማሽከርከር እንቅስቃሴ (Mechanical Rotation) የሚቀይር መሳሪያ ነው። በሮቦቲክስ እና በትንሽ DIY ፕሮጀክቶች ውስጥ በስፋት ይሰራበታል።</p>
+
+            <h3>9. AC Motor (ኤሲ ሞተር) - ምልክት: ⍓</h3>
+            <p>በተለዋዋጭ የኤሲ ኃይል (Alternating Current) የሚሰራ፣ ከፍተኛ ሀይል ያላቸውን ማሽኖች እና መሳሪያዎች ለማንቀሳቀስ የሚያገለግል ትልቅ ሞተር ነው።</p>
+
+            <h3>10. Speaker (ስፒከር) - ምልክት: ⍗</h3>
+            <p>የኤሌክትሪክ ኦዲዮ ሲግናሎችን ወደ ድምፅ ማዕበል (Sound Waves) በመቀየር ሰዎች እንዲሰሙት የሚያደርግ የድምፅ ማውጫ አካል ነው።</p>
+
+            <h3>11. Mic (ማይክሮፎን) - ምልክት: ⍰</h3>
+            <p>የድምፅ ማዕበሎችን ወደ ኤሌክትሪካዊ ሲግናሎች በመቀየር ወደ ሰርኪዩቱ የሚያስገባ የመቅረጫ አካል ነው።</p>
+
+            <h3>12. LDR (Light Dependent Resistor) - ምልክት: ⍔</h3>
+            <p>በብርሃን መጠን ልክ ሪዚስታንሱ የሚለዋወጥ አካል ነው። በጨለማ ጊዜ ሪዚስታንሱ ይጨምራል፣ በብርሃን ጊዜ ደግሞ ይቀንሳል። አውቶማቲክ የብርሃን መቆጣጠሪያ ሰርኪዩቶች ላይ ይጠቅማል።</p>
+
+            <h3>13. Piezo Buzzer (ባዘር) - ምልክት: ⍝</h3>
+            <p>የኤሌክትሪክ pulse ወይም ቮልቴጅ ሲደርሰው የማንቂያ ድምፅ (Beep/Buzzer sound) የሚያወጣ የኤሌክትሮኒክ ድምፅ ማውጫ ነው።</p>
+
+            <h3>14. Potentiometer (ፖቴንሺዮሜትር) - ምልክት: ⍯</h3>
+            <p>በእጅ ማዞሪያ (Knob) በመጠቀም የሪዚስታንስ መጠኑን በመቀየር በሰርኪዩት ውስጥ ያለውን የቮልቴጅ ወይም የድምፅ መጠን (Volume control) ለመቆጣጠር የሚያገለግል ተለዋዋጭ ሪዚስተር ነው።</p>
+
+            <h3>15. MOSFET (Metal-Oxide-Semiconductor Field-Effect Transistor) - ምልክት: ⫘</h3>
+            <p>ከፍተኛ ኃይልን እና ፍጥነትን መቆጣጠር የሚችል የትራንዚስተር አይነት ነው። በኃይል መቆጣጠሪያ ሰርኪዩቶች (Power electronics) እና ስዊቺንግ ሲስተሞች ውስጥ ከፍተኛ ቦታ አለው።</p>
         </div>
+
         <div class="lang-en">
             <h2>🛠 Detailed Guide to 15 Essential Electronics Components</h2>
-            <p>Comprehensive technical descriptions of 15 fundamental electronic components used in hardware design:</p>
-            <ul>
-                <li><strong>1. Switch:</strong> Manually opens or closes an electrical circuit to control power flow.</li>
-                <li><strong>2. Inductor:</strong> A coiled wire that stores electrical energy in a magnetic field when current flows through it.</li>
-                <li><strong>3. Relay:</strong> An electromagnetically operated switch allowing low control voltages to switch high-power circuits.</li>
-                <li><strong>4. Transistor:</strong> A semiconductor device used to amplify electrical signals or act as a high-speed electronic switch.</li>
-                <li><strong>5. Battery:</strong> A portable electrochemical DC power source providing steady voltage to circuits.</li>
-                <li><strong>6. Bridge Rectifier:</strong> A configuration of four diodes that converts incoming AC power into pulsating DC power.</li>
-                <li><strong>7. Fuse:</strong> A sacrificial safety device that breaks the circuit when current exceeds safe operational thresholds.</li>
-                <li><strong>8. DC Motor:</strong> Converts electrical DC energy into continuous mechanical rotational motion.</li>
-                <li><strong>9. AC Motor:</strong> An electrical motor driven by alternating current for heavy-duty applications.</li>
-                <li><strong>10. Speaker:</strong> Transduces electrical audio signals into audible acoustic sound waves.</li>
-                <li><strong>11. Microphone:</strong> Converts acoustic sound waves into corresponding electrical audio signals.</li>
-                <li><strong>12. LDR:</strong> A photoresistor whose electrical resistance decreases as ambient light intensity increases.</li>
-                <li><strong>13. Piezo Buzzer:</strong> An electronic audio signaling device that generates beeps or alarm tones.</li>
-                <li><strong>14. Potentiometer:</strong> A three-terminal adjustable variable resistor used for manual control applications.</li>
-                <li><strong>15. MOSFET:</strong> A specialized field-effect transistor optimized for high-frequency, high-power electronic switching.</li>
-            </ul>
+            <p>This section covers the core functions, operating principles, and schematic symbols of 15 fundamental electronic components used in hardware design and circuit building.</p>
+
+            <h3>1. Switch - Symbol: ⏻</h3>
+            <p>An electromechanical or mechanical device used to manually open or close an electrical circuit, controlling the flow of power.</p>
+
+            <h3>2. Inductor - Symbol: ∿</h3>
+            <p>A passive component that stores electrical energy in a magnetic field when electrical current flows through its wire coil. Essential for filtering and tuning.</p>
+
+            <h3>3. Relay Switch - Symbol: ⛿</h3>
+            <p>An electromagnetically operated switch that allows a low-power control circuit to switch a much higher voltage or current load safely.</p>
+
+            <h3>4. Transistor - Symbol: ⫘</h3>
+            <p>A semiconductor device fundamental to modern electronics, used for amplifying electronic signals or acting as a high-speed digital switch.</p>
+
+            <h3>5. Battery - Symbol: ⎓</h3>
+            <p>A power source consisting of electrochemical cells that convert chemical energy into stable direct current (DC) electrical energy.</p>
+
+            <h3>6. Bridge Rectifier - Symbol: ⍾</h3>
+            <p>An arrangement of four diodes connected in a bridge circuit configuration, utilized to convert alternating current (AC) into direct current (DC).</p>
+
+            <h3>7. Fuse - Symbol: ⌁</h3>
+            <p>A sacrificial overcurrent protection device containing a metal wire that melts and breaks the circuit when current exceeds safe operational thresholds.</p>
+
+            <h3>8. DC Motor - Symbol: ⍒</h3>
+            <p>An electrical actuator that converts direct current electrical energy into continuous mechanical rotational movement.</p>
+
+            <h3>9. AC Motor - Symbol: ⍓</h3>
+            <p>An electric motor driven by alternating current, widely utilized in heavy-duty appliances and industrial machinery applications.</p>
+
+            <h3>10. Speaker - Symbol: ⍗</h3>
+            <p>An output transducer that converts electronic audio frequency signals into audible sound waves.</p>
+
+            <h3>11. Microphone - Symbol: ⍰</h3>
+            <p>An acoustic input transducer that converts physical sound waves into proportional electrical signals for processing.</p>
+
+            <h3>12. LDR (Light Dependent Resistor) - Symbol: ⍔</h3>
+            <p>A specialized photoresistor whose electrical resistance decreases as ambient light intensity increases, ideal for automated light-sensing circuits.</p>
+
+            <h3>13. Piezo Buzzer - Symbol: ⍝</h3>
+            <p>An electronic sound generator that utilizes the piezoelectric effect to produce audible alert tones or buzzing sounds when powered.</p>
+
+            <h3>14. Potentiometer - Symbol: ⍯</h3>
+            <p>A three-terminal variable resistor with a rotating shaft used to manually adjust voltage levels or act as a volume control knob.</p>
+
+            <h3>15. MOSFET - Symbol: ⫘</h3>
+            <p>A specialized field-effect transistor designed for high-efficiency, high-speed electronic switching and power regulation applications.</p>
         </div>
     </div>
 
@@ -419,9 +480,9 @@
         let path = document.getElementById('wavePath');
         let currentD = path.getAttribute('d');
         if(currentD.includes('Q')) {
-            path.setAttribute('d', 'M 10 60 L 390 60');
+            path.setAttribute('d', 'M 10 60 L 390 60'); // Flat DC line
         } else {
-            path.setAttribute('d', 'M 10 60 Q 50 10 100 60 T 190 60 T 280 60 T 370 60');
+            path.setAttribute('d', 'M 10 60 Q 50 10 100 60 T 190 60 T 280 60 T 370 60'); // AC Wave
         }
     }
 
