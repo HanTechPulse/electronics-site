@@ -50,18 +50,27 @@
 
         .lang-en { display: none; }
         
-        /* Header */
+        /* Header & Logo Styling */
         header { 
             text-align: center; 
-            padding: 55px 25px; 
+            padding: 45px 25px; 
             background: var(--bg-card); 
             border: 1px solid var(--border-color);
             border-radius: 20px; 
             margin-bottom: 35px; 
             box-shadow: var(--shadow);
         }
-        h1 { color: var(--accent-primary); font-size: 2.8rem; margin-bottom: 12px; font-weight: 800; letter-spacing: -0.5px; }
-        p.subtitle { color: var(--text-muted); font-size: 1.2rem; max-width: 800px; margin: 0 auto; font-weight: 500; }
+        .logo-container {
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 220px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 { color: var(--accent-primary); font-size: 2.5rem; margin-bottom: 8px; font-weight: 800; letter-spacing: -0.5px; }
+        p.subtitle { color: var(--text-muted); font-size: 1.15rem; max-width: 800px; margin: 0 auto; font-weight: 500; }
         
         /* Cards */
         .card { 
@@ -78,7 +87,7 @@
         ul { margin-left: 22px; margin-bottom: 22px; color: var(--text-muted); }
         li { margin-bottom: 14px; font-size: 1.05rem; }
 
-        /* Interactive Visual Components (Working Graphics) */
+        /* Interactive Visual Components */
         .interactive-graphic { background: var(--bg-body); border: 2px dashed var(--accent-primary); border-radius: 16px; padding: 25px; text-align: center; margin: 25px 0; }
         .interactive-graphic svg { max-width: 100%; height: auto; }
         .interactive-btn { background: var(--accent-gradient); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; margin-top: 10px; }
@@ -128,8 +137,11 @@
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
     </div>
 
-    <!-- Header -->
+    <!-- Header with Logo Integration -->
     <header>
+        <div class="logo-container">
+            <img src="Generated Image August 22, 2026 - 5_35PM_3.png" alt="HanTechPulse Logo">
+        </div>
         <div class="lang-am">
             <h1>HanTechPulse</h1>
             <p class="subtitle">የኤሌክትሮኒክስ ትምህርት፥ የመለኪያ መሣሪያዎች እና የሃርድዌር ላብራቶሪ</p>
@@ -275,7 +287,7 @@
             <ul>
                 <li><strong>የመጀመሪያ ዝግጅት:</strong> የዲጂታል መልቲሜትሩን (Digital Multimeter) ማዞሪያ ቁልፍ (Dial) ወደ ዲዮድ ምልክት ወይም ወደ ቀጣይነት መመርመሪያ (Diode/Continuity Mode) አስተካክለው ያስቀምጡ።</li>
                 <li><strong>ፎርዋርድ ባያስ ሙከራ (Forward Bias Test):</strong> ቀዩን ፕሮብ (Red Probe) ከዲዮዱ አኖድ (Anode - ፖዘቲቭ ጫፍ) ጋር፣ ጥቁሩን ፕሮብ (Black Probe) ደግሞ ከካቶድ (Cathode - በነጭ መስመር ምልክት ከተደረገበት ጫፍ) ጋር ያገናኙ። በዚህ ጊዜ ዲዮዱ በጥሩ ጤንነት ላይ ከሆነ ስክሪኑ ላይ ከ 0.5V እስከ 0.7V የሚደርስ የሲሊኮን ቮልቴጅ ጠብታ (Voltage Drop) ንባብ ማሳየት አለበት።</li>
-                <li><strong>ሪቨርስ ባያስ ሙከራ (Reverse Bias Test):</strong> አሁን የመልቲሜትሩን ፕሮቦች ይቀያይሩ (ቀዩን በካቶድ፣ ጥቁሩን በአኖድ)። በዚህ ጊዜ ዲዮዱ ጅረት ማስተላለፍ ስለሌለበት መልቲሜትሩ ምንም ዓይነት ንባብ ሳይሰጥ **'OL' (Open Loop)** ወይም ማለቂያ የሌለው መቋቋም ማሳየት አለበት። ይህንን ካሟላ ዲዮዱ 100% ጤናማ ነው ማለት ነው።</li>
+                <li><strong>ሪቨርስ ባያስ ሙከራ (Reverse Bias Test):</strong> አሁን የመልቲሜትሩን ፕሮቦች ይቀያይሩ (ቀዩን በካቶድ፣ ጥቁሩን በአኖድ)። በዚህ ጊዜ ዲዮዱ ጅረት ማስተላለፍ ስለሌለበት መልቲሜትሩ ምንም ዓይነት ንባብ ሳይሰጥ <strong>'OL' (Open Loop)</strong> ወይም ማለቂያ የሌለው መቋቋም ማሳየት አለበት። ይህንን ካሟላ ዲዮዱ 100% ጤናማ ነው ማለት ነው።</li>
             </ul>
         </div>
         <div class="lang-en">
@@ -285,7 +297,7 @@
             <ul>
                 <li><strong>Meter Setup:</strong> Turn your digital multimeter rotary switch to the Diode test symbol.</li>
                 <li><strong>Forward Bias Test:</strong> Place the red probe on the Anode and the black probe on the Cathode (identified by the visual band). A healthy silicon diode will display a forward voltage drop reading between 0.5V and 0.7V.</li>
-                <li><strong>Reverse Bias Test:</strong> Swap the probe connections (red to cathode, black to anode). The multimeter should register **'OL' (Open Loop)**, indicating zero reverse leakage current and proper blocking functionality.</li>
+                <li><strong>Reverse Bias Test:</strong> Swap the probe connections (red to cathode, black to anode). The multimeter should register <strong>'OL' (Open Loop)</strong>, indicating zero reverse leakage current and proper blocking functionality.</li>
             </ul>
         </div>
     </div>
@@ -415,10 +427,10 @@
             <h3>13. Piezo Buzzer - Symbol: ⍝</h3>
             <p>An electronic sound generator that utilizes the piezoelectric effect to produce audible alert tones or buzzing sounds when powered.</p>
 
-            <h3>14. Potentiometer - Symbol: ⍯</h3>
+            ### 14. Potentiometer - Symbol: ⍯</h3>
             <p>A three-terminal variable resistor with a rotating shaft used to manually adjust voltage levels or act as a volume control knob.</p>
 
-            <h3>15. MOSFET - Symbol: ⫘</h3>
+            ### 15. MOSFET - Symbol: ⫘</h3>
             <p>A specialized field-effect transistor designed for high-efficiency, high-speed electronic switching and power regulation applications.</p>
         </div>
     </div>
